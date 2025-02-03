@@ -31,4 +31,9 @@ public class InventoryManager : MonoBehaviour
     {
         Inventoy_UI.SetActive(false);
     }
+
+    public void Open() 
+    {
+        Inventoy_UI.SetActive(true);
+    }
 }
