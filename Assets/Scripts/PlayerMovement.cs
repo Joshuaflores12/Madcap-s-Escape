@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Playermovement : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public float move_speed = 0;
-    Vector2 direction = Vector2.zero;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] public float move_speed = 0;
+    [SerializeField] Vector2 direction = Vector2.zero;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

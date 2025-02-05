@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject Inventoy_UI;
+    [SerializeField] public GameObject Inventoy_UI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
