@@ -3,6 +3,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     [SerializeField] public GameObject Inventoy_UI;
+    [SerializeField] public GameObject Combine_UI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,12 +25,14 @@ public class InventoryManager : MonoBehaviour
 
     public void Combine_Item() 
     {
-        
+        Combine_UI.SetActive(true);
+        Inventoy_UI.SetActive(false);
     }
 
     public void Close() 
     {
         Inventoy_UI.SetActive(false);
+        Combine_UI.SetActive(false);
     }
 
     public void Open() 
