@@ -11,7 +11,7 @@ public class ItemCollector : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.CompareTag("Collectible")) 
+                if (hit.collider.CompareTag("test1")) 
                 {
                     string itemTag = hit.collider.tag;
                     NotebookInventory.Instance.AddToInventory(itemTag);

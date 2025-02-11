@@ -8,7 +8,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] private List<string> inventory = new List<string>();
     [SerializeField] private Transform inventoryUI;
     [SerializeField] private GameObject inventorySlotPrefab; 
-    public float test =15;
+
 
     private void Awake()
     {
