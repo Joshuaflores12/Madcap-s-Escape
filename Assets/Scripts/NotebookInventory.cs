@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,8 @@ public class NotebookInventory : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+        else
+            Destroy(gameObject);
     }
 
     public void AddToInventory(string itemTag)
@@ -28,11 +31,22 @@ public class NotebookInventory : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        float xOffset = 200f;
 
-        foreach (string item in inventory)
+        for (int i = 0; i < inventory.Count; i++)
         {
             GameObject slot = Instantiate(inventorySlotPrefab, inventoryUI);
-            slot.GetComponentInChildren<Text>().text = item; 
+            TMP_Text slotText = slot.GetComponentInChildren<TMP_Text>();
+
+            if (slotText != null)
+                slotText.text = inventory[i];
+
+
+            RectTransform slotRect = slot.GetComponent<RectTransform>();
+            if (slotRect != null)
+            {
+                slotRect.anchoredPosition = new Vector2(xOffset * i, 0); 
+            }
         }
     }
 }

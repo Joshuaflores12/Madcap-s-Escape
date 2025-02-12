@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - test1
-  - test2
+  - Inventory
+  - candle
+  - book
+  - bobbyPin
+  - pingPongBall
   layers:
   - Default
   - TransparentFX
