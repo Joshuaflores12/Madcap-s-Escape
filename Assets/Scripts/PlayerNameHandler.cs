@@ -3,6 +3,7 @@ using TMPro;
 public class PlayerNameHandler : MonoBehaviour
 {
     [SerializeField] public TMP_InputField playerNameInput;
+    [SerializeField] public GameObject playerInputUI;
 
     public void SavePlayerName() 
     {
@@ -10,6 +11,7 @@ public class PlayerNameHandler : MonoBehaviour
         PlayerPrefs.SetString("Player Name", playerName);
         PlayerPrefs.Save();
         Debug.Log("Player Name Saved: " + playerName);
+        playerInputUI.SetActive(false);
     }
 
     // accesing the player name in other scripts
