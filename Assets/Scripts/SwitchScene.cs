@@ -9,7 +9,8 @@ public class SwitchScene : MonoBehaviour
     [SerializeField] string scene;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField]  float fadeDuration = 2f;
-    [SerializeField] float delayBeforeFadeOut = 2f; 
+    [SerializeField] float delayBeforeFadeOut = 2f;
+    [SerializeField] private Curtains curtains;
 
     void Start()
     {
@@ -44,6 +45,11 @@ public class SwitchScene : MonoBehaviour
             yield return null;
         }
         chapterTitleText.alpha = 0f; 
+
+        if (curtains != null) 
+        {
+            curtains.OpenCurtains();
+        }
     }
 
     private IEnumerator LoadSceneAfterTextFade()
