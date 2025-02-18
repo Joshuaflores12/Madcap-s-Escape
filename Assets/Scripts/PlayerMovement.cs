@@ -8,9 +8,12 @@ public class Playermovement : MonoBehaviour
     [SerializeField] public float move_speed = 0;
     [SerializeField] Vector2 direction = Vector2.zero;
     [SerializeField] TMP_InputField playerNameInput;
+
+    [SerializeField] TutorialMechanics tutorialMechanics;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        tutorialMechanics = FindObjectOfType<TutorialMechanics>();
     }
 
     private void Update()
@@ -26,6 +29,12 @@ public class Playermovement : MonoBehaviour
     {
         // If player is inputting their name disable movement controls
         if(playerNameInput != null && playerNameInput.isFocused) 
+        {
+            direction = Vector2.zero;
+            return;
+        }
+
+        if (tutorialMechanics.isMoving == false)
         {
             direction = Vector2.zero;
             return;

@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\TutorialMechanics.cs" />
     <Compile Include="Assets\Scripts\ItemCollector.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\ClownMask.cs" />
     <Compile Include="Assets\Scripts\PlayerNameHandler.cs" />
     <Compile Include="Assets\Scripts\NotebookInventory.cs" />
