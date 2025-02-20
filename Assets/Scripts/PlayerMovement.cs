@@ -22,6 +22,7 @@ public class Playermovement : MonoBehaviour
         {
             playerNameInput.DeactivateInputField();
         }
+
         rb.linearVelocity = direction * move_speed;
     }
 
