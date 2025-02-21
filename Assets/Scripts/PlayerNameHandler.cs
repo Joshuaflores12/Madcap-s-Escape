@@ -1,22 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
+using Fungus;
 using TMPro;
-public class PlayerNameHandler : MonoBehaviour
-{
-    [SerializeField] public TMP_InputField playerNameInput;
-    [SerializeField] public GameObject playerInputUI;
 
-    public void SavePlayerName() 
+public class SavePlayerName : MonoBehaviour
+{
+    public TMP_InputField inputField; 
+    public Flowchart flowchart;    
+    public GameObject playerInputUI;  
+
+    public void SaveNameToFungus()
     {
-        string playerName = playerNameInput.text;
-        PlayerPrefs.SetString("Player Name", playerName);
+        string playerName = inputField.text;
+
+        
+        if (flowchart != null)
+        {
+            flowchart.SetStringVariable("PlayerName", playerName);
+            Debug.Log("Player Name Saved: " + playerName);
+        }
+        else
+        {
+            Debug.LogError("Flowchart is not assigned!");
+        }
+
+        PlayerPrefs.SetString("PlayerName", playerName);
         PlayerPrefs.Save();
-        Debug.Log("Player Name Saved: " + playerName);
+
         playerInputUI.SetActive(false);
     }
-
-    // accesing the player name in other scripts
-    //string playerName = PlayerPrefs.GetString("PlayerName", "Patient");
-    //Debug.Log("Player name loaded: " + playerName);
-
-    
 }
