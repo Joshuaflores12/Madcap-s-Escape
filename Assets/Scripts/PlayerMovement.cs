@@ -13,7 +13,7 @@ public class Playermovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        tutorialMechanics = FindObjectOfType<TutorialMechanics>();
+        tutorialMechanics = FindFirstObjectByType<TutorialMechanics>();
     }
 
     private void Update()
@@ -35,11 +35,11 @@ public class Playermovement : MonoBehaviour
             return;
         }
 
-        if (tutorialMechanics.isMoving == false)
+/*        if (tutorialMechanics.isMoving == false)
         {
             direction = Vector2.zero;
             return;
-        }
+        }*/
 
         if (context.performed) 
         {

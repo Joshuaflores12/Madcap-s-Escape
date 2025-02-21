@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class Curtains : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Curtains : MonoBehaviour
     [SerializeField] public Transform  endCurtainRight;
     [SerializeField] private float Speed = 5f;
     [SerializeField] private bool isOpening = false;
-    
+    [SerializeField] private Flowchart flowchart;
+
 
     void Update() 
     {
@@ -26,6 +28,12 @@ public class Curtains : MonoBehaviour
             Vector3.Distance(curtainRight.transform.position, endCurtainRight.position) < 0.01f)
         {
             isOpening = false;
+        }
+
+        if (flowchart != null)
+        {
+            flowchart.gameObject.SetActive(true); 
+            flowchart.ExecuteBlock("StartDialogue");
         }
     }
 
