@@ -12,6 +12,7 @@ public class Curtains : MonoBehaviour
     [SerializeField] private float Speed = 5f;
     [SerializeField] private bool isOpening = false;
     [SerializeField] private Flowchart flowchart;
+    private bool hasExecutedBlock = false;
 
 
     void Update() 
@@ -30,15 +31,25 @@ public class Curtains : MonoBehaviour
             isOpening = false;
         }
 
-        if (flowchart != null)
-        {
-            flowchart.gameObject.SetActive(true); 
-            flowchart.ExecuteBlock("StartDialogue");
-        }
     }
 
     public void OpenCurtains() 
     {
         isOpening = true;
+
+        hasExecutedBlock = false; 
+        StartCoroutine(ExecuteFungusBlockAfterDelay(10f));
+    }
+
+    private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); 
+
+        if (!hasExecutedBlock && flowchart != null)
+        {
+            flowchart.ExecuteBlock("StartDialogue");
+            hasExecutedBlock = true;
+            Debug.Log("Fungus block executed after 10 seconds.");
+        }
     }
 }
