@@ -2,53 +2,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Playermovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] public float move_speed = 0;
-    [SerializeField] Vector2 direction = Vector2.zero;
-    [SerializeField] TMP_InputField playerNameInput;
-
-    [SerializeField] TutorialMechanics tutorialMechanics;
+    [SerializeField] public Rigidbody2D rb;
+    [SerializeField] public float move_speed;
+    [SerializeField] public Vector2 direction;
+    [SerializeField] public TMP_InputField playerNameInput;
+    [SerializeField] public PlayerInput playerInput;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        tutorialMechanics = FindFirstObjectByType<TutorialMechanics>();
+        playerNameInput.onSelect.AddListener(DisablePLayerInput);
+        playerNameInput.onDeselect.AddListener(EnablePLayerInput);
     }
 
-    private void Update()
+    private void DisablePLayerInput(string text) 
     {
-        if (playerNameInput != null && playerNameInput.isFocused && Input.GetKeyDown(KeyCode.Return))
+        if (playerInput != null) 
         {
-            playerNameInput.DeactivateInputField();
+            playerInput.enabled = false;
+            direction = Vector2.zero;
         }
-
-        rb.linearVelocity = direction * move_speed;
     }
 
-    public void Move_Event(InputAction.CallbackContext context)
+    private void EnablePLayerInput(string text) 
     {
-        // If player is inputting their name disable movement controls
-        if(playerNameInput != null && playerNameInput.isFocused) 
+        if(playerInput != null) 
         {
-            direction = Vector2.zero;
-            return;
-        }
-
-/*        if (tutorialMechanics.isMoving == false)
-        {
-            direction = Vector2.zero;
-            return;
-        }*/
-
-        if (context.performed) 
-        {
-            Vector2 input = context.ReadValue<Vector2>();
-            direction.x = input.x;
-        }
-        else // No Input
-        {
-            direction = Vector2.zero;
+            playerInput.enabled = true;
+            rb.linearVelocity = direction * move_speed;
         }
     }
 }
