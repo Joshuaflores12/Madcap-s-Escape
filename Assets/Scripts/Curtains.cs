@@ -38,7 +38,7 @@ public class Curtains : MonoBehaviour
         isOpening = true;
 
         hasExecutedBlock = false; 
-        StartCoroutine(ExecuteFungusBlockAfterDelay(8f));
+        StartCoroutine(ExecuteFungusBlockAfterDelay(6f));
     }
 
     private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
