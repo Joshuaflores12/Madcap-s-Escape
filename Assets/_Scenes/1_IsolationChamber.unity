@@ -3723,7 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b85556abd314f3f870c18c013fdcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickMode: 3
+  clickMode: 1
   nextClickDelay: 0
   cancelEnabled: 1
   ignoreMenuClicks: 1
@@ -4556,7 +4556,6 @@ GameObject:
   - component: {fileID: 1399133851}
   - component: {fileID: 1399133850}
   - component: {fileID: 1399133849}
-  - component: {fileID: 1399133852}
   - component: {fileID: 1399133853}
   - component: {fileID: 1399133878}
   - component: {fileID: 1399133877}
@@ -4593,7 +4592,6 @@ GameObject:
   - component: {fileID: 1399133908}
   - component: {fileID: 1399133962}
   - component: {fileID: 1399133961}
-  - component: {fileID: 1399133960}
   - component: {fileID: 1399133959}
   - component: {fileID: 1399133958}
   - component: {fileID: 1399133957}
@@ -5327,21 +5325,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1266.2352, y: 498.3327}
+  scrollPos: {x: -105.68344, y: 270.18472}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.25
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1399134385}
-  selectedCommands:
-  - {fileID: 1399134384}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1399133843}
   - {fileID: 1399133847}
@@ -5513,27 +5509,12 @@ MonoBehaviour:
   itemId: 102
   blockName: Narration
   description: 
-  eventHandler: {fileID: 1399133852}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1399133849}
   - {fileID: 1399133853}
   - {fileID: 1399133850}
   suppressAllAutoSelections: 0
---- !u!114 &1399133852
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1399133851}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
 --- !u!114 &1399133853
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6424,7 +6405,6 @@ MonoBehaviour:
   - {fileID: 1399133912}
   - {fileID: 1399133911}
   - {fileID: 1399133910}
-  - {fileID: 1399133960}
   suppressAllAutoSelections: 0
 --- !u!114 &1399133931
 MonoBehaviour:
@@ -6745,27 +6725,6 @@ MonoBehaviour:
   - {fileID: 1399133955}
   - {fileID: 1399133988}
   suppressAllAutoSelections: 0
---- !u!114 &1399133960
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 185
-  indentLevel: 0
-  targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 1399133959}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!114 &1399133961
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11748,7 +11707,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 672
   blockName: Narration 20
   description: 'PATIENT 4
 
@@ -11858,7 +11817,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 673
   blockName: Narration 21
   description: 'PATIENT 5
 
@@ -11936,7 +11895,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 572
+  itemId: 674
   blockName: Chapter 2.16
   description: 'PATIENT 5
 
@@ -12390,7 +12349,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 675
   blockName: Narration 22
   description: 'PATIENT 6
 
@@ -12470,7 +12429,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 572
+  itemId: 676
   blockName: Chapter 2.17
   description: 'PATIENT 6
 
@@ -12840,7 +12799,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 677
   blockName: Chapter 2.18
   description: 'INTERACT WITH THE KITCHEN LADY TO MAKE CAKE
 
@@ -12922,7 +12881,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 678
   blockName: Narration 23
   description: 'PATIENT 6
 
@@ -13000,7 +12959,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 679
   blockName: Chapter 2.19
   description: 'INTERACT WITH THE KITCHEN LADY TO MAKE CAKE
 
@@ -13114,7 +13073,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 680
   blockName: Chapter 2.20
   description: 'WITHOUT EXTRA INGREDIENTS + SPOKEN WITH PATIENT 6
 
@@ -13415,7 +13374,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 681
   blockName: Chapter 2.21
   description: WITH EXTRA INGREDIENTS + SPOKEN WITH PATIENT 6
   eventHandler: {fileID: 0}
@@ -13583,7 +13542,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 571
+  itemId: 682
   blockName: Chapter 2.22
   description: 'WITH MIXED INGREDIENTS
 
@@ -14890,7 +14849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b85556abd314f3f870c18c013fdcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickMode: 3
+  clickMode: 1
   nextClickDelay: 0
   cancelEnabled: 1
   ignoreMenuClicks: 1

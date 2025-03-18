@@ -38,7 +38,7 @@ public class Curtains : MonoBehaviour
         isOpening = true;
 
         hasExecutedBlock = false; 
-        StartCoroutine(ExecuteFungusBlockAfterDelay(10f));
+        StartCoroutine(ExecuteFungusBlockAfterDelay(8f));
     }
 
     private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
@@ -47,7 +47,7 @@ public class Curtains : MonoBehaviour
 
         if (!hasExecutedBlock && flowchart != null)
         {
-            flowchart.ExecuteBlock("StartDialogue");
+            flowchart.ExecuteBlock("Narration");
             hasExecutedBlock = true;
             Debug.Log("Fungus block executed after 10 seconds.");
         }
