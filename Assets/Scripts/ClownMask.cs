@@ -23,4 +23,12 @@ public class ClownMask : MonoBehaviour
             ManicStateBG.SetActive(isManic);
         }
     }
+
+    public void WearMask()
+    {
+        isManic = !isManic;
+
+        SoberStateBG.SetActive(!isManic);
+        ManicStateBG.SetActive(isManic);
+    }
 }

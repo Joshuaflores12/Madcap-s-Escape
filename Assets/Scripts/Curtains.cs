@@ -47,7 +47,7 @@ public class Curtains : MonoBehaviour
 
         if (!hasExecutedBlock && flowchart != null)
         {
-            flowchart.ExecuteBlock("Narration");
+            flowchart.ExecuteBlock("FirstBlock");
             hasExecutedBlock = true;
             Debug.Log("Fungus block executed after 10 seconds.");
         }

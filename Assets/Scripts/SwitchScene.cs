@@ -27,16 +27,19 @@ public class SwitchScene : MonoBehaviour
     private IEnumerator FadeInAndOutChapterTitle()
     {
         float timeElapsed = 0f;
+
+        // Fade in
         while (timeElapsed < fadeDuration)
         {
             chapterTitleText.alpha = Mathf.Lerp(0f, 1f, timeElapsed / fadeDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        chapterTitleText.alpha = 1f; 
+        chapterTitleText.alpha = 1f;
 
         yield return new WaitForSeconds(delayBeforeFadeOut);
 
+        // Fade out
         timeElapsed = 0f;
         while (timeElapsed < fadeDuration)
         {
@@ -44,13 +47,17 @@ public class SwitchScene : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        chapterTitleText.alpha = 0f; 
+        chapterTitleText.alpha = 0f;
 
-        if (curtains != null) 
+        // Hide the title after fading out
+        chapterTitleText.gameObject.SetActive(false);
+
+        if (curtains != null)
         {
             curtains.OpenCurtains();
         }
     }
+
 
     private IEnumerator LoadSceneAfterTextFade()
     {
