@@ -5,11 +5,10 @@ using UnityEngine.InputSystem;
 public class Playermovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] public float move_speed = 0;
-    [SerializeField] Vector2 direction = Vector2.zero;
-    [SerializeField] TMP_InputField playerNameInput;
-
+    [SerializeField] public float move_speed;
+    [SerializeField] Vector2 direction;
     [SerializeField] FirstChallenge firstChallenge;
+    [SerializeField] TMP_InputField PlayerName;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,36 +17,23 @@ public class Playermovement : MonoBehaviour
 
     private void Update()
     {
-        if (playerNameInput != null && playerNameInput.isFocused && Input.GetKeyDown(KeyCode.Return))
+        if (PlayerName != null && PlayerName.isFocused) 
         {
-            playerNameInput.DeactivateInputField();
+         rb.linearVelocity = Vector2.zero;
+            return;
         }
 
+        // movement
+        direction = Vector2.zero;
+        if (Input.GetKey(KeyCode.A)) 
+        {
+            direction.x = -1;
+        }
+
+        if (Input.GetKey(KeyCode.D)) 
+        {
+            direction.x = 1;
+        }
         rb.linearVelocity = direction * move_speed;
-    }
-
-    public void Move_Event(InputAction.CallbackContext context)
-    {
-        // If player is inputting their name, disable movement but allow typing
-        if (playerNameInput != null && playerNameInput.isFocused)
-        {
-            return;
-        }
-
-        if (firstChallenge != null && firstChallenge.disableMovement)
-        {
-            direction = Vector2.zero;
-            return;
-        }
-
-        if (context.performed)
-        {
-            Vector2 input = context.ReadValue<Vector2>();
-            direction.x = input.x;
-        }
-        else if (context.canceled) // No Input
-        {
-            direction = Vector2.zero;
-        }
     }
 }
