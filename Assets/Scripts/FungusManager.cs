@@ -5,6 +5,7 @@ public class FungusManager : MonoBehaviour
     [SerializeField] GameObject slider;
     [SerializeField] GameObject weakpoints;
     [SerializeField] GameObject instruction;
+    [SerializeField] GameObject letter;
 
     public void UnhideChallengeObjects()
     {
@@ -19,5 +20,9 @@ public class FungusManager : MonoBehaviour
         slider.SetActive(false);
         weakpoints.SetActive(false);
         instruction.SetActive(false);
+    }
+    public void UnhideLetter()
+    {
+        letter.SetActive(true);
     }
 }

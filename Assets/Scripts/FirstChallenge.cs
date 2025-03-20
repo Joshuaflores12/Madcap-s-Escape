@@ -18,7 +18,7 @@ public class FirstChallenge : MonoBehaviour
     [SerializeField] private GameObject secondSlider;
     [SerializeField] private GameObject firstSlider;
 
-    public bool isChallengeCompleted = false;
+    public bool isFirstChallengeCompleted = false;
     public bool disableMovement;
     
     private Volume globalVolume;
@@ -53,7 +53,7 @@ public class FirstChallenge : MonoBehaviour
 
     void Update()
     {
-        if (isChallengeCompleted) return;
+        if (isFirstChallengeCompleted) return;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -89,7 +89,7 @@ public class FirstChallenge : MonoBehaviour
             StartCoroutine(RestartChallenge());
         }
 
-        if (isChallengeCompleted == true)
+        if (isFirstChallengeCompleted == true)
         {
             StartCoroutine(ShowMiniGameScreen());
             Debug.Log("show mini game screen");
@@ -128,7 +128,7 @@ public class FirstChallenge : MonoBehaviour
     }
     void CompleteChallenge()
     {
-        isChallengeCompleted = true;
+        isFirstChallengeCompleted = true;
         Debug.Log("Challenge Completed!");
         weakpointsButton.interactable = false;
         StartCoroutine(ShowMiniGameScreen());

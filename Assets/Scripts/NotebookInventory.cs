@@ -19,19 +19,21 @@ public class NotebookInventory : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void AddToInventory(string itemTag)
+    public GameObject AddToInventory(string itemTag)
     {
-        inventory.Add(itemTag);  
-        UpdateInventoryUI();
+        inventory.Add(itemTag);
+        return UpdateInventoryUI();
     }
 
-    void UpdateInventoryUI()
+    GameObject UpdateInventoryUI()
     {
         foreach (Transform child in inventoryUI)
         {
             Destroy(child.gameObject);
         }
+
         float xOffset = 200f;
+        GameObject lastSlot = null;
 
         for (int i = 0; i < inventory.Count; i++)
         {
@@ -41,12 +43,15 @@ public class NotebookInventory : MonoBehaviour
             if (slotText != null)
                 slotText.text = inventory[i];
 
-
             RectTransform slotRect = slot.GetComponent<RectTransform>();
             if (slotRect != null)
             {
-                slotRect.anchoredPosition = new Vector2(xOffset * i, 0); 
+                slotRect.anchoredPosition = new Vector2(xOffset * i, 0);
             }
+
+            lastSlot = slot; // Store the last created slot
         }
+
+        return lastSlot; // Return the most recently created inventory slot
     }
 }

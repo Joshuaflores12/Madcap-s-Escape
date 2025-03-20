@@ -1,39 +1,32 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using Fungus;
 
-public class Playermovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] public float move_speed;
-    [SerializeField] Vector2 direction;
-    [SerializeField] FirstChallenge firstChallenge;
-    [SerializeField] TMP_InputField PlayerName;
-    private void Start()
+    public float speed = 5f;
+    private bool isTyping = false;
+    private bool isDialogueActive = false;
+
+    void Update()
     {
-        rb = GetComponent<Rigidbody2D>();
-        firstChallenge = FindFirstObjectByType<FirstChallenge>();
-    }
+        isTyping = EventSystem.current.currentSelectedGameObject != null &&
+                   EventSystem.current.currentSelectedGameObject.GetComponent<InputField>() != null;
 
-    private void Update()
-    {
-        if (PlayerName != null && PlayerName.isFocused) 
-        {
-         rb.linearVelocity = Vector2.zero;
-            return;
-        }
+        isDialogueActive = SayDialog.ActiveSayDialog != null && SayDialog.ActiveSayDialog.gameObject.activeInHierarchy;
 
-        // movement
-        direction = Vector2.zero;
-        if (Input.GetKey(KeyCode.A)) 
-        {
-            direction.x = -1;
-        }
 
-        if (Input.GetKey(KeyCode.D)) 
+        if (!isTyping && !isDialogueActive)
         {
-            direction.x = 1;
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
         }
-        rb.linearVelocity = direction * move_speed;
     }
 }

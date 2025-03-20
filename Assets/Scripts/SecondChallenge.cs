@@ -20,10 +20,11 @@ public class SecondChallenge : MonoBehaviour
     [SerializeField] Animator animD;
     [SerializeField] Animator animA;
 
+    public bool isSecondChallengeCompleted = false;
+
     private Volume globalVolume;
     private Vignette vignette;
     private ChromaticAberration chromaticAberration;
-    private bool isSecondChallengeCompleted = false;
     private bool isBlackingOut = false;
     private bool isPanicking = false;
     private float lastSpamTime;
@@ -33,6 +34,7 @@ public class SecondChallenge : MonoBehaviour
 
     void Start()
     {
+        
         miniGameScreen.SetActive(false);
 
         globalVolume = FindFirstObjectByType<Volume>();
@@ -53,7 +55,7 @@ public class SecondChallenge : MonoBehaviour
     void Update()
     {
         
-        if (firstChallenge.isChallengeCompleted == true)
+        if (firstChallenge.isFirstChallengeCompleted == true)
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -134,11 +136,11 @@ public class SecondChallenge : MonoBehaviour
         {
             chromaticAberration.intensity.value = Mathf.Lerp(0f, chromaticAberrationMax, spamMeterSlider.value / maxSpamValue);
         }
-
-        if (spamMeterSlider.value >= maxSpamValue / 2 && !isPanicking)
+        if (firstChallenge.isFirstChallengeCompleted == true)
         {
             StartCoroutine(PanicEffect());
         }
+
 
         if (spamMeterSlider.value >= maxSpamValue)
         {
@@ -205,8 +207,8 @@ public class SecondChallenge : MonoBehaviour
 
         while (isPanicking)
         {
-            float randomDelay = Random.Range(0.1f, 0.3f);
-            chromaticAberration.intensity.value = 0.7f;
+            float randomDelay = Random.Range(0.1f, 0.9f);
+            chromaticAberration.intensity.value = 0.4f;
 
             yield return new WaitForSeconds(0.3f);
             chromaticAberration.intensity.value = 0.1f;

@@ -8,6 +8,11 @@ TagManager:
   - Enemy
   - Weakpoints
   - Inventory
+  - bobbyPin
+  - pingPongBall
+  - candle
+  - letter
+  - HiddenInventory
   layers:
   - Default
   - TransparentFX
