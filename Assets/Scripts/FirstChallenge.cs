@@ -154,10 +154,10 @@ public class FirstChallenge : MonoBehaviour
         while (isPanicking)
         {
             float randomDelay = Random.Range(0.1f, 0.5f);
-            chromaticAberration.intensity.value = 1f;
+            chromaticAberration.intensity.value = 0.6f;
 
             yield return new WaitForSeconds(0.5f);
-            chromaticAberration.intensity.value = 0.4f;
+            chromaticAberration.intensity.value = 0.2f;
 
             yield return new WaitForSeconds(randomDelay);
         }

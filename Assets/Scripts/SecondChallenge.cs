@@ -17,6 +17,8 @@ public class SecondChallenge : MonoBehaviour
     [SerializeField] private GameObject secondSlider;
     [SerializeField] private GameObject firstSlider;
     [SerializeField] FirstChallenge firstChallenge;
+    [SerializeField] Animator animD;
+    [SerializeField] Animator animA;
 
     private Volume globalVolume;
     private Vignette vignette;
@@ -53,6 +55,16 @@ public class SecondChallenge : MonoBehaviour
         
         if (firstChallenge.isChallengeCompleted == true)
         {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                animA.SetTrigger("AisPressed");
+                StartCoroutine(ResetTrigger());
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                animD.SetTrigger("DisPressed");
+                StartCoroutine(ResetTrigger());
+            }
 
             if (isSecondChallengeCompleted) return;
 
@@ -60,11 +72,15 @@ public class SecondChallenge : MonoBehaviour
             {
                 IncreaseSpam();
                 lastKeyWasA = true;
+                animA.SetTrigger("AisPressed");
+                StartCoroutine(ResetTrigger());
             }
             else if (Input.GetKeyDown(KeyCode.D) && lastKeyWasA)
             {
                 IncreaseSpam();
                 lastKeyWasA = false;
+                animD.SetTrigger("DisPressed");
+                StartCoroutine(ResetTrigger());
             }
 
             if (Time.time - lastSpamTime > 0.3f)
@@ -94,6 +110,12 @@ public class SecondChallenge : MonoBehaviour
                 StartCoroutine(RestartChallenge());
             }
         }
+    }
+    IEnumerator ResetTrigger()
+    {
+        yield return new WaitForSeconds(0.05f); 
+        animA.ResetTrigger("AisPressed");
+        animD.ResetTrigger("DisPressed");
     }
 
     private void IncreaseSpam()
@@ -151,10 +173,10 @@ public class SecondChallenge : MonoBehaviour
         while (isPanicking)
         {
             float randomDelay = Random.Range(0.1f, 0.3f);
-            chromaticAberration.intensity.value = 0.8f;
+            chromaticAberration.intensity.value = 0.7f;
 
             yield return new WaitForSeconds(0.3f);
-            chromaticAberration.intensity.value = 0.3f;
+            chromaticAberration.intensity.value = 0.1f;
 
             yield return new WaitForSeconds(randomDelay);
         }
