@@ -2,35 +2,52 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class Playermovement : MonoBehaviour
 {
-    [SerializeField] public Rigidbody2D rb;
-    [SerializeField] public float move_speed;
-    [SerializeField] public Vector2 direction;
-    [SerializeField] public TMP_InputField playerNameInput;
-    [SerializeField] public PlayerInput playerInput;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] public float move_speed = 0;
+    [SerializeField] Vector2 direction = Vector2.zero;
+    [SerializeField] TMP_InputField playerNameInput;
+
+    [SerializeField] FirstChallenge firstChallenge;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerNameInput.onSelect.AddListener(DisablePLayerInput);
-        playerNameInput.onDeselect.AddListener(EnablePLayerInput);
+        firstChallenge = FindFirstObjectByType<FirstChallenge>();
     }
 
-    private void DisablePLayerInput(string text) 
+    private void Update()
     {
-        if (playerInput != null) 
+        if (playerNameInput != null && playerNameInput.isFocused && Input.GetKeyDown(KeyCode.Return))
         {
-            playerInput.enabled = false;
-            direction = Vector2.zero;
+            playerNameInput.DeactivateInputField();
         }
+
+        rb.linearVelocity = direction * move_speed;
     }
 
-    private void EnablePLayerInput(string text) 
+    public void Move_Event(InputAction.CallbackContext context)
     {
-        if(playerInput != null) 
+        // If player is inputting their name, disable movement but allow typing
+        if (playerNameInput != null && playerNameInput.isFocused)
         {
-            playerInput.enabled = true;
-            rb.linearVelocity = direction * move_speed;
+            return;
+        }
+
+        if (firstChallenge != null && firstChallenge.disableMovement)
+        {
+            direction = Vector2.zero;
+            return;
+        }
+
+        if (context.performed)
+        {
+            Vector2 input = context.ReadValue<Vector2>();
+            direction.x = input.x;
+        }
+        else if (context.canceled) // No Input
+        {
+            direction = Vector2.zero;
         }
     }
 }

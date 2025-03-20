@@ -9,7 +9,7 @@ public class SecondChallenge : MonoBehaviour
     [SerializeField] private Slider spamMeterSlider;
     [SerializeField] private float spamIncreaseRate = 5f;
     [SerializeField] private float spamDecreaseRate = 60f;
-    [SerializeField] private float vignetteIncreaseRate = 0.2f;
+    [SerializeField] private float vignetteIncreaseRate = 0.5f;
     [SerializeField] private float vignetteRecoverRate = 0.3f;
     [SerializeField] private float chromaticAberrationMax = 0.8f;
     [SerializeField] private float maxSpamValue = 100f;
@@ -89,10 +89,11 @@ public class SecondChallenge : MonoBehaviour
                 spamMeterSlider.value = Mathf.Clamp(spamMeterSlider.value, 0, maxSpamValue);
             }
 
-            if (spamMeterSlider.value < maxSpamValue / 2 && isPanicking)
+/*            if (spamMeterSlider.value < maxSpamValue / 2 && isPanicking)
             {
                 StopPanic();
-            }
+                Debug.Log("Stop panicking");
+            }*/
 
             if (spamMeterSlider.value > 0)
             {
@@ -151,8 +152,40 @@ public class SecondChallenge : MonoBehaviour
         Debug.Log("Challenge Completed!");
         StartCoroutine(HideMiniGameScreen());
         secondSlider.SetActive(false);
+        isPanicking = false;
+
+        StartCoroutine(RecoverFromPanic());
     }
 
+    IEnumerator RecoverFromPanic()
+    {
+        float duration = 2f; 
+        float elapsedTime = 0f;
+
+        float startVignette = vignette.intensity.value;
+        float startChromatic = chromaticAberration.intensity.value;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            if (vignette != null)
+            {
+                vignette.intensity.value = Mathf.Lerp(startVignette, 0.15f, t);
+            }
+
+            if (chromaticAberration != null)
+            {
+                chromaticAberration.intensity.value = Mathf.Lerp(startChromatic, 0f, t);
+            }
+
+            yield return null;
+        }
+
+        if (vignette != null) vignette.intensity.value = 0.15f;
+        if (chromaticAberration != null) chromaticAberration.intensity.value = 0f;
+    }
     IEnumerator RestartChallenge()
     {
         Debug.Log("Blackout! Restarting Challenge...");

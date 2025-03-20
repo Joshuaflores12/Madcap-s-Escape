@@ -19,6 +19,7 @@ public class FirstChallenge : MonoBehaviour
     [SerializeField] private GameObject firstSlider;
 
     public bool isChallengeCompleted = false;
+    public bool disableMovement;
     
     private Volume globalVolume;
     private Vignette vignette;
@@ -29,8 +30,10 @@ public class FirstChallenge : MonoBehaviour
     private float lastSpamTime;
     private float timeToBlackout = 2f;
 
+
     void Start()
     {
+        disableMovement = false;
         miniGameScreen.SetActive(false);
         secondSlider.SetActive(false);
         globalVolume = FindFirstObjectByType<Volume>();
@@ -129,7 +132,40 @@ public class FirstChallenge : MonoBehaviour
         Debug.Log("Challenge Completed!");
         weakpointsButton.interactable = false;
         StartCoroutine(ShowMiniGameScreen());
+        isPanicking = false;
 
+        StartCoroutine(RecoverFromPanic());
+
+    }
+
+    IEnumerator RecoverFromPanic()
+    {
+        float duration = 2f;
+        float elapsedTime = 0f;
+
+        float startVignette = vignette.intensity.value;
+        float startChromatic = chromaticAberration.intensity.value;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            if (vignette != null)
+            {
+                vignette.intensity.value = Mathf.Lerp(startVignette, 0.15f, t);
+            }
+
+            if (chromaticAberration != null)
+            {
+                chromaticAberration.intensity.value = Mathf.Lerp(startChromatic, 0f, t);
+            }
+
+            yield return null;
+        }
+
+        if (vignette != null) vignette.intensity.value = 0.15f;
+        if (chromaticAberration != null) chromaticAberration.intensity.value = 0f;
     }
 
 
