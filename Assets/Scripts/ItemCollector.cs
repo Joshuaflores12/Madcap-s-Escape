@@ -19,7 +19,7 @@ public class ItemCollector : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))  
+        if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
@@ -31,7 +31,6 @@ public class ItemCollector : MonoBehaviour
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;
                     NotebookInventory.Instance.AddToInventory(itemTag);
-
                     Destroy(hit.collider.gameObject);
                 }
 
@@ -39,22 +38,27 @@ public class ItemCollector : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("letter"))
                     {
-                        Debug.Log("opende letter");
+                        Debug.Log("Opened letter");
                         letter.SetActive(true);
-                        StartCoroutine(ExecuteFungusBlockAfterDelay(2f));
+                        StartCoroutine(ExecuteFungusBlockAfterDelay(2f, "DoneTutorial"));
                     }
                 }
-
+ 
+                if (hit.collider.CompareTag("ClownMask"))
+                {
+                    Debug.Log("Clown mask clicked");
+                    StartCoroutine(ExecuteFungusBlockAfterDelay(1f, "ClickedMask"));
+                }
             }
         }
     }
-    private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
+    private IEnumerator ExecuteFungusBlockAfterDelay(float delay, string blockName)
     {
         yield return new WaitForSeconds(delay);
 
         if (!hasExecutedBlock && flowchart != null)
         {
-            flowchart.ExecuteBlock("DoneTutorial");
+            flowchart.ExecuteBlock(blockName);
             hasExecutedBlock = true;
         }
     }

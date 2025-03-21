@@ -13,6 +13,7 @@ TagManager:
   - candle
   - letter
   - HiddenInventory
+  - ClownMask
   layers:
   - Default
   - TransparentFX
