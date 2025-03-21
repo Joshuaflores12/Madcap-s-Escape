@@ -1,41 +1,37 @@
 using UnityEngine;
-using UnityEngine.UI;
-using Fungus;
 using TMPro;
+using Fungus;
 
 public class SavePlayerName : MonoBehaviour
 {
     public TMP_InputField inputField;
     public Flowchart flowchart;
-    public GameObject playerInputUI;
-
-    void Start()
-    {
-        // Set the default name to "?" at the start
-        if (flowchart != null)
-        {
-            string savedName = PlayerPrefs.GetString("PlayerName", "?"); // Load saved name or set default
-            flowchart.SetStringVariable("PlayerName", savedName);
-        }
-    }
+    public Character character; 
 
     public void SaveNameToFungus()
     {
-        string PlayerName = inputField.text;
-        if (flowchart != null)
+        if (!string.IsNullOrEmpty(inputField.text))
         {
-            flowchart.SetStringVariable("PlayerName", PlayerName);
-            flowchart.SetBooleanVariable("NameEntered", true); // Set flag
-            Debug.Log("Player Name Saved: " + PlayerName);
-        }
-        else
-        {
-            Debug.LogError("Flowchart is not assigned!");
-        }
+            string playerName = inputField.text;
+            // Update Fungus Variable
+            if (flowchart != null)
+            {
+                flowchart.SetStringVariable("PlayerName", playerName);
+            }
 
-        PlayerPrefs.SetString("PlayerName", PlayerName);
-        PlayerPrefs.Save();
+            if (character != null)
+            {
+                character.name = playerName;
+            }
+        }
+    }
+    public void Start()
+    {
+        character.name = "?";
+    }
 
-        playerInputUI.SetActive(false);
+    public void Update()
+    {
+        SaveNameToFungus();
     }
 }
