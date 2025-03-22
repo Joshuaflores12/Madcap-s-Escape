@@ -22,7 +22,13 @@ public class NotebookInventory : MonoBehaviour
 
     public void OpenNotebook()
     {
-        notebook.SetActive(!notebook.activeSelf);
+        bool isActive = !notebook.activeSelf;
+        notebook.SetActive(isActive);
+
+        foreach (Transform child in notebook.transform)
+        {
+            child.gameObject.SetActive(isActive);
+        }
     }
 
     public GameObject AddToInventory(string itemTag)
