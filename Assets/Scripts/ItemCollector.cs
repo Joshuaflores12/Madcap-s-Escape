@@ -43,12 +43,18 @@ public class ItemCollector : MonoBehaviour
                         StartCoroutine(ExecuteFungusBlockAfterDelay(2f, "DoneTutorial"));
                     }
                 }
- 
-                if (hit.collider.CompareTag("ClownMask"))
+
+                /*if (hit.collider.CompareTag("ClownMask"))
                 {
                     Debug.Log("Clown mask clicked");
+
+                    if (flowchart != null)
+                    {
+                        flowchart.StopAllBlocks();
+                    }
+
                     StartCoroutine(ExecuteFungusBlockAfterDelay(1f, "ClickedMask"));
-                }
+                }*/
             }
         }
     }
