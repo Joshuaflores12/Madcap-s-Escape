@@ -1,15 +1,20 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using Fungus;
 
 public class FungusManager : MonoBehaviour
 {
-    [SerializeField] GameObject slider;
-    [SerializeField] GameObject weakpoints;
-    [SerializeField] GameObject instruction;
-    [SerializeField] GameObject letter;
-    [SerializeField] GameObject nurse;
-    [SerializeField] Vector3 nurseTargetPosition;
-    [SerializeField] float nurseLerpSpeed = 0.09f;
+    [SerializeField] private GameObject slider;
+    [SerializeField] private GameObject weakpoints;
+    [SerializeField] private GameObject instruction;
+    [SerializeField] private GameObject letter;
+    [SerializeField] private GameObject nurse;
+    [SerializeField] private Vector3 nurseTargetPosition;
+    [SerializeField] private float nurseLerpSpeed = 0.09f;
+
+    [SerializeField] private Button clownMaskButton;
+    [SerializeField] private Flowchart flowchart; 
 
     public void UnhideChallengeObjects()
     {
@@ -49,5 +54,24 @@ public class FungusManager : MonoBehaviour
         }
         nurse.transform.position = nurseTargetPosition;
         nurse.SetActive(false);
+    }
+
+    public void ExecuteFungusBlock(string blockName)
+    {
+        if (flowchart != null && clownMaskButton != null)
+        {
+            clownMaskButton.interactable = false; 
+            flowchart.ExecuteBlock(blockName);
+            StartCoroutine(WaitForBlockToEnd());
+        }
+    }
+
+    private IEnumerator WaitForBlockToEnd()
+    {
+        while (flowchart.HasExecutingBlocks()) 
+        {
+            yield return null;
+        }
+        clownMaskButton.interactable = true; 
     }
 }

@@ -28,7 +28,7 @@ public class NotebookInventory : MonoBehaviour
         foreach (Transform child in notebook.transform)
         {
             child.gameObject.SetActive(isActive);
-        }
+        }   
     }
 
     public GameObject AddToInventory(string itemTag)

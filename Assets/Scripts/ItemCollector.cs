@@ -2,21 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using Fungus;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] GameObject letter;
+    [SerializeField] private GameObject letter;
     [SerializeField] private Flowchart flowchart;
+    [SerializeField] private Button clownMaskButton;
+
     private NotebookInventory notebookInventory;
     private SecondChallenge secondChallenge;
-    private bool hasExecutedBlock = false;
+    private bool isExecutingBlock = false;
 
     void Awake()
     {
         notebookInventory = FindFirstObjectByType<NotebookInventory>();
         secondChallenge = FindFirstObjectByType<SecondChallenge>();
+
+        if (clownMaskButton != null)
+        {
+            clownMaskButton.interactable = true;
+            clownMaskButton.onClick.AddListener(() => StartCoroutine(HandleClownMaskClick()));
+        }
     }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -34,38 +43,44 @@ public class ItemCollector : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                 }
 
-                if (secondChallenge.isSecondChallengeCompleted == true)
+                if (secondChallenge.isSecondChallengeCompleted)
                 {
                     if (hit.collider.CompareTag("letter"))
                     {
                         Debug.Log("Opened letter");
                         letter.SetActive(true);
-                        StartCoroutine(ExecuteFungusBlockAfterDelay(2f, "DoneTutorial"));
+                        StartCoroutine(ExecuteFungusBlock("DoneTutorial"));
                     }
                 }
-
-                /*if (hit.collider.CompareTag("ClownMask"))
-                {
-                    Debug.Log("Clown mask clicked");
-
-                    if (flowchart != null)
-                    {
-                        flowchart.StopAllBlocks();
-                    }
-
-                    StartCoroutine(ExecuteFungusBlockAfterDelay(1f, "ClickedMask"));
-                }*/
             }
         }
     }
-    private IEnumerator ExecuteFungusBlockAfterDelay(float delay, string blockName)
-    {
-        yield return new WaitForSeconds(delay);
 
-        if (!hasExecutedBlock && flowchart != null)
-        {
-            flowchart.ExecuteBlock(blockName);
-            hasExecutedBlock = true;
-        }
+    private IEnumerator HandleClownMaskClick()
+    {
+        if (isExecutingBlock || flowchart.HasExecutingBlocks()) yield break; 
+
+        isExecutingBlock = true;
+        clownMaskButton.interactable = false; 
+
+        Debug.Log("Clown mask clicked");
+        flowchart.ExecuteBlock("ClickedMask");
+
+        yield return new WaitUntil(() => !flowchart.HasExecutingBlocks()); 
+
+        clownMaskButton.interactable = true; 
+        isExecutingBlock = false;
+    }
+
+    private IEnumerator ExecuteFungusBlock(string blockName)
+    {
+        if (isExecutingBlock || flowchart.HasExecutingBlocks()) yield break;
+
+        isExecutingBlock = true;
+        flowchart.ExecuteBlock(blockName);
+
+        yield return new WaitUntil(() => !flowchart.HasExecutingBlocks());
+
+        isExecutingBlock = false;
     }
 }
