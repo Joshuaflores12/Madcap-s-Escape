@@ -925,14 +925,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 5
+  m_ContentType: 0
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 5
+  m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -4046,7 +4046,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
@@ -5404,11 +5404,11 @@ GameObject:
   - component: {fileID: 1399134391}
   - component: {fileID: 1399134390}
   - component: {fileID: 1399134389}
-  - component: {fileID: 1399134392}
   - component: {fileID: 1399134396}
   - component: {fileID: 1399134397}
   - component: {fileID: 1399134398}
   - component: {fileID: 1399134399}
+  - component: {fileID: 1399134400}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -5791,7 +5791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2392.767
+    x: 2395.0928
     y: -177.55385
     width: 172.61
     height: 40
@@ -5827,7 +5827,7 @@ MonoBehaviour:
     these needles in me and making me more sick! {/color}"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -5878,11 +5878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -200.67297, y: 461.37457}
+  scrollPos: {x: -1920.7908, y: 520.30725}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.7299998
+  zoom: 0.39999998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5890,7 +5890,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134391}
+  - {fileID: 1399133768}
   selectedCommands: []
   variables:
   - {fileID: 1399134396}
@@ -6112,7 +6112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -137.7775
+    x: -134.5517
     y: -161.32858
     width: 113.53
     height: 40
@@ -6180,7 +6180,7 @@ MonoBehaviour:
   storyText: '{punch=3,6}{s=5} I need my mama, please!{/s}'
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6209,7 +6209,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6237,7 +6237,7 @@ MonoBehaviour:
     horrible scene\u2026{/s}"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6292,7 +6292,7 @@ MonoBehaviour:
   storyText: "Because I\u2019m\u2026{w=1.5} unwell. I need time to be cured."
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6395,7 +6395,7 @@ MonoBehaviour:
   storyText: "N-No {w=0.7} but\u2026\r\n"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6453,7 +6453,7 @@ MonoBehaviour:
     these needles in me and making me more sick! {/color}"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6571,7 +6571,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 48.518738
-    y: -143.08086
+    y: -139.85506
     width: 113.91
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6804,7 +6804,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6834,7 +6834,7 @@ MonoBehaviour:
     see me!'
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7029,7 +7029,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7087,7 +7087,7 @@ MonoBehaviour:
     so pretty\u2026{/s}\n{punch=10,0.5}I wanna put it on!"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7116,7 +7116,7 @@ MonoBehaviour:
     Chuckles sent me a gift too!\n\r\n"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7143,7 +7143,7 @@ MonoBehaviour:
   storyText: "Mr. Chuckles?\n\rWhy would he send me a letter?\n"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7269,8 +7269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 779.6506
-    y: -71.902824
+    x: 781.97614
+    y: -74.22841
     width: 113.759995
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -7300,7 +7300,7 @@ MonoBehaviour:
   storyText: "{s=20}What?{/s}\n{s=20}Everything is\u2026{/s}"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7324,7 +7324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 939.71704
+    x: 939.8915
     y: -146.28474
     width: 206.82
     height: 40
@@ -7478,7 +7478,7 @@ MonoBehaviour:
     Mama\u2026{/s}\r\n{s=15}Mama, I\u2019m so scared, please\u2026{/s}\r\n"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7631,7 +7631,7 @@ MonoBehaviour:
   storyText: "{s=20}But\u2026{/s}\nWhat if mama sent me this to help me see her?"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7655,7 +7655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1495.4323
+    x: 1502.9323
     y: -159.26895
     width: 240
     height: 40
@@ -7729,7 +7729,7 @@ MonoBehaviour:
     sense!"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7786,7 +7786,7 @@ MonoBehaviour:
   storyText: "{punch=10,0.5}What?!\n{s=10}Why would they\u2026{/s}"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7842,7 +7842,7 @@ MonoBehaviour:
     here and get better.\nOnly then will mama come and get me\u2026"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7897,7 +7897,7 @@ MonoBehaviour:
   storyText: "What?\nThose voices\nSisters\u2026 {w=1} Is that you?"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8018,7 +8018,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1548.6724
-    y: -68.75204
+    y: -66.25204
     width: 113.759995
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8154,7 +8154,7 @@ MonoBehaviour:
   storyText: "I\u2019m so sorry, Mr. Wall.\nYour paint makes for a good adhesive."
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8319,8 +8319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2135.3047
-    y: -81.35807
+    x: 2137.6304
+    y: -79.032486
     width: 117.42
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8610,8 +8610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 395
   indentLevel: 0
-  targetTextObject: {fileID: 0}
-  stringVariable: {fileID: 0}
+  targetTextObject: {fileID: 113529872}
+  stringVariable: {fileID: 1399134396}
   _textObjectObsolete: {fileID: 0}
 --- !u!114 &1399134134
 MonoBehaviour:
@@ -9101,7 +9101,7 @@ MonoBehaviour:
     Mama, I\u2019m scared!\n{punch=10,0.5} I need to get out of here!"
   description: 
   character: {fileID: 1657468476}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9139,21 +9139,6 @@ MonoBehaviour:
   - {fileID: 1399134390}
   - {fileID: 1399134389}
   suppressAllAutoSelections: 0
---- !u!114 &1399134392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47421cc4a5a4306458cdbb3ff35d990f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputField: {fileID: 113529874}
-  flowchart: {fileID: 1399133818}
-  character: {fileID: 1657468476}
 --- !u!114 &1399134396
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9224,6 +9209,21 @@ MonoBehaviour:
   targetObject: {fileID: 1486352526}
   methodName: NurseIsLeaving
   delay: 0
+--- !u!114 &1399134400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47421cc4a5a4306458cdbb3ff35d990f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 113529874}
+  flowchart: {fileID: 1399133818}
+  character: {fileID: 1657468476}
 --- !u!1 &1486352526
 GameObject:
   m_ObjectHideFlags: 0
@@ -9314,6 +9314,8 @@ MonoBehaviour:
   nurse: {fileID: 267891377}
   nurseTargetPosition: {x: 13.76, y: -0.3285513, z: 0}
   nurseLerpSpeed: 0.09
+  clownMaskButton: {fileID: 0}
+  flowchart: {fileID: 0}
 --- !u!1 &1539618236
 GameObject:
   m_ObjectHideFlags: 0
@@ -9824,7 +9826,8 @@ MonoBehaviour:
   nameText: 
   nameColor: {r: 0.38679248, g: 0.034665354, b: 0.12404543, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -10552,7 +10555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1830552463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11007,7 +11010,7 @@ GameObject:
   - component: {fileID: 1899626440}
   - component: {fileID: 1899626439}
   - component: {fileID: 1899626438}
-  m_Layer: 5
+  m_Layer: 1
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11023,15 +11026,15 @@ RectTransform:
   m_GameObject: {fileID: 1899626436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.8418937, y: 2.8418937, z: 2.8418937}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 920601115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -178.5, y: 368}
-  m_SizeDelta: {x: 357, y: 435}
+  m_AnchoredPosition: {x: -2994, y: 1222}
+  m_SizeDelta: {x: 1039.7295, y: 404.1491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899626438
 MonoBehaviour:
@@ -11052,7 +11055,7 @@ MonoBehaviour:
   m_PreferredHeight: 350
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
+  m_LayoutPriority: 0
 --- !u!114 &1899626439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11847,6 +11850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 1368853}
   flowchart: {fileID: 1399133818}
+  clownMaskButton: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
   m_ObjectHideFlags: 0

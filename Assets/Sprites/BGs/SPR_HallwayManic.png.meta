@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_HallwayManic_0: -7708528817464950467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
