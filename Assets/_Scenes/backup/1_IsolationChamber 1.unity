@@ -1917,6 +1917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 267891380}
   - component: {fileID: 267891379}
+  - component: {fileID: 267891378}
   m_Layer: 0
   m_Name: SPR_Nurse_1
   m_TagString: Untagged
@@ -1924,6 +1925,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &267891378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267891377}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a8dbaf6d92e25469266cd815b54473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1399133818}
+  fungusBlockName: Narration 4
+  nurse: {fileID: 267891377}
+  targetPosition: {fileID: 0}
+  moveDuration: 2
 --- !u!212 &267891379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1988,11 +2006,10 @@ Transform:
   m_GameObject: {fileID: 267891377}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.96, y: -0.3285513, z: 0}
+  m_LocalPosition: {x: -1.5, y: -0.3285513, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1906395982}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &301316106
@@ -2292,7 +2309,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2041944939}
   - {fileID: 1603725934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5393,7 +5409,6 @@ GameObject:
   - component: {fileID: 1399134398}
   - component: {fileID: 1399134399}
   - component: {fileID: 1399134400}
-  - component: {fileID: 1399134401}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -5863,11 +5878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 111.16378, y: 331.5623}
+  scrollPos: {x: -1920.7908, y: 520.30725}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.87999964
+  zoom: 0.39999998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5875,9 +5890,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399133857}
-  selectedCommands:
-  - {fileID: 1399134401}
+  - {fileID: 1399133768}
+  selectedCommands: []
   variables:
   - {fileID: 1399134396}
   description: 
@@ -6109,7 +6123,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1399134401}
   - {fileID: 1399133856}
   - {fileID: 1399133904}
   suppressAllAutoSelections: 0
@@ -9211,23 +9224,6 @@ MonoBehaviour:
   inputField: {fileID: 113529874}
   flowchart: {fileID: 1399133818}
   character: {fileID: 1657468476}
---- !u!114 &1399134401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 699
-  indentLevel: 0
-  targetObject: {fileID: 1486352526}
-  methodName: NurseIsEntering
-  delay: 0
 --- !u!1 &1486352526
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,7 +9312,6 @@ MonoBehaviour:
   instruction: {fileID: 75644465}
   letter: {fileID: 1931539838}
   nurse: {fileID: 267891377}
-  nurseStartPosition: {x: 0, y: 0, z: 0}
   nurseTargetPosition: {x: 13.76, y: -0.3285513, z: 0}
   nurseLerpSpeed: 0.09
   clownMaskButton: {fileID: 0}
@@ -10560,7 +10555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1830552463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11099,37 +11094,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899626436}
   m_CullTransparentMesh: 1
---- !u!1 &1906395981
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1906395982}
-  m_Layer: 0
-  m_Name: nurse og position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1906395982
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906395981}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 267891380}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1931539838
 GameObject:
   m_ObjectHideFlags: 0
@@ -11778,12 +11742,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041944937}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.6, y: -0.02, z: 0}
   m_LocalScale: {x: 0.92929, y: 0.92929, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 376513449}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091609857
 GameObject:
@@ -12153,6 +12117,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1027721207}
+  - {fileID: 2041944939}
   - {fileID: 376513449}
   - {fileID: 1570625485}
   - {fileID: 224757215}

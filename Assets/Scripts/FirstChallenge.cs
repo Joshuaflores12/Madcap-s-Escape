@@ -15,6 +15,7 @@ public class FirstChallenge : MonoBehaviour
     [SerializeField] private float maxSpamValue = 100f;
     [SerializeField] GameObject miniGameScreen;
     [SerializeField] private Button weakpointsButton;
+    [SerializeField] private GameObject weakpointsButtonG;
     [SerializeField] private GameObject secondSlider;
     [SerializeField] private GameObject firstSlider;
 
@@ -124,6 +125,7 @@ public class FirstChallenge : MonoBehaviour
         {
             CompleteChallenge();
             Debug.Log("complete first challenge");
+            weakpointsButtonG.SetActive(false);
         }
     }
     void CompleteChallenge()
