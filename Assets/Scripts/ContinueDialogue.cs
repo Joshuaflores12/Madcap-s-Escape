@@ -1,16 +1,38 @@
 using UnityEngine;
+using Fungus;
 
-public class ContinueDialogue : MonoBehaviour
+public class TriggerFungusBlock : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Flowchart flowchart;
+    [SerializeField] private string blockName;
+    [SerializeField] private Transform checkpoint;
+    private Transform player;
+    private bool hasTriggered = false;
+
+    private void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
-    void Update()
-    { 
-        
+    private void Update()
+    {
+        if (!hasTriggered && PlayerHasPassedCheckpoint())
+        {
+            hasTriggered = true;
+            ExecuteFungusBlock();
+        }
+    }
+
+    private bool PlayerHasPassedCheckpoint()
+    {
+        return player != null && player.position.x > checkpoint.position.x;
+    }
+
+    private void ExecuteFungusBlock()
+    {
+        if (flowchart != null)
+        {
+            flowchart.ExecuteBlock(blockName);
+        }
     }
 }

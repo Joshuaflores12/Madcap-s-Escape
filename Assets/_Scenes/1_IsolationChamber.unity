@@ -5187,6 +5187,37 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
+--- !u!1 &1244650342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244650343}
+  m_Layer: 0
+  m_Name: checkpointcontinuedialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244650343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244650342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.88, y: -3.15, z: 0.0007858062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315193475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,7 +5533,6 @@ GameObject:
   - component: {fileID: 1399134074}
   - component: {fileID: 1399134072}
   - component: {fileID: 1399134071}
-  - component: {fileID: 1399134095}
   - component: {fileID: 1399134096}
   - component: {fileID: 1399134120}
   - component: {fileID: 1399134119}
@@ -6025,21 +6055,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1187.6742, y: 369.43835}
+  scrollPos: {x: -1312.4058, y: 317.51782}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.5799998
+  zoom: 0.7899996
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1399134068}
-  selectedCommands:
-  - {fileID: 1399134413}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1399134396}
   description: 
@@ -8116,7 +8144,6 @@ MonoBehaviour:
   - {fileID: 1399134049}
   - {fileID: 1399134048}
   - {fileID: 1399134047}
-  - {fileID: 1399134095}
   suppressAllAutoSelections: 0
 --- !u!114 &1399134067
 MonoBehaviour:
@@ -8332,27 +8359,6 @@ MonoBehaviour:
   indentLevel: 0
   targetFlowchart: {fileID: 1399133818}
   targetBlock: {fileID: 1399134068}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
---- !u!114 &1399134095
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 359
-  indentLevel: 0
-  targetFlowchart: {fileID: 1399133818}
-  targetBlock: {fileID: 1399134072}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -9525,7 +9531,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1399134410
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9543,7 +9549,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1399134411
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9560,7 +9566,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1399134412
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9577,7 +9583,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1399134413
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9605,6 +9611,7 @@ GameObject:
   - component: {fileID: 1486352527}
   - component: {fileID: 1486352530}
   - component: {fileID: 1486352531}
+  - component: {fileID: 1486352532}
   m_Layer: 0
   m_Name: ScriptsManager
   m_TagString: Untagged
@@ -9702,6 +9709,21 @@ MonoBehaviour:
   SoberStateIsolationBG: {fileID: 1603725933}
   ManicStateIsolationBG: {fileID: 2050216223}
   isManic: 0
+--- !u!114 &1486352532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486352526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4094bc905682743a4cd3aa14d7418b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1399133818}
+  blockName: DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy)
+  checkpoint: {fileID: 1244650343}
 --- !u!1 &1539618236
 GameObject:
   m_ObjectHideFlags: 0
@@ -12441,7 +12463,7 @@ GameObject:
   - component: {fileID: 2093656901}
   m_Layer: 3
   m_Name: MC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12762,3 +12784,4 @@ SceneRoots:
   - {fileID: 452623521}
   - {fileID: 174688463}
   - {fileID: 1315193476}
+  - {fileID: 1244650343}
