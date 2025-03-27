@@ -12,6 +12,7 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private GameObject openedletterScreen;
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject nurse;
+    [SerializeField] private GameObject checkpointContinueDialogue;
     [SerializeField] private Vector3 nurseStartPosition;
     [SerializeField] private Vector3 nurseTargetPosition;
     [SerializeField] private float nurseLerpSpeed = 0.09f;
@@ -53,7 +54,14 @@ public class FungusManager : MonoBehaviour
         openedletterScreen.SetActive(false);
         Debug.Log("hide letter");
     }
-
+    public void UnhideFirstCheckpoint()
+    {
+        checkpointContinueDialogue.SetActive(true);
+    }
+    public void HideFirstCheckpoint()
+    {
+        checkpointContinueDialogue.SetActive(false);
+    }
     public void NurseIsEntering()
     {
         Debug.Log("Nurse entering");
