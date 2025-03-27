@@ -2376,7 +2376,7 @@ Transform:
   m_GameObject: {fileID: 267891377}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.77, y: -0.3285513, z: 0}
+  m_LocalPosition: {x: 18, y: -0.3285513, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2409,8 +2409,8 @@ Transform:
   m_GameObject: {fileID: 293323588}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.75, y: -2.22, z: 0}
-  m_LocalScale: {x: 2.35, y: 4.225, z: 1}
+  m_LocalPosition: {x: 9.65, y: -0.30000007, z: 0}
+  m_LocalScale: {x: 3.6204517, y: 6.5091095, z: 1.5406177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376513449}
@@ -6030,7 +6030,6 @@ GameObject:
   - component: {fileID: 1399133849}
   - component: {fileID: 1399133853}
   - component: {fileID: 1399133878}
-  - component: {fileID: 1399133877}
   - component: {fileID: 1399133876}
   - component: {fileID: 1399133875}
   - component: {fileID: 1399133874}
@@ -6626,11 +6625,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1827.6188, y: 6.6656685}
+  scrollPos: {x: -1821.215, y: -64.168945}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 317
-  zoom: 0.7899997
+  zoom: 0.6999998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -6638,9 +6637,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134131}
-  selectedCommands:
-  - {fileID: 1399134418}
+  - {fileID: 1399133759}
+  selectedCommands: []
   variables:
   - {fileID: 1399134396}
   description: 
@@ -7185,35 +7183,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1399133877
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399133750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 107
-  indentLevel: 0
-  storyText: "Ugh\u2026\nI hate it here so much.\r\nThey said I could leave and see
-    mama when I\u2019m all better\u2026\r\nBut they keep{color=red} {punch=5,3} sticking
-    these needles in me and making me more sick! {/color}"
-  description: 
-  character: {fileID: 1657468476}
-  portrait: {fileID: 21300000, guid: 8f5b5b110e73a414eb229eeead86200f, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 1830552468}
 --- !u!114 &1399133878
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7239,7 +7208,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1399133877}
   - {fileID: 1399133876}
   - {fileID: 1399133875}
   - {fileID: 1399133874}
@@ -10151,7 +10119,7 @@ MonoBehaviour:
   endCurtainRight: {fileID: 2119134297}
   startCurtainLeft: {fileID: 1249919572}
   startCurtainRight: {fileID: 46473996}
-  Speed: 3
+  Speed: 4
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 1399133818}
@@ -10210,9 +10178,10 @@ MonoBehaviour:
   openedletterScreen: {fileID: 1368853}
   door: {fileID: 293323588}
   nurse: {fileID: 267891377}
+  checkpointContinueDialogue: {fileID: 0}
   nurseStartPosition: {x: -0.1, y: -0.3285513, z: 0}
-  nurseTargetPosition: {x: 13.76, y: -0.3285513, z: 0}
-  nurseLerpSpeed: 0.11
+  nurseTargetPosition: {x: 19.7, y: -0.3285513, z: 0}
+  nurseLerpSpeed: 0.16
   clownMaskButton: {fileID: 1980609225}
   flowchart: {fileID: 1399133818}
 --- !u!114 &1486352531
@@ -10575,8 +10544,8 @@ Transform:
   m_GameObject: {fileID: 1603725933}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003817916, y: 0.11934304, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.9038175, y: 2.0393429, z: 0}
+  m_LocalScale: {x: 1.5406177, y: 1.5406177, z: 1.5406177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376513449}
@@ -10653,7 +10622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1655425821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11241,7 +11210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1796522583
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12919,8 +12888,8 @@ Transform:
   m_GameObject: {fileID: 2041944937}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.6, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.92929, y: 0.92929, z: 0.92929}
+  m_LocalPosition: {x: 28.5, y: 2, z: 0}
+  m_LocalScale: {x: 1.4823622, y: 1.4823622, z: 1.4823622}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376513449}
@@ -13006,8 +12975,8 @@ Transform:
   m_GameObject: {fileID: 2050216223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003817916, y: 0.11934304, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.9038175, y: 2.0393429, z: 0}
+  m_LocalScale: {x: 1.5406177, y: 1.5406177, z: 1.5406177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376513449}
