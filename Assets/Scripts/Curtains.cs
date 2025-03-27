@@ -5,51 +5,72 @@ using Fungus;
 
 public class Curtains : MonoBehaviour
 {
-    [SerializeField] public GameObject curtainLeft;
-    [SerializeField] public GameObject curtainRight;
-    [SerializeField] public Transform  endCurtainLeft;
-    [SerializeField] public Transform  endCurtainRight;
-    [SerializeField] private float Speed = 5f;
+    [SerializeField] private GameObject curtainLeft;
+    [SerializeField] private GameObject curtainRight;
+    [SerializeField] private Transform endCurtainLeft;
+    [SerializeField] private Transform endCurtainRight;
+    [SerializeField] private Transform startCurtainLeft;
+    [SerializeField] private Transform startCurtainRight;
+    [SerializeField] private float Speed = 3f;
     [SerializeField] private bool isOpening = false;
+    [SerializeField] private bool isClosing = false;
     [SerializeField] private Flowchart flowchart;
+    [SerializeField] private string blockToExecute;
+
     private bool hasExecutedBlock = false;
 
-
-    void Update() 
+    void Update()
     {
-        if (isOpening) 
+        if (isOpening)
         {
-            curtainLeft.transform.position = Vector2.MoveTowards(curtainLeft.transform.position, endCurtainLeft.transform.position, Speed * Time.deltaTime);
-
-            curtainRight.transform.position = Vector2.MoveTowards(curtainRight.transform.position, endCurtainRight.transform.position, Speed * Time.deltaTime);
-
+            MoveCurtains(curtainLeft, endCurtainLeft, curtainRight, endCurtainRight, ref isOpening);
         }
 
-        if (Vector3.Distance(curtainLeft.transform.position, endCurtainLeft.position) < 0.01f &&
-            Vector3.Distance(curtainRight.transform.position, endCurtainRight.position) < 0.01f)
+        if (isClosing)
         {
-            isOpening = false;
+            MoveCurtains(curtainLeft, startCurtainLeft, curtainRight, startCurtainRight, ref isClosing);
         }
-
     }
 
-    public void OpenCurtains() 
+    private void MoveCurtains(GameObject left, Transform leftTarget, GameObject right, Transform rightTarget, ref bool state)
+    {
+        left.transform.position = Vector2.MoveTowards(left.transform.position, leftTarget.position, Speed * Time.deltaTime);
+        right.transform.position = Vector2.MoveTowards(right.transform.position, rightTarget.position, Speed * Time.deltaTime);
+
+        // Using a slightly larger threshold to avoid precision errors
+        if (Vector3.Distance(left.transform.position, leftTarget.position) < 0.05f &&
+            Vector3.Distance(right.transform.position, rightTarget.position) < 0.05f)
+        {
+            state = false;
+            left.transform.position = leftTarget.position;  // Ensure exact positioning
+            right.transform.position = rightTarget.position;
+        }
+    }
+
+    public void OpenCurtains()
     {
         isOpening = true;
+        isClosing = false;  // Ensure it doesn’t conflict with closing
+        hasExecutedBlock = false;
+        StartCoroutine(ExecuteFungusBlockAfterDelay(4f));
+    }
 
-        hasExecutedBlock = false; 
-        StartCoroutine(ExecuteFungusBlockAfterDelay(6f)); /// 6f
+    public void CloseCurtains()
+    {
+        isClosing = true;
+        isOpening = false;  // Prevent opening and closing at the same time
+        Debug.Log("Curtains closing");
     }
 
     private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(delay); 
+        yield return new WaitForSeconds(delay);
 
-        if (!hasExecutedBlock && flowchart != null)
+        if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
         {
-            flowchart.ExecuteBlock("FirstBlock"); ////firstBlock
+            flowchart.ExecuteBlock(blockToExecute);
             hasExecutedBlock = true;
-            Debug.Log("Fungus block executed after 10 seconds.");
+            Debug.Log("Fungus block executed: " + blockToExecute);
         }
     }
 }

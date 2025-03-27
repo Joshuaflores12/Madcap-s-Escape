@@ -10,6 +10,7 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private GameObject instruction;
     [SerializeField] private GameObject letter;
     [SerializeField] private GameObject openedletterScreen;
+    [SerializeField] private GameObject door;
     [SerializeField] private GameObject nurse;
     [SerializeField] private Vector3 nurseStartPosition;
     [SerializeField] private Vector3 nurseTargetPosition;
@@ -36,6 +37,15 @@ public class FungusManager : MonoBehaviour
     public void UnhideLetter()
     {
         letter.SetActive(true);
+    }
+
+    public void HideDoor()
+    {
+        door.SetActive(false);
+    }
+    public void UnhideDoor()
+    {
+        door.SetActive(true);
     }
     public void HideLetter()
     {

@@ -35,7 +35,7 @@ public class ItemCollector : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall"))
+                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("Key") )
                 {
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;

@@ -7,21 +7,30 @@ public class SwitchScene : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string scene;
+    [SerializeField] string scene2;
     [SerializeField] TextMeshProUGUI chapterTitleText;
-    [SerializeField]  float fadeDuration = 2f;
+    [SerializeField] float fadeDuration = 2f;
     [SerializeField] float delayBeforeFadeOut = 2f;
     [SerializeField] private Curtains curtains;
+    [SerializeField] private GameObject fadeOutObject;
 
     void Start()
     {
         chapterTitleText.alpha = 0f;
-
         StartCoroutine(FadeInAndOutChapterTitle());
+        fadeOutObject.SetActive(false);
     }
 
     public void OnPlayButtonClicked()
     {
         StartCoroutine(LoadSceneAfterTextFade());
+    }
+
+    public void SwitchSceneFromFungus()
+    {
+
+        StartCoroutine(LoadSceneAfterTextFade());
+        Debug.Log("Switching scene to: " + scene2);
     }
 
     private IEnumerator FadeInAndOutChapterTitle()
@@ -49,7 +58,6 @@ public class SwitchScene : MonoBehaviour
         }
         chapterTitleText.alpha = 0f;
 
-        // Hide the title after fading out
         chapterTitleText.gameObject.SetActive(false);
 
         if (curtains != null)
@@ -58,15 +66,17 @@ public class SwitchScene : MonoBehaviour
         }
     }
 
-
     private IEnumerator LoadSceneAfterTextFade()
     {
+        fadeOutObject.SetActive(true);
         yield return new WaitForSeconds(fadeDuration + delayBeforeFadeOut);
 
         animator.SetBool("FadeOut", true);
 
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        float fadeOutTime = 4f; 
+        yield return new WaitForSeconds(fadeOutTime);
 
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(scene2);
     }
+
 }

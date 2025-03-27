@@ -15,7 +15,7 @@ public class CinemachineFreeze : MonoBehaviour
     {
         if (cinemachineCamera != null)
         {
-            cinemachineCamera.enabled = false; 
+            cinemachineCamera.enabled = false;
         }
     }
 
@@ -23,7 +23,7 @@ public class CinemachineFreeze : MonoBehaviour
     {
         if (cinemachineCamera != null)
         {
-            cinemachineCamera.enabled = true; 
+            cinemachineCamera.enabled = true;
         }
     }
 }

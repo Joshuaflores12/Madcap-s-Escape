@@ -3,7 +3,9 @@ using UnityEngine;
 public class ClownMask : MonoBehaviour
 {
     [SerializeField] public GameObject SoberStateIsolationBG;
+
     [SerializeField] public GameObject ManicStateIsolationBG;
+
     [SerializeField] private  bool isManic = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,5 +33,6 @@ public class ClownMask : MonoBehaviour
         SoberStateIsolationBG.SetActive(!isManic);
         ManicStateIsolationBG.SetActive(isManic);
     }
+
 
 }

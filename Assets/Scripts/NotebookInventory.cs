@@ -66,4 +66,17 @@ public class NotebookInventory : MonoBehaviour
 
         return lastSlot; // Return the most recently created inventory slot
     }
+
+    public int CountItems(string itemTag)
+    {
+        int count = 0;
+        foreach (string item in inventory)
+        {
+            if (item == itemTag)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
