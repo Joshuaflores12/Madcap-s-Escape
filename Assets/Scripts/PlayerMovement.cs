@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     private bool isTyping = false;
     private bool isDialogueActive = false;
+    private bool isFrozen = false;
 
     void Update()
     {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         isDialogueActive = SayDialog.ActiveSayDialog != null && SayDialog.ActiveSayDialog.gameObject.activeInHierarchy;
 
 
-        if (!isTyping && !isDialogueActive)
+        if (!isTyping && !isDialogueActive && !isFrozen)
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -28,5 +29,15 @@ public class PlayerMovement : MonoBehaviour
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
             }
         }
+    }
+
+    public void FreezePlayer()
+    {
+        isFrozen = true;
+    }
+
+    public void UnfreezePlayer()
+    {
+        isFrozen = false;
     }
 }

@@ -12,10 +12,16 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private GameObject openedletterScreen;
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject nurse;
+    [SerializeField] private GameObject guard;
+    [SerializeField] private GameObject mc;
     [SerializeField] private GameObject checkpointContinueDialogue;
     [SerializeField] private Vector3 nurseStartPosition;
     [SerializeField] private Vector3 nurseTargetPosition;
+    [SerializeField] private Vector3 guardStartPosition;
+    [SerializeField] private Vector3 guardTargetPosition;
+    [SerializeField] private Vector3 mcTargetPosition;
     [SerializeField] private float nurseLerpSpeed = 0.09f;
+    [SerializeField] private float guardLerpSpeed = 0.09f;
 
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private Flowchart flowchart;
@@ -80,7 +86,7 @@ public class FungusManager : MonoBehaviour
         Vector3 startPos = nurse.transform.position;
         while (timeElapsed < 8f)
         {
-            nurse.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed * nurseLerpSpeed);
+            nurse.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / nurseLerpSpeed);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
@@ -89,6 +95,50 @@ public class FungusManager : MonoBehaviour
         {
             nurse.SetActive(false);
         }
+    }
+
+    public void GuardDraggingMC()
+    {
+        Debug.Log("guard dragging mc");
+        StartCoroutine(MoveGuard(guardTargetPosition));
+        StartCoroutine(DelayMCFollow(1f));
+    }
+
+    public void GuardReturnToOGPos()
+    {
+        StartCoroutine(MoveGuard(guardStartPosition));
+    }
+
+    private IEnumerator MoveGuard(Vector3 targetPosition)
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = guard.transform.position;
+        while (timeElapsed < 8f)
+        {
+            guard.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / guardLerpSpeed);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        guard.transform.position = targetPosition;
+    }
+
+    private IEnumerator DelayMCFollow(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(MoveMC(mcTargetPosition));
+    }
+
+    private IEnumerator MoveMC(Vector3 targetPosition)
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = mc.transform.position;
+        while (timeElapsed < 8f)
+        {
+            mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / guardLerpSpeed);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        mc.transform.position = targetPosition;
     }
 
     public void ExecuteFungusBlock(string blockName)
