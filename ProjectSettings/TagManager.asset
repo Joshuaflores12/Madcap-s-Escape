@@ -16,6 +16,10 @@ TagManager:
   - ClownMask
   - Key
   - door
+  - Food
+  - OddColoredJuice
+  - Food2
+  - Water
   layers:
   - Default
   - TransparentFX

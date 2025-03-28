@@ -7,6 +7,8 @@ public class Curtains : MonoBehaviour
 {
     [SerializeField] private GameObject curtainLeft;
     [SerializeField] private GameObject curtainRight;
+    [SerializeField] private GameObject Collectables;
+    [SerializeField] private GameObject Dialogue;
     [SerializeField] private Transform endCurtainLeft;
     [SerializeField] private Transform endCurtainRight;
     [SerializeField] private Transform startCurtainLeft;
@@ -16,6 +18,7 @@ public class Curtains : MonoBehaviour
     [SerializeField] private bool isClosing = false;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private string blockToExecute;
+    [SerializeField]  private bool hasOpened = false;
 
     private bool hasExecutedBlock = false;
 
@@ -44,6 +47,13 @@ public class Curtains : MonoBehaviour
             state = false;
             left.transform.position = leftTarget.position;  // Ensure exact positioning
             right.transform.position = rightTarget.position;
+        }
+        if (!hasOpened && !isClosing) // Ensures activation only happens when opening
+        {
+            Collectables.SetActive(true);
+            Dialogue.SetActive(true);
+            hasOpened = true;
+            Debug.Log("Curtains opened, Collectables and Dialogue activated.");
         }
     }
 
@@ -74,3 +84,4 @@ public class Curtains : MonoBehaviour
         }
     }
 }
+
