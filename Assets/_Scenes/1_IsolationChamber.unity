@@ -10463,7 +10463,7 @@ MonoBehaviour:
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 1399133818}
-  blockToExecute: Narration 9
+  blockToExecute: FirstBlock
 --- !u!114 &1486352528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10968,7 +10968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1655425821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11556,7 +11556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1796522583
 RectTransform:
   m_ObjectHideFlags: 0

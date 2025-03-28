@@ -1,37 +1,19 @@
 fileFormatVersion: 2
-guid: 16cbcba46ba22414da3eb6cbd7091943
+guid: 180079b224f3c1d4bb982a63f4de6e2d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7575608618946539231
-    second: SPR_Nurse_0
+      213: 6260729419771877298
+    second: NPC_Character_Design_-_NURSE_0
   - first:
-      213: -1998890088733664843
-    second: SPR_Nurse_1
+      213: 1746117119346733345
+    second: NPC_Character_Design_-_NURSE_1
   - first:
-      213: 935721650866108439
-    second: SPR_Nurse_2
+      213: 6586358538396290574
+    second: NPC_Character_Design_-_NURSE_2
   - first:
-      213: 1130092509564898493
-    second: SPR_Nurse_3
-  - first:
-      213: -6387713031380591951
-    second: SPR_Nurse_4
-  - first:
-      213: 8920195408254503997
-    second: SPR_Nurse_5
-  - first:
-      213: 618925872135669591
-    second: SPR_Nurse_6
-  - first:
-      213: 5899021637195501220
-    second: SPR_Nurse_7
-  - first:
-      213: 8269910563084973461
-    second: SPR_Nurse_8
-  - first:
-      213: 1965316177370795959
-    second: SPR_Nurse_9
+      213: 2728447211972055469
+    second: NPC_Character_Design_-_NURSE_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -123,106 +105,93 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_Nurse_0
+      name: NPC_Character_Design_-_NURSE_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 94
-        width: 246
-        height: 845
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63458e00572ab2a4e8452792a0baf243
-      internalID: -1924940601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_Nurse_1
-      rect:
-        serializedVersion: 2
-        x: 537
-        y: 94
-        width: 246
-        height: 845
+        x: 214
+        y: 93
+        width: 249
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8ea9d0b3f18a3464b92ea9dc0b14d916
-      internalID: -791618176
+      spriteID: 2b7175c8c3492e650800000000000000
+      internalID: 6260729419771877298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_Nurse_2
+      name: NPC_Character_Design_-_NURSE_1
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 94
+        width: 276
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121f3eac4447b3810800000000000000
+      internalID: 1746117119346733345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NPC_Character_Design_-_NURSE_2
       rect:
         serializedVersion: 2
         x: 855
-        y: 89
-        width: 295
-        height: 850
+        y: 88
+        width: 296
+        height: 851
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 75e1c541badc0f0498107f6328c90b94
-      internalID: -1402197961
+      spriteID: e0ec874d132776b50800000000000000
+      internalID: 6586358538396290574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPR_Nurse_3
+      name: NPC_Character_Design_-_NURSE_3
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 101
-        width: 308
-        height: 834
+        x: 1197
+        y: 100
+        width: 310
+        height: 836
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 515904645a0d17043b06e55fd003e786
-      internalID: 1825533094
+      spriteID: da1dff988446dd520800000000000000
+      internalID: 2728447211972055469
       vertices: []
       indices: 
       edges: []
@@ -231,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 25dee720acafc524f86a058a99388b3c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -240,18 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SPR_Nurse_0: -1924940601
-      SPR_Nurse_1: -791618176
-      SPR_Nurse_10: 907973177
-      SPR_Nurse_2: -1402197961
-      SPR_Nurse_3: 1825533094
-      SPR_Nurse_4: 1457537663
-      SPR_Nurse_5: 1804409725
-      SPR_Nurse_6: -746706550
-      SPR_Nurse_7: -566479159
-      SPR_Nurse_8: -325133245
-      SPR_Nurse_9: 315845225
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

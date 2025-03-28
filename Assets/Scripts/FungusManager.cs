@@ -84,18 +84,45 @@ public class FungusManager : MonoBehaviour
     {
         float timeElapsed = 0f;
         Vector3 startPos = nurse.transform.position;
+        float baseSwayFrequency = 4f;
+        float baseSwayAmplitude = 0.1f;
+        float baseTiltAngle = 2f;
+        bool isMovingRight = targetPosition.x > startPos.x;
+        float targetYRotation = isMovingRight ? 180f : 0f;
+        Quaternion startRotation = nurse.transform.rotation;
+        Quaternion endRotation = Quaternion.Euler(0, targetYRotation, 0);
+        float rotationSpeed = 3f;
+        float rotationTimeElapsed = 0f;
+
         while (timeElapsed < 8f)
         {
-            nurse.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / nurseLerpSpeed);
+            float moveT = timeElapsed / nurseLerpSpeed;
+            nurse.transform.position = Vector3.Lerp(startPos, targetPosition, moveT);
+            rotationTimeElapsed += Time.deltaTime * rotationSpeed;
+            nurse.transform.rotation = Quaternion.Slerp(startRotation, endRotation, Mathf.Clamp01(rotationTimeElapsed));
+            float slowdownFactor = Mathf.SmoothStep(1, 0, moveT);
+            float swayFrequency = baseSwayFrequency * slowdownFactor;
+            float swayAmplitude = baseSwayAmplitude * slowdownFactor;
+            float tiltAngle = baseTiltAngle * slowdownFactor;
+            float swayOffset = Mathf.Sin(timeElapsed * swayFrequency) * swayAmplitude;
+            nurse.transform.position += new Vector3(0, swayOffset, 0);
+            float tilt = Mathf.Sin(timeElapsed * swayFrequency) * tiltAngle;
+            nurse.transform.rotation *= Quaternion.Euler(0, 0, tilt);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
         nurse.transform.position = targetPosition;
+        nurse.transform.rotation = endRotation;
+
         if (targetPosition == nurseTargetPosition)
         {
             nurse.SetActive(false);
         }
     }
+
+
+
 
     public void GuardDraggingMC()
     {
