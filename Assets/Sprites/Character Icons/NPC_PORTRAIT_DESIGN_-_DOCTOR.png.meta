@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NPC_PORTRAIT_DESIGN_-_DOCTOR_0: -3826262291417512214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

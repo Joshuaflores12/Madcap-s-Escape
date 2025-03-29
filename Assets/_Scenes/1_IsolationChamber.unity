@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 113529874}
   flowchart: {fileID: 1399133818}
-  character: {fileID: 0}
+  character: {fileID: 1657468476}
 --- !u!1 &114698484
 GameObject:
   m_ObjectHideFlags: 0
