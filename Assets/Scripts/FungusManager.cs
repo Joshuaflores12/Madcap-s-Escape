@@ -16,16 +16,32 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private GameObject mc;
     [SerializeField] private GameObject journalClownMask;
     [SerializeField] private GameObject checkpointContinueDialogue;
-    [SerializeField] private Vector3 nurseStartPosition;
-    [SerializeField] private Vector3 nurseTargetPosition;
-    [SerializeField] private Vector3 guardStartPosition;
-    [SerializeField] private Vector3 guardTargetPosition;
-    [SerializeField] private Vector3 mcTargetPosition;
+    [SerializeField] private Transform nurseStartTransform;
+    [SerializeField] private Transform nurseTargetTransform;
+    [SerializeField] private Transform guardStartTransform;
+    [SerializeField] private Transform guardTargetTransform;
+    [SerializeField] private Transform mcTargetTransform;
+    [SerializeField] private Transform mcDoorwayTransform;
+    [SerializeField] private Transform mcHallwayTransform;
+    [SerializeField] private Transform mcIsolationTransform;
     [SerializeField] private float nurseLerpSpeed = 0.09f;
     [SerializeField] private float guardLerpSpeed = 0.09f;
+    [SerializeField] private Animator animFadeout;
+    [SerializeField] private GameObject fadeoutObject;
 
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private Flowchart flowchart;
+
+    public void TriggerFadeoutAnimation()
+    {
+        fadeoutObject.SetActive(true);
+        animFadeout.SetBool("FadeOut", true);
+    }
+
+    public void FadeoutFalse()
+    {
+        animFadeout.SetBool("FadeOut", false);
+    }
 
     public void UnhideJournalClownMask()
     {
@@ -76,100 +92,143 @@ public class FungusManager : MonoBehaviour
     public void NurseIsEntering()
     {
         Debug.Log("Nurse entering");
-        StartCoroutine(MoveNurse(nurseStartPosition)); 
+        StartCoroutine(MoveNurse(nurseStartTransform.position));
     }
 
     public void NurseIsLeaving()
     {
         Debug.Log("Nurse leaving");
-        StartCoroutine(MoveNurse(nurseTargetPosition)); 
+        StartCoroutine(MoveNurse(nurseTargetTransform.position));
     }
 
     private IEnumerator MoveNurse(Vector3 targetPosition)
     {
         float timeElapsed = 0f;
         Vector3 startPos = nurse.transform.position;
-        float baseSwayFrequency = 4f;
-        float baseSwayAmplitude = 0.1f;
-        float baseTiltAngle = 2f;
-        bool isMovingRight = targetPosition.x > startPos.x;
-        float targetYRotation = isMovingRight ? 180f : 0f;
-        Quaternion startRotation = nurse.transform.rotation;
-        Quaternion endRotation = Quaternion.Euler(0, targetYRotation, 0);
-        float rotationSpeed = 3f;
-        float rotationTimeElapsed = 0f;
 
         while (timeElapsed < 8f)
         {
             float moveT = timeElapsed / nurseLerpSpeed;
             nurse.transform.position = Vector3.Lerp(startPos, targetPosition, moveT);
-            rotationTimeElapsed += Time.deltaTime * rotationSpeed;
-            nurse.transform.rotation = Quaternion.Slerp(startRotation, endRotation, Mathf.Clamp01(rotationTimeElapsed));
-            float slowdownFactor = Mathf.SmoothStep(1, 0, moveT);
-            float swayFrequency = baseSwayFrequency * slowdownFactor;
-            float swayAmplitude = baseSwayAmplitude * slowdownFactor;
-            float tiltAngle = baseTiltAngle * slowdownFactor;
-            float swayOffset = Mathf.Sin(timeElapsed * swayFrequency) * swayAmplitude;
-            nurse.transform.position += new Vector3(0, swayOffset, 0);
-            float tilt = Mathf.Sin(timeElapsed * swayFrequency) * tiltAngle;
-            nurse.transform.rotation *= Quaternion.Euler(0, 0, tilt);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
 
         nurse.transform.position = targetPosition;
-        nurse.transform.rotation = endRotation;
-
-        if (targetPosition == nurseTargetPosition)
-        {
-            nurse.SetActive(false);
-        }
     }
-
-
-
 
     public void GuardDraggingMC()
     {
         Debug.Log("guard dragging mc");
-        StartCoroutine(MoveGuard(guardTargetPosition));
+        StartCoroutine(MoveGuard(guardTargetTransform.position));
         StartCoroutine(DelayMCFollow(1f));
     }
 
     public void GuardReturnToOGPos()
     {
-        StartCoroutine(MoveGuard(guardStartPosition));
+        StartCoroutine(MoveGuard(guardStartTransform.position));
     }
 
     private IEnumerator MoveGuard(Vector3 targetPosition)
     {
         float timeElapsed = 0f;
         Vector3 startPos = guard.transform.position;
+
         while (timeElapsed < 8f)
         {
             guard.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / guardLerpSpeed);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
         guard.transform.position = targetPosition;
     }
 
     private IEnumerator DelayMCFollow(float delay)
     {
         yield return new WaitForSeconds(delay);
-        StartCoroutine(MoveMC(mcTargetPosition));
+        StartCoroutine(MoveMC(mcTargetTransform.position));
     }
 
     private IEnumerator MoveMC(Vector3 targetPosition)
     {
         float timeElapsed = 0f;
+        float duration = 5f; 
         Vector3 startPos = mc.transform.position;
-        while (timeElapsed < 8f)
+
+        while (timeElapsed < duration)
         {
-            mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / guardLerpSpeed);
+            float t = timeElapsed / duration;
+            mc.transform.position = Vector3.Lerp(startPos, targetPosition, t);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
+        mc.transform.position = targetPosition;
+    }
+
+
+
+    public void MCToDoorway()
+    {
+        Debug.Log("moving mc to door");
+        StartCoroutine(MoveMCDoorway(mcDoorwayTransform.position));
+    }
+
+    private IEnumerator MoveMCDoorway(Vector3 targetPosition)
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = mc.transform.position;
+
+        while (timeElapsed < 8f)
+        {
+            mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / 1f);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        mc.transform.position = targetPosition;
+    }
+
+    public void MCToHallway()
+    {
+        Debug.Log("moving mc to hallway");
+        StartCoroutine(MoveMCHallway(mcHallwayTransform.position));
+    }
+
+    private IEnumerator MoveMCHallway(Vector3 targetPosition)
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = mc.transform.position;
+
+        while (timeElapsed < 8f)
+        {
+            mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / 1f);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        mc.transform.position = targetPosition;
+    }
+
+    public void MCBackToIsolation()
+    {
+        Debug.Log("back to isolation");
+        StartCoroutine(MoveMCBackIsolation(mcIsolationTransform.position));
+    }
+
+    private IEnumerator MoveMCBackIsolation(Vector3 targetPosition)
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = mc.transform.position;
+
+        while (timeElapsed < 8f)
+        {
+            mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / 1f);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
         mc.transform.position = targetPosition;
     }
 

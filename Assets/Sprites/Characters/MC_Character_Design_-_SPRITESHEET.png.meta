@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: -316483736930331671
     second: MC_Character_Design_-_SPRITESHEET_3
+  - first:
+      213: 8440256874024955332
+    second: MC_Character_Design_-_SPRITESHEET_4
+  - first:
+      213: -5094271920222963047
+    second: MC_Character_Design_-_SPRITESHEET_5
+  - first:
+      213: 375911818265689884
+    second: MC_Character_Design_-_SPRITESHEET_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,12 +134,12 @@ TextureImporter:
       name: MC_Character_Design_-_SPRITESHEET_0
       rect:
         serializedVersion: 2
-        x: 130
+        x: 40
         y: 0
-        width: 434
-        height: 899
+        width: 435
+        height: 901
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +156,12 @@ TextureImporter:
       name: MC_Character_Design_-_SPRITESHEET_1
       rect:
         serializedVersion: 2
-        x: 544
+        x: 482
         y: 0
-        width: 287
-        height: 891
+        width: 281
+        height: 894
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +178,12 @@ TextureImporter:
       name: MC_Character_Design_-_SPRITESHEET_2
       rect:
         serializedVersion: 2
-        x: 884
+        x: 814
         y: 0
-        width: 288
-        height: 889
+        width: 281
+        height: 891
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,20 +200,20 @@ TextureImporter:
       name: MC_Character_Design_-_SPRITESHEET_3
       rect:
         serializedVersion: 2
-        x: 1181
+        x: 1137
         y: 0
-        width: 298
-        height: 891
+        width: 258
+        height: 895
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4afe246b8eccf934392f1a39e008b4ee
-      internalID: -1300040163
+      spriteID: 9e35413d7bf9b9bf0800000000000000
+      internalID: -316483736930331671
       vertices: []
       indices: 
       edges: []
@@ -213,20 +222,64 @@ TextureImporter:
       name: MC_Character_Design_-_SPRITESHEET_4
       rect:
         serializedVersion: 2
-        x: 1456
+        x: 1443
         y: 0
-        width: 433
-        height: 891
+        width: 425
+        height: 885
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d2698cec75ace824187041737d2c19e5
-      internalID: -1114326900
+      spriteID: 4cd6e4598e0d12570800000000000000
+      internalID: 8440256874024955332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Character_Design_-_SPRITESHEET_5
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 0
+        width: 503
+        height: 878
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99afcdddda28d49b0800000000000000
+      internalID: -5094271920222963047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Character_Design_-_SPRITESHEET_6
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 0
+        width: 485
+        height: 890
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ff89a9ec1873500800000000000000
+      internalID: 375911818265689884
       vertices: []
       indices: 
       edges: []
@@ -235,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bdd000fb3a64e0347b551af96fcd1298
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -244,9 +297,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MC_Character_Design_-_SPRITESHEET_3: -1300040163
-      MC_Character_Design_-_SPRITESHEET_4: -1114326900
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
