@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
+using Unity.VisualScripting;
 
 public class Curtains : MonoBehaviour
 {
     [SerializeField] private GameObject curtainLeft;
     [SerializeField] private GameObject curtainRight;
+    [SerializeField] private GameObject CollectablesUI;
     [SerializeField] private Transform endCurtainLeft;
     [SerializeField] private Transform endCurtainRight;
     [SerializeField] private Transform startCurtainLeft;
@@ -53,6 +55,7 @@ public class Curtains : MonoBehaviour
         isClosing = false;  // Ensure it doesn’t conflict with closing
         hasExecutedBlock = false;
         StartCoroutine(ExecuteFungusBlockAfterDelay(4f));
+        
     }
 
     public void CloseCurtains()
@@ -71,6 +74,9 @@ public class Curtains : MonoBehaviour
             flowchart.ExecuteBlock(blockToExecute);
             hasExecutedBlock = true;
             Debug.Log("Fungus block executed: " + blockToExecute);
+            CollectablesUI.SetActive(true);
         }
+
     }
+    
 }
