@@ -43,36 +43,24 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 movement += Vector3.left * speed * Time.deltaTime;
-                targetRotation = Quaternion.Euler(0, 180, 0);
                 isMoving = true;
+                animMC.Play("MC_LeftWalkSide");  // Play left walk animation
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 movement += Vector3.right * speed * Time.deltaTime;
-                targetRotation = Quaternion.Euler(0, 0, 0);
                 isMoving = true;
+                animMC.Play("MC_RightWalkSide"); // Play right walk animation
             }
 
             transform.position = new Vector3(movement.x, transform.position.y, transform.position.z);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
 
             if (isMoving)
             {
                 float swayOffset = Mathf.Sin(Time.time * swayFrequency) * swayAmplitude;
                 transform.position = new Vector3(transform.position.x, basePosition.y + swayOffset, transform.position.z);
-
-                float tilt = Mathf.Sin(Time.time * swayFrequency) * tiltAngle;
-                transform.rotation *= Quaternion.Euler(0, 0, tilt);
             }
 
-            if (animMC != null)
-            {
-                if (isMoving)
-                {
-                    animMC.Play("MC_WalkSide"); 
-                }
-
-            }
         }
     }
     private void ResetRotation()
