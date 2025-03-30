@@ -18,6 +18,7 @@ public class FirstChallenge : MonoBehaviour
     [SerializeField] private GameObject weakpointsButtonG;
     [SerializeField] private GameObject secondSlider;
     [SerializeField] private GameObject firstSlider;
+    [SerializeField] private Animator animEscaping;
 
     public bool isFirstChallengeCompleted = false;
     public bool disableMovement;
@@ -100,6 +101,7 @@ public class FirstChallenge : MonoBehaviour
 
     public void ClickablePoints()
     {
+        animEscaping.SetTrigger("isSpammed");
         isSpamming = true;
         lastSpamTime = Time.time;
         spamMeterSlider.value += spamIncreaseRate;

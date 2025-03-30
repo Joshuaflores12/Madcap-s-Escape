@@ -5,13 +5,15 @@ using Fungus;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    [SerializeField] Animator animMC;
+    [SerializeField] public float speed = 5f;
     private bool isTyping = false;
     private bool isDialogueActive = false;
     private bool isFrozen = false;
 
     private float rotationSpeed = 8f;
     private Quaternion targetRotation;
+    private Quaternion defaultRotation;
 
     private float swayFrequency = 4f;
     private float swayAmplitude = 0.105f;
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         basePosition = transform.position;
         targetRotation = transform.rotation;
+        defaultRotation = transform.rotation;
     }
 
     void Update()
@@ -61,8 +64,51 @@ public class PlayerMovement : MonoBehaviour
                 float tilt = Mathf.Sin(Time.time * swayFrequency) * tiltAngle;
                 transform.rotation *= Quaternion.Euler(0, 0, tilt);
             }
+
+            if (animMC != null)
+            {
+                if (isMoving)
+                {
+                    animMC.Play("MC_WalkSide"); 
+                }
+
+            }
         }
     }
+    private void ResetRotation()
+    {
+        transform.rotation = defaultRotation;
+    }
+    public void MCBackFacing()
+    {
+        ResetRotation();
+        animMC.Play("MC_Back");
+    }
+
+    public void MC3_4BFacing()
+    {
+        ResetRotation();
+        animMC.Play("MC_3_4B");
+    }
+
+    public void MCSideFacing()
+    {
+        ResetRotation();
+        animMC.Play("MC_Side");
+    }
+
+    public void MC3_4FFacing()
+    {
+        ResetRotation();
+        animMC.Play("MC_3_4F");
+    }
+
+    public void MCFrontFacing()
+    {
+        ResetRotation();
+        animMC.Play("MC_Idle");
+    }
+
 
     public void FreezePlayer()
     {

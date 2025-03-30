@@ -10,6 +10,7 @@ public class ContinueDialogue : MonoBehaviour
     [SerializeField] private Transform checkpoint2;
     [SerializeField] private string requiredTag = "door";
 
+    [SerializeField] private ClownMask clownMask;
     private Transform player;
     private bool hasTriggeredFirstCheckpoint = false;
     private bool hasTriggeredSecondCheckpoint = false;
@@ -21,7 +22,7 @@ public class ContinueDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint))
+        if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint) && clownMask.ManicStateIsolationBG.activeSelf)
         {
             hasTriggeredFirstCheckpoint = true;
             ExecuteFungusBlock(blockName);

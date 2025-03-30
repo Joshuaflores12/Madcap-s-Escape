@@ -19,6 +19,7 @@ public class SecondChallenge : MonoBehaviour
     [SerializeField] FirstChallenge firstChallenge;
     [SerializeField] Animator animD;
     [SerializeField] Animator animA;
+    [SerializeField] PlayerMovement playerMovement;
 
     public bool isSecondChallengeCompleted = false;
 
@@ -150,6 +151,7 @@ public class SecondChallenge : MonoBehaviour
 
     void CompleteChallenge()
     {
+        playerMovement.UnfreezePlayer();
         isSecondChallengeCompleted = true;
         Debug.Log("Challenge Completed!");
         StartCoroutine(HideMiniGameScreen());

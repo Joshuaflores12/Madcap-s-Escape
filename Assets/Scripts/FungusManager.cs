@@ -14,6 +14,7 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private GameObject nurse;
     [SerializeField] private GameObject guard;
     [SerializeField] private GameObject mc;
+    [SerializeField] private GameObject journalClownMask;
     [SerializeField] private GameObject checkpointContinueDialogue;
     [SerializeField] private Vector3 nurseStartPosition;
     [SerializeField] private Vector3 nurseTargetPosition;
@@ -26,6 +27,10 @@ public class FungusManager : MonoBehaviour
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private Flowchart flowchart;
 
+    public void UnhideJournalClownMask()
+    {
+        journalClownMask.SetActive(true);
+    }
     public void UnhideChallengeObjects()
     {
         slider.SetActive(true);

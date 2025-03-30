@@ -9,6 +9,7 @@ public class SwitchScene : MonoBehaviour
     [SerializeField] string scene;
     [SerializeField] string scene2;
     [SerializeField] TextMeshProUGUI chapterTitleText;
+    [SerializeField] GameObject titleText;
     [SerializeField] float fadeDuration = 2f;
     [SerializeField] float delayBeforeFadeOut = 2f;
     [SerializeField] private Curtains curtains;
@@ -16,9 +17,15 @@ public class SwitchScene : MonoBehaviour
 
     void Start()
     {
-        chapterTitleText.alpha = 0f;
-        StartCoroutine(FadeInAndOutChapterTitle());
-        fadeOutObject.SetActive(false);
+        titleText.SetActive(false);
+        if (titleText.activeSelf == false)
+        {
+            titleText.SetActive(true);
+            chapterTitleText.alpha = 0f;
+            StartCoroutine(FadeInAndOutChapterTitle());
+            fadeOutObject.SetActive(false);
+        }
+        
     }
 
     public void OnPlayButtonClicked()
