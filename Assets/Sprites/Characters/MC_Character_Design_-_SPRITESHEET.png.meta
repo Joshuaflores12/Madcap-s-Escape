@@ -297,7 +297,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MC_Character_Design_-_SPRITESHEET_0: -5412803622727239189
+      MC_Character_Design_-_SPRITESHEET_1: 1952963042846855061
+      MC_Character_Design_-_SPRITESHEET_2: 3677676332059792441
+      MC_Character_Design_-_SPRITESHEET_3: -316483736930331671
+      MC_Character_Design_-_SPRITESHEET_4: 8440256874024955332
+      MC_Character_Design_-_SPRITESHEET_5: -5094271920222963047
+      MC_Character_Design_-_SPRITESHEET_6: 375911818265689884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
