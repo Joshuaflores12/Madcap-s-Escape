@@ -9,6 +9,7 @@ public class ClownMask : MonoBehaviour
 
     [SerializeField] private Transform mc; 
     [SerializeField] private Transform hallwayCheckpoint; 
+    [SerializeField] private SecondChallenge secondChallenge; 
 
     private bool isManic = false;
     private bool isInHallway = false;
@@ -25,12 +26,15 @@ public class ClownMask : MonoBehaviour
         {
             isInHallway = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
+        if (secondChallenge.isSecondChallengeCompleted == true)
         {
-            isManic = !isManic;
-            SwitchStateBG();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                isManic = !isManic;
+                SwitchStateBG();
+            }
         }
+        
     }
     public void SwitchStateIsolationBG()
     {

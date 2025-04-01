@@ -4,9 +4,9 @@ using Fungus;
 public class ContinueDialogue : MonoBehaviour
 {
     [SerializeField] private Flowchart flowchart;
-    [SerializeField] private string blockName;  
+    [SerializeField] private string blockName;
     [SerializeField] private Transform checkpoint;
-    [SerializeField] private string blockName2; 
+    [SerializeField] private string blockName2;
     [SerializeField] private Transform checkpoint2;
     [SerializeField] private string requiredTag = "door";
 
@@ -14,6 +14,7 @@ public class ContinueDialogue : MonoBehaviour
     private Transform player;
     private bool hasTriggeredFirstCheckpoint = false;
     private bool hasTriggeredSecondCheckpoint = false;
+    private bool isBackToIsolation = true;
 
     private void Start()
     {
@@ -28,10 +29,17 @@ public class ContinueDialogue : MonoBehaviour
             ExecuteFungusBlock(blockName);
         }
 
-        if (!hasTriggeredSecondCheckpoint && PlayerHasPassedCheckpoint(checkpoint2))
+        if (PlayerHasPassedCheckpoint(checkpoint2) && isBackToIsolation == true)
         {
-            hasTriggeredSecondCheckpoint = true;
-            ExecuteFungusBlock(blockName2);
+            if (!hasTriggeredSecondCheckpoint)
+            {
+                hasTriggeredSecondCheckpoint = true;
+                ExecuteFungusBlock(blockName2);
+            }
+        }
+        else
+        {
+            hasTriggeredSecondCheckpoint = false;
         }
 
         if (Input.GetMouseButtonDown(0) && PlayerHasThreeKeys())
@@ -68,5 +76,14 @@ public class ContinueDialogue : MonoBehaviour
             return keyCount >= 3;
         }
         return false;
+    }
+
+    public void setTriggerCheckpointBoolean()
+    {
+        isBackToIsolation = true;
+    }
+    public void setTriggerCheckpointBooleanFalse()
+    {
+        isBackToIsolation = false;
     }
 }

@@ -10,6 +10,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] private Transform inventoryUI;
     [SerializeField] private GameObject inventorySlotPrefab;
     [SerializeField] public GameObject notebook;
+    [SerializeField] public SecondChallenge secondChallenge;
 
 
     private void Awake()
@@ -18,6 +19,16 @@ public class NotebookInventory : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+    }
+    private void Update()
+    {
+        if (secondChallenge.isSecondChallengeCompleted == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                notebook.SetActive(!notebook.activeSelf);
+            }
+        }
     }
 
     public void OpenNotebook()
@@ -28,7 +39,9 @@ public class NotebookInventory : MonoBehaviour
         foreach (Transform child in notebook.transform)
         {
             child.gameObject.SetActive(isActive);
-        }   
+        }
+
+
     }
 
     public GameObject AddToInventory(string itemTag)

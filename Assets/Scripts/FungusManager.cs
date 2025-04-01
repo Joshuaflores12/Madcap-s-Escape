@@ -95,10 +95,26 @@ public class FungusManager : MonoBehaviour
         StartCoroutine(MoveNurse(nurseStartTransform.position));
     }
 
+   
     public void NurseIsLeaving()
     {
-        Debug.Log("Nurse leaving");
-        StartCoroutine(MoveNurse(nurseTargetTransform.position));
+        Debug.Log("nurse leaving");
+        StartCoroutine(MoveAndHideNurse());
+    }
+
+    private IEnumerator MoveAndHideNurse()
+    {
+        float timeElapsed = 0f;
+        Vector3 startPos = nurse.transform.position;
+        while (timeElapsed < 8f)
+        {
+            float moveT = timeElapsed / nurseLerpSpeed;
+            nurse.transform.position = Vector3.Lerp(startPos, nurseTargetTransform.position, moveT);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        nurse.transform.position = nurseTargetTransform.position;
+        nurse.SetActive(false);
     }
 
     private IEnumerator MoveNurse(Vector3 targetPosition)
@@ -115,6 +131,7 @@ public class FungusManager : MonoBehaviour
         }
 
         nurse.transform.position = targetPosition;
+
     }
 
     public void GuardDraggingMC()

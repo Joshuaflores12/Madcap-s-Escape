@@ -19,6 +19,7 @@ public class SecondChallenge : MonoBehaviour
     [SerializeField] FirstChallenge firstChallenge;
     [SerializeField] Animator animD;
     [SerializeField] Animator animA;
+    [SerializeField] Animator challenge2Anim;
     [SerializeField] PlayerMovement playerMovement;
 
     public bool isSecondChallengeCompleted = false;
@@ -60,11 +61,13 @@ public class SecondChallenge : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
+                challenge2Anim.SetTrigger("isSpammed2");
                 animA.SetTrigger("AisPressed");
                 StartCoroutine(ResetTrigger());
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
+                challenge2Anim.SetTrigger("isSpammed2");
                 animD.SetTrigger("DisPressed");
                 StartCoroutine(ResetTrigger());
             }
@@ -120,6 +123,7 @@ public class SecondChallenge : MonoBehaviour
         yield return new WaitForSeconds(0.05f); 
         animA.ResetTrigger("AisPressed");
         animD.ResetTrigger("DisPressed");
+        challenge2Anim.ResetTrigger("isSpammed2");
     }
 
     private void IncreaseSpam()
