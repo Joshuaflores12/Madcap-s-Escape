@@ -7,12 +7,15 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour
 {
     [SerializeField] private GameObject letter;
+    [SerializeField] GameObject NpcHoverUI;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private string FoodBlock;
     [SerializeField] private string JuiceBlock;
     [SerializeField] private string Food2Block;
     [SerializeField] private string WaterBlock;
+    [SerializeField] private string Chapter2IntroBlock;
+    
 
     private NotebookInventory notebookInventory;
     private SecondChallenge secondChallenge;
@@ -77,6 +80,13 @@ public class ItemCollector : MonoBehaviour
                 {
                     flowchart.ExecuteBlock(WaterBlock);
                     isExecutingWaterBlock = true;
+                    Destroy(hit.collider.gameObject);
+                }
+
+                if (hit.collider.CompareTag("Patient1"))
+                {
+                    flowchart.ExecuteBlock(Chapter2IntroBlock);
+                    NpcHoverUI.SetActive(false);
                     Destroy(hit.collider.gameObject);
                 }
 

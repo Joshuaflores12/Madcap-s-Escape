@@ -20,6 +20,12 @@ TagManager:
   - OddColoredJuice
   - Food2
   - Water
+  - Patient1
+  - Patient2
+  - Patient3
+  - Patient4
+  - Patient5
+  - Patient6
   layers:
   - Default
   - TransparentFX

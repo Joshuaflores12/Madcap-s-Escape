@@ -7380,11 +7380,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1804.6018, y: -79.58029}
+  scrollPos: {x: -1175.5476, y: 648.47034}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.60999995
+  zoom: 0.37000003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7392,9 +7392,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134131}
+  - {fileID: 1399134064}
   selectedCommands:
-  - {fileID: 1399134465}
+  - {fileID: 1399134054}
   variables:
   - {fileID: 1399134396}
   description: 
@@ -8803,7 +8803,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 939.8915
-    y: -146.28474
+    y: -148.98744
     width: 206.82
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -11822,6 +11822,7 @@ MonoBehaviour:
   curtainLeft: {fileID: 1655425820}
   curtainRight: {fileID: 1796522582}
   CollectablesUI: {fileID: 1926650461}
+  Npc: {fileID: 0}
   endCurtainLeft: {fileID: 501471222}
   endCurtainRight: {fileID: 2119134297}
   startCurtainLeft: {fileID: 1249919572}

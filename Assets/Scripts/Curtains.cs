@@ -9,6 +9,7 @@ public class Curtains : MonoBehaviour
     [SerializeField] private GameObject curtainLeft;
     [SerializeField] private GameObject curtainRight;
     [SerializeField] private GameObject CollectablesUI;
+    [SerializeField] private GameObject Npc;
     [SerializeField] private Transform endCurtainLeft;
     [SerializeField] private Transform endCurtainRight;
     [SerializeField] private Transform startCurtainLeft;
@@ -68,15 +69,16 @@ public class Curtains : MonoBehaviour
     private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        CollectablesUI.SetActive(true);
+        Npc.SetActive(true);
 
-        if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
-        {
-            flowchart.ExecuteBlock(blockToExecute);
-            hasExecutedBlock = true;
-            Debug.Log("Fungus block executed: " + blockToExecute);
-            CollectablesUI.SetActive(true);
-        }
-
+        //if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
+        //{
+        //    flowchart.ExecuteBlock(blockToExecute);
+        //    hasExecutedBlock = true;
+        //    Debug.Log("Fungus block executed: " + blockToExecute);
+            
+        //}
     }
     
 }
