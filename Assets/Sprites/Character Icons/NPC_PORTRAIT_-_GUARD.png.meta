@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NPC_PORTRAIT_-_GUARD_0: 5417424893544543205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
