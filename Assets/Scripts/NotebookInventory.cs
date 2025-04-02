@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NotebookInventory : MonoBehaviour
@@ -12,6 +13,8 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] public GameObject notebook;
     [SerializeField] public SecondChallenge secondChallenge;
 
+    [SerializeField] private string allowedSceneName = "2_CanteenDorm";
+
 
     private void Awake()
     {
@@ -22,7 +25,7 @@ public class NotebookInventory : MonoBehaviour
     }
     private void Update()
     {
-        if (secondChallenge.isSecondChallengeCompleted == true)
+        if (secondChallenge.isSecondChallengeCompleted == true || SceneManager.GetActiveScene().name == allowedSceneName)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

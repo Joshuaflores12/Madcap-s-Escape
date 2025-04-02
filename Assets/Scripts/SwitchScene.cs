@@ -8,6 +8,8 @@ public class SwitchScene : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] string scene;
     [SerializeField] string scene2;
+    [SerializeField] string scene3;
+    [SerializeField] string scene4;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField] GameObject titleText;
     [SerializeField] float fadeDuration = 2f;
@@ -33,11 +35,24 @@ public class SwitchScene : MonoBehaviour
         StartCoroutine(LoadSceneAfterTextFade());
     }
 
-    public void SwitchSceneFromFungus()
+    public void SwitchSceneToChapter2()
     {
 
         StartCoroutine(LoadSceneAfterTextFade());
         Debug.Log("Switching scene to: " + scene2);
+    }
+
+    public void SwitchSceneToChapter3()
+    {
+
+        StartCoroutine(LoadSceneAfterTextFade());
+        Debug.Log("Switching scene to: " + scene3);
+    }
+    public void SwitchSceneToChapter4()
+    {
+
+        StartCoroutine(LoadSceneAfterTextFade());
+        Debug.Log("Switching scene to: " + scene4);
     }
 
     private IEnumerator FadeInAndOutChapterTitle()

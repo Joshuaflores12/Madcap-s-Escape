@@ -72,13 +72,13 @@ public class Curtains : MonoBehaviour
         CollectablesUI.SetActive(true);
         Npc.SetActive(true);
 
-        //if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
-        //{
-        //    flowchart.ExecuteBlock(blockToExecute);
-        //    hasExecutedBlock = true;
-        //    Debug.Log("Fungus block executed: " + blockToExecute);
+        if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
+        {
+            flowchart.ExecuteBlock(blockToExecute);
+            hasExecutedBlock = true;
+            Debug.Log("Fungus block executed: " + blockToExecute);
             
-        //}
+        }
     }
     
 }
