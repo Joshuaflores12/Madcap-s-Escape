@@ -11,6 +11,7 @@ public class ContinueDialogue : MonoBehaviour
     [SerializeField] private string requiredTag = "door";
 
     [SerializeField] private Transform toCanteen;
+    [SerializeField] private Transform toHallway;
 
     [SerializeField] private ClownMask clownMask;
     private Transform player;
@@ -18,6 +19,7 @@ public class ContinueDialogue : MonoBehaviour
     private bool hasTriggeredSecondCheckpoint = false;
     private bool isBackToIsolation = true;
     [SerializeField] bool hasTriggeredCanteenTransition = false;
+    [SerializeField] bool hasTriggeredHallwayTransition = false;
 
     private void Start()
     {
@@ -55,13 +57,18 @@ public class ContinueDialogue : MonoBehaviour
                 Debug.Log("Door clicked with 3 keys. Executing dialogue block.");
                 ExecuteFungusBlock("DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)");
             }
-
         }
 
         if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
         {
             hasTriggeredCanteenTransition = true;
             TriggerCanteenTransition();
+        }
+        
+        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallway))
+        {
+            hasTriggeredHallwayTransition = true;
+            TriggerHallwayTransition();
         }
     }
 
@@ -97,13 +104,21 @@ public class ContinueDialogue : MonoBehaviour
         isBackToIsolation = false;
     }
 
-
     private void TriggerCanteenTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
             switchScene.SwitchSceneToChapter2();
+        }
+    }
+    
+    private void TriggerHallwayTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToHallway();
         }
     }
 }

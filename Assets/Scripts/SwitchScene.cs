@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string scene;
+    [SerializeField] string hallway;
     [SerializeField] string scene2;
     [SerializeField] string scene3;
     [SerializeField] string scene4;
@@ -34,7 +35,12 @@ public class SwitchScene : MonoBehaviour
     {
         StartCoroutine(LoadSceneAfterTextFade());
     }
+    public void SwitchSceneToHallway()
+    {
 
+        StartCoroutine(LoadSceneAfterTextFade());
+        Debug.Log("Switching scene to: hallway "  );
+    }
     public void SwitchSceneToChapter2()
     {
 
@@ -42,12 +48,7 @@ public class SwitchScene : MonoBehaviour
         Debug.Log("Switching scene to: " + scene2);
     }
 
-    public void SwitchSceneToChapter3()
-    {
 
-        StartCoroutine(LoadSceneAfterTextFade());
-        Debug.Log("Switching scene to: " + scene3);
-    }
     public void SwitchSceneToChapter4()
     {
 

@@ -27,6 +27,7 @@ TagManager:
   - Patient5
   - Patient6
   - toCanteen
+  - toHallway
   layers:
   - Default
   - TransparentFX
