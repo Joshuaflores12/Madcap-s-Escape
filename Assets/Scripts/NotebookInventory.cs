@@ -13,7 +13,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] public GameObject notebook;
     [SerializeField] public SecondChallenge secondChallenge;
 
-    [SerializeField] private string allowedSceneName = "2_CanteenDorm";
+    [SerializeField] private string[] allowedSceneNames = { "2_CanteenDorm", "3_Dorm" };
 
 
     private void Awake()
@@ -25,13 +25,26 @@ public class NotebookInventory : MonoBehaviour
     }
     private void Update()
     {
-        if (secondChallenge.isSecondChallengeCompleted == true || SceneManager.GetActiveScene().name == allowedSceneName)
+        if (secondChallenge.isSecondChallengeCompleted == true || IsSceneAllowed())
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 notebook.SetActive(!notebook.activeSelf);
             }
         }
+    }
+
+    private bool IsSceneAllowed()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        foreach (string scene in allowedSceneNames)
+        {
+            if (currentScene == scene)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void OpenNotebook()
