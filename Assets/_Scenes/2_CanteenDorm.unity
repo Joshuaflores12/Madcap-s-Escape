@@ -7634,11 +7634,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1489.8352, y: 475.0909}
+  scrollPos: {x: -1380.8706, y: 367.96066}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.66999984
+  zoom: 0.96999955
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -9836,7 +9836,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 7
+    floatVal: 14
   durationOLD: 0
 --- !u!114 &298812983
 MonoBehaviour:
@@ -11003,7 +11003,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

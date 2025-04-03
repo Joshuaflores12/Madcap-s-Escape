@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47421cc4a5a4306458cdbb3ff35d990f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
+  inputField: {fileID: 1059905817}
   flowchart: {fileID: 423972050}
   character: {fileID: 1702011263}
 --- !u!114 &423972048
