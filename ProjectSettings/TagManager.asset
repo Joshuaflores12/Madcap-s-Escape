@@ -28,6 +28,9 @@ TagManager:
   - Patient6
   - toCanteen
   - toHallway
+  - Patient1.1
+  - CanteenDoor
+  - KitchenLady
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour
 {
     [SerializeField] private GameObject letter;
-    [SerializeField] GameObject NpcHoverUI;
+    [SerializeField] private GameObject Patient1Prefab;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private string FoodBlock;
@@ -15,15 +15,19 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private string Food2Block;
     [SerializeField] private string WaterBlock;
     [SerializeField] private string Chapter2IntroBlock;
-    
+    [SerializeField] private string HallwayBlock;
+    [SerializeField] private string KitchenLadyBlock;
+    [SerializeField] private string Patient1_1Block;
+    [SerializeField] private string Patient2Block;
+    [SerializeField] private string Patient3Block;
+    [SerializeField] private string Patient4Block;
+    [SerializeField] private string Patient5Block;
+    [SerializeField] private string Patient6Block;
+
 
     private NotebookInventory notebookInventory;
     private SecondChallenge secondChallenge;
     private bool isExecutingBlock = false;
-    [SerializeField] bool isExecutingFoodBlock = false;
-    [SerializeField] bool isExecutingJuiceBlock = false;
-    [SerializeField] bool isExecutingFood2Block = false;
-    [SerializeField] bool isExecutingWaterBlock = false;
 
 
     void Awake()
@@ -54,41 +58,84 @@ public class ItemCollector : MonoBehaviour
                     NotebookInventory.Instance.AddToInventory(itemTag);
                     Destroy(hit.collider.gameObject);
                 }
-
-                if (hit.collider.CompareTag("Food")) 
+                if (hit.collider.CompareTag("Food"))
                 {
                     flowchart.ExecuteBlock(FoodBlock);
-                    isExecutingFoodBlock = true;
                     Destroy(hit.collider.gameObject);
                 }
 
                 if (hit.collider.CompareTag("OddColoredJuice"))
                 {
                     flowchart.ExecuteBlock(JuiceBlock);
-                    isExecutingJuiceBlock = true;
                     Destroy(hit.collider.gameObject);
                 }
 
                 if (hit.collider.CompareTag("Food2"))
                 {
                     flowchart.ExecuteBlock(Food2Block);
-                    isExecutingFood2Block = true;
                     Destroy(hit.collider.gameObject);
                 }
 
                 if (hit.collider.CompareTag("Water"))
                 {
                     flowchart.ExecuteBlock(WaterBlock);
-                    isExecutingWaterBlock = true;
                     Destroy(hit.collider.gameObject);
                 }
 
                 if (hit.collider.CompareTag("Patient1"))
                 {
                     flowchart.ExecuteBlock(Chapter2IntroBlock);
-                    NpcHoverUI.SetActive(false);
+                    Destroy(hit.collider.gameObject);
+                    Patient1Prefab.SetActive(true);
+                }
+
+                if (hit.collider.CompareTag("CanteenDoor"))
+                {
+                    flowchart.ExecuteBlock(HallwayBlock);
                     Destroy(hit.collider.gameObject);
                 }
+
+                if (hit.collider.CompareTag("KitchenLady"))
+                {
+                    flowchart.ExecuteBlock(KitchenLadyBlock);
+                }
+
+                if (hit.collider.CompareTag("Patient1.1"))
+                {
+                    flowchart.ExecuteBlock(Patient1_1Block);
+
+                }
+
+                if (hit.collider.CompareTag("Patient2"))
+                {
+                    flowchart.ExecuteBlock(Patient2Block);
+
+                }
+
+                if (hit.collider.CompareTag("Patient3"))
+                {
+                    flowchart.ExecuteBlock(Patient3Block);
+
+                }
+
+                if (hit.collider.CompareTag("Patient4"))
+                {
+                    flowchart.ExecuteBlock(Patient4Block);
+
+                }
+
+                if (hit.collider.CompareTag("Patient5"))
+                {
+                    flowchart.ExecuteBlock(Patient5Block);
+
+                }
+
+                if (hit.collider.CompareTag("Patient6"))
+                {
+                    flowchart.ExecuteBlock(Patient6Block);
+
+                }
+
 
                 if (secondChallenge.isSecondChallengeCompleted)
                 {

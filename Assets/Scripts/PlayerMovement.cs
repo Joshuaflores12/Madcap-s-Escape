@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
                    EventSystem.current.currentSelectedGameObject.GetComponent<InputField>() != null;
 
         isDialogueActive = SayDialog.ActiveSayDialog != null && SayDialog.ActiveSayDialog.gameObject.activeInHierarchy;
+        
 
         if (!isTyping && !isDialogueActive && !isFrozen)
         {
