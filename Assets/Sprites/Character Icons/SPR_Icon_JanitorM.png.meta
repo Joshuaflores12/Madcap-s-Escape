@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_Icon_JanitorM_0: -7372442201535784813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

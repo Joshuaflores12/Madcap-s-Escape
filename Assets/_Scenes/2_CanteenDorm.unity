@@ -1632,7 +1632,6 @@ GameObject:
   - component: {fileID: 298812975}
   - component: {fileID: 298812976}
   - component: {fileID: 298812978}
-  - component: {fileID: 298812981}
   - component: {fileID: 298812984}
   - component: {fileID: 298812988}
   - component: {fileID: 298812987}
@@ -7647,8 +7646,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 298812978}
-  selectedCommands:
-  - {fileID: 298812982}
+  selectedCommands: []
   variables:
   - {fileID: 298812900}
   description: 
@@ -9799,27 +9797,12 @@ MonoBehaviour:
   itemId: 356
   blockName: freeze player
   description: 
-  eventHandler: {fileID: 298812981}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 298812989}
   - {fileID: 298812982}
   - {fileID: 298812983}
   suppressAllAutoSelections: 0
---- !u!114 &298812981
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 298812978}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
 --- !u!114 &298812982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9933,7 +9916,7 @@ MonoBehaviour:
   itemId: 367
   indentLevel: 0
   targetObject: {fileID: 2093656899}
-  methodName: FreezePlayer
+  methodName: UnfreezePlayer
   delay: 0
 --- !u!114 &298812987
 MonoBehaviour:
@@ -10246,12 +10229,12 @@ GameObject:
   m_Component:
   - component: {fileID: 412869263}
   m_Layer: 0
-  m_Name: toHallway
+  m_Name: toHallwayLeft
   m_TagString: toHallway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &412869263
 Transform:
   m_ObjectHideFlags: 0
@@ -10261,7 +10244,7 @@ Transform:
   m_GameObject: {fileID: 412869261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.82, y: -2.11, z: 0}
+  m_LocalPosition: {x: -15.05, y: -2.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13300,6 +13283,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111695700}
   m_CullTransparentMesh: 1
+--- !u!1 &1145824139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145824140}
+  m_Layer: 0
+  m_Name: toHallwayRight
+  m_TagString: toHallway
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145824140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145824139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.1, y: -2.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1162979934
 GameObject:
   m_ObjectHideFlags: 0
@@ -14269,7 +14283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1870802716}
   scene: 1_IsolationChamber
-  hallway: 
+  hallwayLeft: Hallway
+  hallwayRight: HallwayRight
   scene2: 
   scene3: 
   scene4: 
@@ -14307,13 +14322,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flowchart: {fileID: 298812902}
-  blockName: 
-  checkpoint: {fileID: 0}
+  blockName: DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy)
+  checkpoint: {fileID: 1784935301}
   blockName2: 
-  checkpoint2: {fileID: 0}
+  checkpoint2: {fileID: 1784935301}
   requiredTag: door
-  toCanteen: {fileID: 0}
-  toHallway: {fileID: 906847042}
+  toCanteen: {fileID: 906847042}
+  toHallwayLeft: {fileID: 412869263}
+  toHallwayRight: {fileID: 1145824140}
   clownMask: {fileID: 0}
   hasTriggeredCanteenTransition: 0
   hasTriggeredHallwayTransition: 0
@@ -17192,6 +17208,7 @@ SceneRoots:
   - {fileID: 1610783316}
   - {fileID: 1784935301}
   - {fileID: 412869263}
+  - {fileID: 1145824140}
   - {fileID: 1996617962}
   - {fileID: 906847042}
   - {fileID: 503920136}

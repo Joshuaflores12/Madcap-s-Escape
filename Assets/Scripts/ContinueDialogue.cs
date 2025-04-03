@@ -1,5 +1,6 @@
 using UnityEngine;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class ContinueDialogue : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class ContinueDialogue : MonoBehaviour
     [SerializeField] private string requiredTag = "door";
 
     [SerializeField] private Transform toCanteen;
-    [SerializeField] private Transform toHallway;
+    [SerializeField] private Transform toHallwayLeft;
+    [SerializeField] private Transform toHallwayRight;
 
     [SerializeField] private ClownMask clownMask;
     private Transform player;
@@ -28,10 +30,13 @@ public class ContinueDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint) && clownMask.ManicStateIsolationBG.activeSelf)
+        if (SceneManager.GetActiveScene().name == "1_IsolationChamber")
         {
-            hasTriggeredFirstCheckpoint = true;
-            ExecuteFungusBlock(blockName);
+            if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint) && clownMask.ManicStateIsolationBG.activeSelf)
+            {
+                hasTriggeredFirstCheckpoint = true;
+                ExecuteFungusBlock(blockName);
+            }
         }
 
         if (PlayerHasPassedCheckpoint(checkpoint2) && isBackToIsolation == true)
@@ -65,16 +70,24 @@ public class ContinueDialogue : MonoBehaviour
             TriggerCanteenTransition();
         }
         
-        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallway))
+        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayLeft))
         {
             hasTriggeredHallwayTransition = true;
-            TriggerHallwayTransition();
+            TriggerHallwayLeftTransition();
+        }
+        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayRight))
+        {
+            hasTriggeredHallwayTransition = true;
+            TriggerHallwayRightTransition();
         }
     }
 
     private bool PlayerHasPassedCheckpoint(Transform checkpointTransform)
     {
-        return player != null && checkpointTransform != null && player.position.x > checkpointTransform.position.x;
+        return player != null && checkpointTransform != null &&
+               Mathf.Abs(player.position.x - checkpointTransform.position.x) < 0.1f ||
+               (player.position.x > checkpointTransform.position.x && checkpointTransform.position.x >= 0) || 
+               (player.position.x < checkpointTransform.position.x && checkpointTransform.position.x < 0);  
     }
 
     private void ExecuteFungusBlock(string block)
@@ -113,12 +126,20 @@ public class ContinueDialogue : MonoBehaviour
         }
     }
     
-    private void TriggerHallwayTransition()
+    private void TriggerHallwayLeftTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
-            switchScene.SwitchSceneToHallway();
+            switchScene.SwitchSceneToHallwayLeft();
+        }
+    }
+    private void TriggerHallwayRightTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToHallwayRight();
         }
     }
 }

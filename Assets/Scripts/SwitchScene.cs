@@ -7,52 +7,55 @@ public class SwitchScene : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string scene;
-    [SerializeField] string hallway;
+    [SerializeField] string hallwayLeft;
+    [SerializeField] string hallwayRight;
     [SerializeField] string scene2;
     [SerializeField] string scene3;
     [SerializeField] string scene4;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField] GameObject titleText;
-    [SerializeField] float fadeDuration = 2f;
-    [SerializeField] float delayBeforeFadeOut = 2f;
+    [SerializeField] float fadeDuration = 0f;
+    [SerializeField] float delayBeforeFadeOut = 0f;
     [SerializeField] private Curtains curtains;
     [SerializeField] private GameObject fadeOutObject;
 
     void Start()
     {
         titleText.SetActive(false);
-        if (titleText.activeSelf == false)
+        if (!titleText.activeSelf)
         {
             titleText.SetActive(true);
             chapterTitleText.alpha = 0f;
             StartCoroutine(FadeInAndOutChapterTitle());
             fadeOutObject.SetActive(false);
         }
-        
     }
 
     public void OnPlayButtonClicked()
     {
-        StartCoroutine(LoadSceneAfterTextFade());
+        StartCoroutine(LoadSceneAfterTextFade(scene2));
     }
-    public void SwitchSceneToHallway()
-    {
 
-        StartCoroutine(LoadSceneAfterTextFade());
-        Debug.Log("Switching scene to: hallway "  );
+    public void SwitchSceneToHallwayLeft()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(hallwayLeft));
+        Debug.Log("Switching scene to: " + hallwayLeft);
     }
+    public void SwitchSceneToHallwayRight()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(hallwayRight));
+        Debug.Log("Switching scene to: " + hallwayRight);
+    }
+
     public void SwitchSceneToChapter2()
     {
-
-        StartCoroutine(LoadSceneAfterTextFade());
+        StartCoroutine(LoadSceneAfterTextFade(scene2));
         Debug.Log("Switching scene to: " + scene2);
     }
 
-
     public void SwitchSceneToChapter4()
     {
-
-        StartCoroutine(LoadSceneAfterTextFade());
+        StartCoroutine(LoadSceneAfterTextFade(scene4));
         Debug.Log("Switching scene to: " + scene4);
     }
 
@@ -89,17 +92,28 @@ public class SwitchScene : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadSceneAfterTextFade()
+    private IEnumerator LoadSceneAfterTextFade(string sceneName)
     {
         fadeOutObject.SetActive(true);
         yield return new WaitForSeconds(fadeDuration + delayBeforeFadeOut);
 
         animator.SetBool("FadeOut", true);
 
-        float fadeOutTime = 4f; 
+        float fadeOutTime = 4f;
         yield return new WaitForSeconds(fadeOutTime);
 
-        SceneManager.LoadScene(scene2);
+        SceneManager.LoadScene(sceneName);
     }
 
+    private IEnumerator LoadSceneAfterFadeOut(string sceneName)
+    {
+        fadeOutObject.SetActive(true);
+        yield return new WaitForSeconds(fadeDuration + delayBeforeFadeOut);
+
+        animator.SetBool("FadeOut", true);
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !animator.IsInTransition(0));
+
+        SceneManager.LoadScene(sceneName);
+    }
 }
