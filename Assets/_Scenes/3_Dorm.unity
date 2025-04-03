@@ -10766,7 +10766,7 @@ MonoBehaviour:
   curtainLeft: {fileID: 1789173636}
   curtainRight: {fileID: 834034181}
   CollectablesUI: {fileID: 1286292288}
-  Npc: {fileID: 0}
+  Npc: {fileID: 1784935300}
   endCurtainLeft: {fileID: 153481494}
   endCurtainRight: {fileID: 1238837758}
   startCurtainLeft: {fileID: 1011297530}

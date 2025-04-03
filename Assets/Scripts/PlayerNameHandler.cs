@@ -6,14 +6,36 @@ public class SavePlayerName : MonoBehaviour
 {
     public TMP_InputField inputField;
     public Flowchart flowchart;
-    public Character character; 
+    public Character character;
 
-    public void SaveNameToFungus()
+    private const string PlayerNameKey = "PlayerName";
+
+    private void Start()
     {
-        if (!string.IsNullOrEmpty(inputField.text))
+        if (PlayerPrefs.HasKey(PlayerNameKey))
         {
-            string playerName = inputField.text;
-            // Update Fungus Variable
+            string savedName = PlayerPrefs.GetString(PlayerNameKey);
+            inputField.text = savedName;
+            character.name = savedName;
+
+            if (flowchart != null)
+            {
+                flowchart.SetStringVariable("PlayerName", savedName);
+            }
+        }
+
+        inputField.onSubmit.AddListener(delegate { SaveNameAndContinue(); });
+    }
+
+    private void SaveNameAndContinue()
+    {
+        string playerName = inputField.text.Trim();
+
+        if (!string.IsNullOrEmpty(playerName))
+        {
+            PlayerPrefs.SetString(PlayerNameKey, playerName);
+            PlayerPrefs.Save();
+
             if (flowchart != null)
             {
                 flowchart.SetStringVariable("PlayerName", playerName);
@@ -23,15 +45,11 @@ public class SavePlayerName : MonoBehaviour
             {
                 character.name = playerName;
             }
-        }
-    }
-    public void Start()
-    {
-        character.name = "?";
-    }
 
-    public void Update()
-    {
-        SaveNameToFungus();
+            if (flowchart != null)
+            {
+                flowchart.SendFungusMessage("ContinueDialogue");
+            }
+        }
     }
 }

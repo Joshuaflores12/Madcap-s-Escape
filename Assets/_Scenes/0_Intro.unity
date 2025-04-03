@@ -212,7 +212,6 @@ GameObject:
   m_Component:
   - component: {fileID: 109756556}
   - component: {fileID: 109756555}
-  - component: {fileID: 109756557}
   m_Layer: 0
   m_Name: ScriptsManager
   m_TagString: Untagged
@@ -234,11 +233,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 903489503}
   scene: 1_IsolationChamber
+  hallway: 
   scene2: 
+  scene3: 
+  scene4: 
   chapterTitleText: {fileID: 903489500}
+  titleText: {fileID: 903489499}
   fadeDuration: 2
   delayBeforeFadeOut: 2
-  curtains: {fileID: 109756557}
+  curtains: {fileID: 0}
   fadeOutObject: {fileID: 1212853705}
 --- !u!4 &109756556
 Transform:
@@ -255,29 +258,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &109756557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109756554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c48bb12e0cf25e44b32c31445c67156, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curtainLeft: {fileID: 1588401808}
-  curtainRight: {fileID: 240496629}
-  endCurtainLeft: {fileID: 81884164}
-  endCurtainRight: {fileID: 749665287}
-  startCurtainLeft: {fileID: 0}
-  startCurtainRight: {fileID: 0}
-  Speed: 5
-  isOpening: 0
-  isClosing: 0
-  flowchart: {fileID: 0}
-  blockToExecute: 
 --- !u!1 &169782989
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +381,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &169782994
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -416,7 +396,7 @@ MonoBehaviour:
   waitForFrames: 1
 --- !u!114 &169782995
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

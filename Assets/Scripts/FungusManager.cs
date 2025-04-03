@@ -77,8 +77,12 @@ public class FungusManager : MonoBehaviour
     }
     public void HideLetter()
     {
-        letter.SetActive(false);
         openedletterScreen.SetActive(false);
+        BoxCollider2D letterCollider = letter.GetComponent<BoxCollider2D>();
+        if (letterCollider != null)
+        {
+            letterCollider.enabled = false;
+        }
         Debug.Log("hide letter");
     }
     public void UnhideFirstCheckpoint()
