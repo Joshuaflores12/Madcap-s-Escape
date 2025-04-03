@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NPC_Character_Design_-_PATIENTS_0: -496006267625749614
+      NPC_Character_Design_-_PATIENTS_1: -7277353934365074264
+      NPC_Character_Design_-_PATIENTS_2: -574603086052498371
+      NPC_Character_Design_-_PATIENTS_3: 5283455514140918792
+      NPC_Character_Design_-_PATIENTS_4: -2189501958844516766
+      NPC_Character_Design_-_PATIENTS_5: -7627164732116748572
+      NPC_Character_Design_-_PATIENTS_6: -7897101813229512996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

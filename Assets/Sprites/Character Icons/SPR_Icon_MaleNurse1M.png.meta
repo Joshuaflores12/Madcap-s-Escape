@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_Icon_MaleNurse1M_0: 6988799979076814806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
