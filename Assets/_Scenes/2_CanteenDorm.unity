@@ -603,7 +603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &95051205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1427.5176, y: 153.16498}
+  scrollPos: {x: -1371.0415, y: 235.02022}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -7659,9 +7659,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 298812898}
+  - {fileID: 298812964}
   selectedCommands:
-  - {fileID: 298812897}
+  - {fileID: 298812976}
   variables:
   - {fileID: 298812900}
   description: 
@@ -8137,7 +8137,7 @@ MonoBehaviour:
   storyText: "I\u2019m not sure how this drunkard is going to be of any help.\r\n"
   description: 
   character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  portrait: {fileID: -2552990461165980500, guid: ecc78e7c474190547accea65bcf4eef9, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8337,7 +8337,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 947055373}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8364,7 +8364,7 @@ MonoBehaviour:
   storyText: "They look at you like you\u2019re food"
   description: 
   character: {fileID: 947055373}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8473,7 +8473,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1490.8163
-    y: 336.08655
+    y: 337.7259
     width: 97.61
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8770,7 +8770,7 @@ MonoBehaviour:
   storyText: "You\u2019re no clown\u2026\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8797,7 +8797,7 @@ MonoBehaviour:
   storyText: "No wonder he doesn\u2019t like you.\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8884,7 +8884,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8913,7 +8913,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8940,7 +8940,7 @@ MonoBehaviour:
   storyText: "\u2026probably more than he should.\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9176,7 +9176,7 @@ MonoBehaviour:
   storyText: "Hello\u2026?Don\u2019t you feel it?\r\n\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9203,7 +9203,7 @@ MonoBehaviour:
   storyText: "Someone\u2019s w-watching us.\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9262,7 +9262,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9291,7 +9291,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9318,7 +9318,7 @@ MonoBehaviour:
   storyText: "Don\u2019t say their name, they\u2019ll hear us!\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9372,7 +9372,7 @@ MonoBehaviour:
   storyText: "She\u2019s insane!\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9401,7 +9401,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9425,8 +9425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1496.9385
-    y: 513.6373
+    x: 1495.6726
+    y: 514.90314
     width: 97.46
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9497,7 +9497,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9611,7 +9611,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9638,7 +9638,7 @@ MonoBehaviour:
   storyText: "Patient 2 might eat you. \r\n"
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9667,7 +9667,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -11571,7 +11571,7 @@ Transform:
   m_GameObject: {fileID: 898476917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.09, y: -2.6469998, z: -50.76324}
+  m_LocalPosition: {x: 27.529999, y: -2.6469998, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11620,7 +11620,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -7897101813229512996, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11694,7 +11694,7 @@ Transform:
   m_GameObject: {fileID: 906847041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -1.64, z: -0.066814534}
+  m_LocalPosition: {x: 28.99, y: -1.64, z: -0.066814534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11802,7 +11802,7 @@ Transform:
   m_GameObject: {fileID: 922931844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0999999, y: -2.6469998, z: -50.76324}
+  m_LocalPosition: {x: 9.539999, y: -2.6469998, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11851,7 +11851,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -574603086052498371, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13526,7 +13526,7 @@ Transform:
   m_GameObject: {fileID: 1349645607}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.56, y: -2.6469998, z: -50.76324}
+  m_LocalPosition: {x: 11, y: -2.6469998, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13575,7 +13575,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -7277353934365074264, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13704,7 +13704,7 @@ Transform:
   m_GameObject: {fileID: 1372699019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.73, y: -2.6469998, z: -50.76324}
+  m_LocalPosition: {x: 26.169998, y: -2.6469998, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13753,7 +13753,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -2189501958844516766, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14256,7 +14256,7 @@ Transform:
   m_GameObject: {fileID: 1546890463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.13, y: -2.68, z: -50.76324}
+  m_LocalPosition: {x: 12.57, y: -2.68, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14305,7 +14305,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: -496006267625749614, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14739,7 +14739,7 @@ Transform:
   m_GameObject: {fileID: 1633401727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: -2.6469998, z: -50.76324}
+  m_LocalPosition: {x: -9.51, y: -2.01, z: -50.76324}
   m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14788,7 +14788,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 5283455514140918792, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
