@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 using Unity.VisualScripting;
+using TMPro;
 
 public class Curtains : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Curtains : MonoBehaviour
     [SerializeField] private Transform endCurtainLeft;
     [SerializeField] private Transform endCurtainRight;
     [SerializeField] private Transform startCurtainLeft;
+    [SerializeField] private TextMeshProUGUI TextUpdater;
     [SerializeField] private Transform startCurtainRight;
     [SerializeField] private float Speed = 3f;
     [SerializeField] private bool isOpening = false;
@@ -56,6 +58,7 @@ public class Curtains : MonoBehaviour
         isClosing = false;  // Ensure it doesn’t conflict with closing
         hasExecutedBlock = false;
         StartCoroutine(ExecuteFungusBlockAfterDelay(4f));
+        TextUpdater.text = string.Empty;
         
     }
 
