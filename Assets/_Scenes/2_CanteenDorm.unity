@@ -1554,7 +1554,6 @@ GameObject:
   - component: {fileID: 298812727}
   - component: {fileID: 298812726}
   - component: {fileID: 298812725}
-  - component: {fileID: 298812724}
   - component: {fileID: 298812723}
   - component: {fileID: 298812722}
   - component: {fileID: 298812721}
@@ -1632,6 +1631,16 @@ GameObject:
   - component: {fileID: 298812974}
   - component: {fileID: 298812975}
   - component: {fileID: 298812976}
+  - component: {fileID: 298812978}
+  - component: {fileID: 298812981}
+  - component: {fileID: 298812984}
+  - component: {fileID: 298812988}
+  - component: {fileID: 298812987}
+  - component: {fileID: 298812985}
+  - component: {fileID: 298812983}
+  - component: {fileID: 298812989}
+  - component: {fileID: 298812986}
+  - component: {fileID: 298812982}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1735,27 +1744,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &298812724
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 278
-  indentLevel: 0
-  targetFlowchart: {fileID: 298812902}
-  targetBlock: {fileID: 298812726}
-  startLabel:
-    stringRef: {fileID: 0}
-    stringVal: 
-  startIndex: 0
-  callMode: 0
 --- !u!114 &298812725
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1797,14 +1785,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1696.8118
-    y: 401.2664
-    width: 117.3
+    x: 1719.4363
+    y: 458.2194
+    width: 118.46
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 282
-  blockName: Chapter 2.3
+  blockName: exit to dorm
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -6716,8 +6704,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Everything\u2019s poison here anyway."
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1414103816}
+  portrait: {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6743,8 +6731,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "What\u2019s the difference?"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1414103816}
+  portrait: {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6770,8 +6758,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "A d-drink?\r\nChildren shouldn\u2019t drink.\r\n"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
+  character: {fileID: 1878828503}
+  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6797,8 +6785,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: You always need a drink.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1362887120}
+  portrait: {fileID: -2552990461165980500, guid: ecc78e7c474190547accea65bcf4eef9, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6824,8 +6812,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: I need a drink.
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6867,7 +6855,6 @@ MonoBehaviour:
   - {fileID: 298812867}
   - {fileID: 298812866}
   - {fileID: 298812865}
-  - {fileID: 298812724}
   suppressAllAutoSelections: 0
 --- !u!114 &298812873
 MonoBehaviour:
@@ -6883,7 +6870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 34
   indentLevel: 0
-  targetTextObject: {fileID: 0}
+  targetTextObject: {fileID: 298812719}
   stringVariable: {fileID: 298812900}
   _textObjectObsolete: {fileID: 0}
 --- !u!114 &298812874
@@ -6924,8 +6911,8 @@ MonoBehaviour:
   storyText: "{$PlayerName} shakes her head, causing Patient 2\u2019s exasperation.
     Patient 2 sighs, crossing his arms.\r\n"
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6980,8 +6967,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Don\u2019t you notice that we\u2019re getting fewer and fewer everyday?"
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7007,8 +6994,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "This one\u2019s dumber than the others."
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7061,8 +7048,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "They\u2019re going to eat us."
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7088,8 +7075,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: They need us here.
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7115,8 +7102,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: They never do.
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 947055373}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7142,8 +7129,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "They lock you in and make you play until they say you\u2019re cured."
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 1414103816}
+  portrait: {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7169,8 +7156,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "That\u2019s the game, see?"
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 1414103816}
+  portrait: {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7217,8 +7204,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: No one can leave.
   description: 
-  character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  character: {fileID: 1414103816}
+  portrait: {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7493,7 +7480,7 @@ MonoBehaviour:
   storyText: "We\u2019re all stuck here but they don\u2019t tell us why."
   description: 
   character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7647,11 +7634,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1372.153, y: 209.5494}
+  scrollPos: {x: -1489.8352, y: 475.0909}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.8199997
+  zoom: 0.66999984
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7659,8 +7646,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 298812964}
-  selectedCommands: []
+  - {fileID: 298812978}
+  selectedCommands:
+  - {fileID: 298812982}
   variables:
   - {fileID: 298812900}
   description: 
@@ -7843,8 +7831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1488.3344
-    y: 123.32857
+    x: 1489.8269
+    y: 139.74649
     width: 120.49
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8101,8 +8089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1496.9388
-    y: 197.31102
+    x: 1423.8046
+    y: 342.0872
     width: 104.43
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8301,8 +8289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1484.694
-    y: 264.6581
+    x: 1411.5597
+    y: 409.43423
     width: 97.240005
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8471,8 +8459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1490.8163
-    y: 337.7259
+    x: 1417.682
+    y: 482.50198
     width: 97.61
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8700,8 +8688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1490.816
-    y: 393.22974
+    x: 1417.6818
+    y: 538.006
     width: 97.68
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9078,8 +9066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1492.857
-    y: 452.4131
+    x: 1419.7228
+    y: 597.18933
     width: 97.270004
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9424,8 +9412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1495.6726
-    y: 514.90314
+    x: 1422.5383
+    y: 659.6793
     width: 97.46
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9788,6 +9776,246 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 885076828}
+--- !u!114 &298812978
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1757.5189
+    y: -149.79329
+    width: 124.7
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 356
+  blockName: freeze player
+  description: 
+  eventHandler: {fileID: 298812981}
+  commandList:
+  - {fileID: 298812989}
+  - {fileID: 298812982}
+  - {fileID: 298812983}
+  suppressAllAutoSelections: 0
+--- !u!114 &298812981
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 298812978}
+  suppressBlockAutoSelect: 0
+  waitForFrames: 1
+--- !u!114 &298812982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 368
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 7
+  durationOLD: 0
+--- !u!114 &298812983
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 365
+  indentLevel: 0
+  targetFlowchart: {fileID: 298812902}
+  targetBlock: {fileID: 298812984}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &298812984
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 1750.6904
+    y: -53.45177
+    width: 130.12
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 364
+  blockName: intro narration
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 298812988}
+  - {fileID: 298812987}
+  - {fileID: 298812986}
+  - {fileID: 298812985}
+  suppressAllAutoSelections: 0
+--- !u!114 &298812985
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 363
+  indentLevel: 0
+  storyText: "The nurse pushes the protagonist forward, forcing her to join her fellow
+    patients. The group\u2019s conversation cuts short as they turn towards her,
+    differing expressions on their faces."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1036412078}
+--- !u!114 &298812986
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 367
+  indentLevel: 0
+  targetObject: {fileID: 2093656899}
+  methodName: FreezePlayer
+  delay: 0
+--- !u!114 &298812987
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 362
+  indentLevel: 0
+  storyText: "To one side of the room, a group of three patients huddles together,
+    their conversation hushed but frantic, like conspirators sharing a terrible secret.
+    Their wide eyes dart around the room, barely acknowledging the nurse stationed
+    near them, who looks exhausted\u2014half-distracted as she stirs a cup of instant
+    coffee. The old janitor is just mopping to one side."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1036412078}
+--- !u!114 &298812988
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 361
+  indentLevel: 0
+  storyText: 'The player steps into the dimly lit canteen, the faint hum of flickering
+    fluorescent lights buzzing overhead. The air is thick with the scent of overcooked
+    food and disinfectant, an unsettling mix of stale bread and something vaguely
+    metallic. A few scattered plastic chairs scrape against the tiled floor as patients
+    shift in their seats, some rocking back and forth, others muttering to themselves.
+
+'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1036412078}
+--- !u!114 &298812989
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 366
+  indentLevel: 0
+  targetObject: {fileID: 2093656899}
+  methodName: FreezePlayer
+  delay: 0
 --- !u!1 &341250139
 GameObject:
   m_ObjectHideFlags: 0
@@ -10841,7 +11069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &834034182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15354,7 +15582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1789173637
 RectTransform:
   m_ObjectHideFlags: 0
