@@ -603,7 +603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &95051205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   storyText: Go eat so you can go back to the Isolation Chamber!
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   storyText: "You aren\u2019t allowed there just yet."
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   storyText: "Where do you think you\u2019re going?"
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   storyText: Hey!
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1797,8 +1797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1712.0292
-    y: 396.91855
+    x: 1696.8118
+    y: 401.2664
     width: 117.3
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -6250,8 +6250,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Not that stinky juice daddy used to drink.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6260,7 +6260,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812851
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6277,8 +6277,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: People should drink more water.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6287,7 +6287,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812852
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6332,8 +6332,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "I miss mum\u2019s food."
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6342,7 +6342,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812854
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6359,7 +6359,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: No wonder the people here are so unhappy.
   description: 
-  character: {fileID: 1593834391}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -6369,7 +6369,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812855
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6386,7 +6386,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\u2026is this even edible?"
   description: 
-  character: {fileID: 1593834391}
+  character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -6396,7 +6396,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812856
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6445,8 +6445,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This looks gross but I might need it.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6455,7 +6455,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812858
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6472,8 +6472,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Eugh.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6482,7 +6482,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812859
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6529,8 +6529,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: This slop looks gross.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6539,7 +6539,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812861
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6556,8 +6556,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "Maybe I\u2019m not hungry."
   description: 
-  character: {fileID: 8387408}
-  portrait: {fileID: 0}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6566,7 +6566,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812862
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6583,8 +6583,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: Eugh.
   description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -2710214509111346981, guid: 07b3e652270d41d459bcece90c6065eb, type: 3}
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -6593,7 +6593,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 885076828}
+  setSayDialog: {fileID: 0}
 --- !u!114 &298812863
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6771,7 +6771,7 @@ MonoBehaviour:
   storyText: "A d-drink?\r\nChildren shouldn\u2019t drink.\r\n"
   description: 
   character: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7493,7 +7493,7 @@ MonoBehaviour:
   storyText: "We\u2019re all stuck here but they don\u2019t tell us why."
   description: 
   character: {fileID: 1362887120}
-  portrait: {fileID: 0}
+  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7647,11 +7647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1380.9634, y: 375.42487}
+  scrollPos: {x: -1371.0415, y: 235.02022}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.37
+  zoom: 0.7899997
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7659,9 +7659,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 298812872}
+  - {fileID: 298812964}
   selectedCommands:
-  - {fileID: 298812870}
+  - {fileID: 298812976}
   variables:
   - {fileID: 298812900}
   description: 
@@ -7737,7 +7737,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7764,7 +7764,7 @@ MonoBehaviour:
   storyText: "I don\u2019t have all day.\r\n"
   description: 
   character: {fileID: 1081685092}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7844,8 +7844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1490.3751
-    y: 125.369385
+    x: 1488.3344
+    y: 123.32857
     width: 120.49
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8137,7 +8137,7 @@ MonoBehaviour:
   storyText: "I\u2019m not sure how this drunkard is going to be of any help.\r\n"
   description: 
   character: {fileID: 1362887120}
-  portrait: {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  portrait: {fileID: -2552990461165980500, guid: ecc78e7c474190547accea65bcf4eef9, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8337,7 +8337,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 947055373}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8364,7 +8364,7 @@ MonoBehaviour:
   storyText: "They look at you like you\u2019re food"
   description: 
   character: {fileID: 947055373}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8473,7 +8473,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1490.8163
-    y: 336.08655
+    y: 337.7259
     width: 97.61
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8770,7 +8770,7 @@ MonoBehaviour:
   storyText: "You\u2019re no clown\u2026\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8797,7 +8797,7 @@ MonoBehaviour:
   storyText: "No wonder he doesn\u2019t like you.\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8884,7 +8884,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8913,7 +8913,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8940,7 +8940,7 @@ MonoBehaviour:
   storyText: "\u2026probably more than he should.\r\n"
   description: 
   character: {fileID: 2111736701}
-  portrait: {fileID: 0}
+  portrait: {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9176,7 +9176,7 @@ MonoBehaviour:
   storyText: "Hello\u2026?Don\u2019t you feel it?\r\n\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9203,7 +9203,7 @@ MonoBehaviour:
   storyText: "Someone\u2019s w-watching us.\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9262,7 +9262,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9291,7 +9291,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9318,7 +9318,7 @@ MonoBehaviour:
   storyText: "Don\u2019t say their name, they\u2019ll hear us!\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9372,7 +9372,7 @@ MonoBehaviour:
   storyText: "She\u2019s insane!\r\n"
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9401,7 +9401,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 1941127811}
-  portrait: {fileID: 0}
+  portrait: {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9425,8 +9425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1496.9385
-    y: 513.6373
+    x: 1495.6726
+    y: 514.90314
     width: 97.46
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9497,7 +9497,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9611,7 +9611,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9638,7 +9638,7 @@ MonoBehaviour:
   storyText: "Patient 2 might eat you. \r\n"
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9667,7 +9667,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 431926563}
-  portrait: {fileID: 0}
+  portrait: {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10087,7 +10087,9 @@ MonoBehaviour:
   nameText: Patient 6
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: -861056394992116446, guid: f209415a0660da447b4dd4125e24d1d9, type: 3}
+  - {fileID: 3227101621694924053, guid: 987a3157d4cbe6d429e0a6fae15eb2e2, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -10106,7 +10108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &485715298
 Transform:
   m_ObjectHideFlags: 0
@@ -10128,7 +10130,6 @@ Transform:
   - {fileID: 1633401728}
   - {fileID: 1372699020}
   - {fileID: 898476918}
-  - {fileID: 568595749}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503920134
@@ -10352,108 +10353,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &568595748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 568595749}
-  - component: {fileID: 568595752}
-  - component: {fileID: 568595751}
-  - component: {fileID: 568595750}
-  m_Layer: 5
-  m_Name: NPC Updater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &568595749
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568595748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1153228846}
-  m_Father: {fileID: 485715298}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &568595750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568595748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &568595751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568595748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &568595752
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568595748}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &586595138
 GameObject:
   m_ObjectHideFlags: 0
@@ -10943,7 +10842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &834034182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11672,8 +11571,8 @@ Transform:
   m_GameObject: {fileID: 898476917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.05, y: -3.34, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 27.529999, y: -2.6469998, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -11721,8 +11620,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: -7897101813229512996, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11767,8 +11666,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.10348405, y: -0.020699365}
+  m_Size: {x: 2.0348427, y: 6.760277}
   m_Direction: 0
 --- !u!1 &906847041
 GameObject:
@@ -11795,7 +11694,7 @@ Transform:
   m_GameObject: {fileID: 906847041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: -1.64, z: -0.066814534}
+  m_LocalPosition: {x: 28.99, y: -1.64, z: -0.066814534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11903,8 +11802,8 @@ Transform:
   m_GameObject: {fileID: 922931844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.51, y: -3.34, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.539999, y: -2.6469998, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -11952,8 +11851,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: -574603086052498371, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11998,8 +11897,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.04562569, y: -0.27375793}
+  m_Size: {x: 2.3687785, y: 6.745092}
   m_Direction: 0
 --- !u!1 &947055371
 GameObject:
@@ -12048,7 +11947,9 @@ MonoBehaviour:
   nameText: Patient 2
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: -1801170497524982588, guid: eb17fa772354e2d49b2f9338128a85a7, type: 3}
+  - {fileID: 8393662750450582755, guid: b6def3e6807cf7a438a280fd4b378beb, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -12925,6 +12826,9 @@ MonoBehaviour:
   nameColor: {r: 0.38679248, g: 0.034665354, b: 0.12404543, a: 1}
   soundEffect: {fileID: 0}
   portraits:
+  - {fileID: 6988799979076814806, guid: 4b62aedfcc46ae44fbf1e93bb06200a1, type: 3}
+  - {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  - {fileID: 162231993076498431, guid: 22ba60e2b43e9e849976cab3ab9271a0, type: 3}
   - {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
@@ -13168,142 +13072,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111695700}
-  m_CullTransparentMesh: 1
---- !u!1 &1153228845
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1153228846}
-  - component: {fileID: 1153228848}
-  - component: {fileID: 1153228847}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1153228846
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153228845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 568595749}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 321}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1153228847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153228845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: New Text
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -56.467163, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1153228848
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153228845}
   m_CullTransparentMesh: 1
 --- !u!1 &1162979934
 GameObject:
@@ -13758,8 +13526,8 @@ Transform:
   m_GameObject: {fileID: 1349645607}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: -3.34, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 11, y: -2.6469998, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -13807,8 +13575,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: -7277353934365074264, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13853,8 +13621,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.045625564, y: -0.09125669}
+  m_Size: {x: 2.186274, y: 6.866761}
   m_Direction: 0
 --- !u!1 &1362887118
 GameObject:
@@ -13904,7 +13672,8 @@ MonoBehaviour:
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 4379474865486554241, guid: 407b64ed6665cb3438cae63c5dd0ea86, type: 3}
+  - {fileID: 4888317162370069137, guid: b7f2fed59af634743a999774a8ea23a4, type: 3}
+  - {fileID: -2552990461165980500, guid: ecc78e7c474190547accea65bcf4eef9, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -13935,8 +13704,8 @@ Transform:
   m_GameObject: {fileID: 1372699019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.27, y: -3.34, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 26.169998, y: -2.6469998, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -13984,8 +13753,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: -2189501958844516766, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14030,8 +13799,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.18250395, y: -0.03041974}
+  m_Size: {x: 1.7300146, y: 7.1101036}
   m_Direction: 0
 --- !u!1 &1390951004
 GameObject:
@@ -14208,7 +13977,9 @@ MonoBehaviour:
   nameText: Patient 3
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: -7250396165553774219, guid: 79dce6fcc83e4ae41a058ce1948fd47f, type: 3}
+  - {fileID: 7035241303705019398, guid: 0bba42062e00f0748abf5549bc873c2a, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -14250,7 +14021,6 @@ MonoBehaviour:
   endCurtainLeft: {fileID: 153481494}
   endCurtainRight: {fileID: 1238837758}
   startCurtainLeft: {fileID: 1011297530}
-  TextUpdater: {fileID: 1153228847}
   startCurtainRight: {fileID: 1278173774}
   Speed: 2
   isOpening: 0
@@ -14367,7 +14137,8 @@ MonoBehaviour:
   nameColor: {r: 0.38679248, g: 0.034665354, b: 0.12404543, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 5417424893544543205, guid: 5875b613375a10b40a5a246bf57ddc67, type: 3}
+  - {fileID: 236051672827985114, guid: c1fdd9c134830ab4eaec8f9cd5540c53, type: 3}
+  - {fileID: -1154388647637100039, guid: 80c1bbe8f9e0ea04c92a1f004ba64a44, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -14485,8 +14256,8 @@ Transform:
   m_GameObject: {fileID: 1546890463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.06, y: -3.41, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.57, y: -2.68, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -14534,8 +14305,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: -496006267625749614, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14580,8 +14351,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.061426546, y: 0.06142427}
+  m_Size: {x: 2.351371, y: 6.791224}
   m_Direction: 0
 --- !u!1 &1563202009
 GameObject:
@@ -14968,8 +14739,8 @@ Transform:
   m_GameObject: {fileID: 1633401727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.68, y: -3.34, z: -50.76324}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.51, y: -2.01, z: -50.76324}
+  m_LocalScale: {x: 0.4713, y: 0.4713, z: 0.4713}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 485715298}
@@ -15017,8 +14788,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: -3
+  m_Sprite: {fileID: 5283455514140918792, guid: fccdb316d58fdc9488e88a2193453cab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15063,8 +14834,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: 0.21292035, y: -0.10646277}
+  m_Size: {x: 2.3383603, y: 6.8096943}
   m_Direction: 0
 --- !u!1 &1685602370
 GameObject:
@@ -15583,7 +15354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1789173637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16372,7 +16143,9 @@ MonoBehaviour:
   nameText: Patient 5
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: -4461654840307583311, guid: c19ebeb8adb87af4f9c8d810396839ca, type: 3}
+  - {fileID: -6093678175295965519, guid: 59eb58888f5dcb1438fb584c745d134b, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -16900,7 +16673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 0}
   Patient1Prefab: {fileID: 2007799700}
-  TextUpdater: {fileID: 1153228847}
   flowchart: {fileID: 298812902}
   clownMaskButton: {fileID: 207702587}
   FoodBlock: Food
@@ -17118,7 +16890,9 @@ MonoBehaviour:
   nameText: Patient 4
   nameColor: {r: 0.3882353, g: 0.03529412, b: 0.1254902, a: 1}
   soundEffect: {fileID: 0}
-  portraits: []
+  portraits:
+  - {fileID: 2942487484054319781, guid: aeb678392d9d560478c6e674be22cce6, type: 3}
+  - {fileID: 8677116657323280378, guid: bb0b63799c37d5b4bb6501833e9cfac5, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
