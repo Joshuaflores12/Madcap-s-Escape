@@ -4,11 +4,12 @@ using Unity.Cinemachine;
 public class CinemachineFreeze : MonoBehaviour
 {
     private CinemachineCamera cinemachineCamera;
+    
 
     void Awake()
     {
         cinemachineCamera = GetComponent<CinemachineCamera>();
-        FreezeCamera();
+        //FreezeCamera();
     }
 
     public void FreezeCamera()

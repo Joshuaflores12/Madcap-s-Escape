@@ -32,6 +32,11 @@ TagManager:
   - CanteenDoor
   - KitchenLady
   - roomDoor1
+  - ExitRoom
+  - roomDoor2
+  - roomDoor3
+  - roomDoor4
+  - roomDoor5
   layers:
   - Default
   - TransparentFX

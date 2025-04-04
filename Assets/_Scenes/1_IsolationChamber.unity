@@ -7868,6 +7868,9 @@ GameObject:
   - component: {fileID: 1399134461}
   - component: {fileID: 1399134465}
   - component: {fileID: 1399134466}
+  - component: {fileID: 1399134468}
+  - component: {fileID: 1399134469}
+  - component: {fileID: 1399134467}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -8346,11 +8349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1919.5436, y: 248.01773}
+  scrollPos: {x: -1831.7607, y: 404.82935}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.8799996
+  zoom: 0.6999997
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -8358,7 +8361,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134120}
+  - {fileID: 1399134093}
   selectedCommands: []
   variables:
   - {fileID: 1399134396}
@@ -12633,6 +12636,65 @@ MonoBehaviour:
   targetObject: {fileID: 1486352526}
   methodName: UnhideLetter
   delay: 0
+--- !u!114 &1399134467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 773
+  indentLevel: 0
+  targetObject: {fileID: 174688460}
+  methodName: FreezeCamera
+  delay: 0
+--- !u!114 &1399134468
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -323.9544
+    y: -286.258
+    width: 114.9
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 772
+  blockName: FreezeCam
+  description: 
+  eventHandler: {fileID: 1399134469}
+  commandList:
+  - {fileID: 1399134467}
+  suppressAllAutoSelections: 0
+--- !u!114 &1399134469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1399134468}
+  suppressBlockAutoSelect: 0
+  waitForFrames: 1
 --- !u!1 &1436349525
 GameObject:
   m_ObjectHideFlags: 0
@@ -12865,7 +12927,7 @@ MonoBehaviour:
   animator: {fileID: 705957867}
   scene: 1_IsolationChamber
   hallwayLeft: 
-  hallwayRight: 
+  hallwayDorm: 
   scene2: 2_CanteenDorm
   scene3: 
   scene4: 
@@ -12966,6 +13028,7 @@ MonoBehaviour:
   checkpoint2: {fileID: 1708174860}
   requiredTag: door
   toCanteen: {fileID: 1333497528}
+  toDoctors: {fileID: 0}
   toHallwayLeft: {fileID: 1926650462}
   toHallwayRight: {fileID: 1926650462}
   clownMask: {fileID: 1486352531}

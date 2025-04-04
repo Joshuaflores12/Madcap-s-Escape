@@ -57,7 +57,7 @@ public class SwitchScene : MonoBehaviour
 
     public void SwitchSceneToChapter4()
     {
-        StartCoroutine(LoadSceneAfterTextFade(scene4));
+        StartCoroutine(LoadSceneAfterFadeOut(scene4));
         Debug.Log("Switching scene to: " + scene4);
     }
 

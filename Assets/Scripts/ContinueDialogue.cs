@@ -12,6 +12,7 @@ public class ContinueDialogue : MonoBehaviour
     [SerializeField] private string requiredTag = "door";
 
     [SerializeField] private Transform toCanteen;
+    [SerializeField] private Transform toDoctors;
     [SerializeField] private Transform toHallwayLeft;
     [SerializeField] private Transform toHallwayRight;
 
@@ -62,6 +63,12 @@ public class ContinueDialogue : MonoBehaviour
                     ExecuteFungusBlock("DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)");
                 }
             }
+
+            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
+            {
+                hasTriggeredCanteenTransition = true;
+                TriggerCanteenTransition();
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "2_CanteenDorm") 
@@ -77,16 +84,35 @@ public class ContinueDialogue : MonoBehaviour
                 TriggerHallwayDormTransition();
             }
         }
-        
 
-        
-
-        if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
+        if (SceneManager.GetActiveScene().name == "HallwayDorm")
         {
-            hasTriggeredCanteenTransition = true;
-            TriggerCanteenTransition();
+            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
+            {
+                hasTriggeredCanteenTransition = true;
+                TriggerCanteenTransition();
+            }
+
+            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toDoctors))
+            {
+                hasTriggeredCanteenTransition = true;
+                TriggerDoctorsOfficeTransition();
+            }
         }
-        
+
+        if (SceneManager.GetActiveScene().name == "HallwayLeft")
+        {
+            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
+            {
+                hasTriggeredCanteenTransition = true;
+                TriggerCanteenTransition();
+            }
+
+        }
+
+
+
+
 
     }
 
@@ -148,6 +174,15 @@ public class ContinueDialogue : MonoBehaviour
         if (switchScene != null)
         {
             switchScene.SwitchSceneToHallwayDorm();
+        }
+    }
+
+    private void TriggerDoctorsOfficeTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToChapter4();
         }
     }
 }

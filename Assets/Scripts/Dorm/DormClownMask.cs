@@ -8,8 +8,6 @@ public class DormClownMask : MonoBehaviour
     [SerializeField] public GameObject SoberStateHallwayBG;
     [SerializeField] public GameObject ManicStateHallwayBG;
 
-    [SerializeField] private Transform mc;
-    [SerializeField] private Transform hallwayCheckpoint;
     [SerializeField] private bool isManic = false;
 
     private bool isInHallway = false;
@@ -23,10 +21,6 @@ public class DormClownMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (mc.position.x > hallwayCheckpoint.position.x)
-        {
-            isInHallway = true;
-        }
 
         
         if (SceneManager.GetActiveScene().name == "HallwayDorm")
@@ -37,6 +31,8 @@ public class DormClownMask : MonoBehaviour
 
                 SoberStateDormBG.SetActive(!isManic);
                 ManicStateDormBG.SetActive(isManic);
+                SoberStateHallwayBG.SetActive(!isManic);
+                ManicStateHallwayBG.SetActive(isManic);
             }
         }
 
@@ -61,18 +57,4 @@ public class DormClownMask : MonoBehaviour
         ManicStateDormBG.SetActive(isManic);
     }
 
-    public void SwitchStateBG()
-    {
-        if (isInHallway)
-        {
-            SoberStateHallwayBG.SetActive(!isManic);
-            ManicStateHallwayBG.SetActive(isManic);
-
-        }
-        else
-        {
-            SoberStateDormBG.SetActive(!isManic);
-            ManicStateDormBG.SetActive(isManic);
-        }
-    }
 }

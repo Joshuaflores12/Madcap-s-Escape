@@ -3306,7 +3306,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 181
+  itemId: 199
   blockName: RightCabinet
   description: 'Using Lockpick
 
@@ -3450,7 +3450,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 181
+  itemId: 200
   blockName: CenterCabinet
   description: 'Using Lockpick
 
@@ -3594,7 +3594,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 192
+  itemId: 201
   blockName: PlayerInputsWrongCode
   description: 
   eventHandler: {fileID: 0}
@@ -4508,7 +4508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &834034182
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6589,6 +6589,7 @@ MonoBehaviour:
   checkpoint2: {fileID: 0}
   requiredTag: door
   toCanteen: {fileID: 0}
+  toDoctors: {fileID: 0}
   toHallwayLeft: {fileID: 0}
   toHallwayRight: {fileID: 0}
   clownMask: {fileID: 0}
@@ -6801,8 +6802,6 @@ MonoBehaviour:
   ManicStateDormBG: {fileID: 1520634149}
   SoberStateHallwayBG: {fileID: 0}
   ManicStateHallwayBG: {fileID: 0}
-  mc: {fileID: 0}
-  hallwayCheckpoint: {fileID: 0}
   isManic: 0
 --- !u!1 &1685602370
 GameObject:
@@ -7374,7 +7373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1789173637
 RectTransform:
   m_ObjectHideFlags: 0
