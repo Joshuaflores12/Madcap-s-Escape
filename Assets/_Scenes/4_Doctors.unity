@@ -1836,8 +1836,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 423972192}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 423972048}
@@ -2653,7 +2652,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1872.9214
-    y: -305.6917
+    y: -307.2542
     width: 88.479996
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -5825,6 +5824,7 @@ MonoBehaviour:
   isClosing: 0
   flowchart: {fileID: 0}
   blockToExecute: 
+  notebookInventory: {fileID: 0}
 --- !u!114 &1486352528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5840,7 +5840,7 @@ MonoBehaviour:
   animator: {fileID: 1870802716}
   scene: 1_IsolationChamber
   hallwayLeft: 
-  hallwayRight: 
+  hallwayDorm: 
   scene2: 
   scene3: 
   scene4: 
@@ -5850,6 +5850,7 @@ MonoBehaviour:
   delayBeforeFadeOut: 2
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 1870802714}
+  textFadeDone: 0
 --- !u!4 &1486352529
 Transform:
   m_ObjectHideFlags: 0
@@ -6094,6 +6095,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoberStateDormBG: {fileID: 341466276}
   ManicStateDormBG: {fileID: 1520634149}
+  SoberStateHallwayBG: {fileID: 0}
+  ManicStateHallwayBG: {fileID: 0}
+  mc: {fileID: 0}
+  hallwayCheckpoint: {fileID: 0}
   isManic: 0
 --- !u!1 &1685602370
 GameObject:
