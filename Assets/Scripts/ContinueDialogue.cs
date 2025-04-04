@@ -37,32 +37,49 @@ public class ContinueDialogue : MonoBehaviour
                 hasTriggeredFirstCheckpoint = true;
                 ExecuteFungusBlock(blockName);
             }
-        }
 
-        if (PlayerHasPassedCheckpoint(checkpoint2) && isBackToIsolation == true)
-        {
-            if (!hasTriggeredSecondCheckpoint)
+            if (PlayerHasPassedCheckpoint(checkpoint2) && isBackToIsolation == true)
             {
-                hasTriggeredSecondCheckpoint = true;
-                ExecuteFungusBlock(blockName2);
+                if (!hasTriggeredSecondCheckpoint)
+                {
+                    hasTriggeredSecondCheckpoint = true;
+                    ExecuteFungusBlock(blockName2);
+                }
+            }
+            else
+            {
+                hasTriggeredSecondCheckpoint = false;
+            }
+
+            if (Input.GetMouseButtonDown(0) && PlayerHasThreeKeys())
+            {
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+                if (hit.collider != null && hit.collider.CompareTag(requiredTag))
+                {
+                    Debug.Log("Door clicked with 3 keys. Executing dialogue block.");
+                    ExecuteFungusBlock("DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)");
+                }
             }
         }
-        else
-        {
-            hasTriggeredSecondCheckpoint = false;
-        }
 
-        if (Input.GetMouseButtonDown(0) && PlayerHasThreeKeys())
+        if (SceneManager.GetActiveScene().name == "2_CanteenDorm") 
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-
-            if (hit.collider != null && hit.collider.CompareTag(requiredTag))
+            if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayLeft))
             {
-                Debug.Log("Door clicked with 3 keys. Executing dialogue block.");
-                ExecuteFungusBlock("DoneTutorial (Copy) (Copy) (Copy) (Copy) (Copy) (Copy)");
+                hasTriggeredHallwayTransition = true;
+                TriggerHallwayLeftTransition();
+            }
+            if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayRight))
+            {
+                hasTriggeredHallwayTransition = true;
+                TriggerHallwayRightTransition();
             }
         }
+        
+
+        
 
         if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
         {
@@ -70,16 +87,7 @@ public class ContinueDialogue : MonoBehaviour
             TriggerCanteenTransition();
         }
         
-        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayLeft))
-        {
-            hasTriggeredHallwayTransition = true;
-            TriggerHallwayLeftTransition();
-        }
-        if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayRight))
-        {
-            hasTriggeredHallwayTransition = true;
-            TriggerHallwayRightTransition();
-        }
+
     }
 
     private bool PlayerHasPassedCheckpoint(Transform checkpointTransform)
