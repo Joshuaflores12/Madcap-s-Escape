@@ -5625,7 +5625,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1011297530}
   TextUpdater: {fileID: 2082468067}
   startCurtainRight: {fileID: 1278173774}
-  Speed: 3
+  Speed: 3.3
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 423972050}
@@ -5646,14 +5646,14 @@ MonoBehaviour:
   animator: {fileID: 1870802716}
   scene: 1_IsolationChamber
   hallwayLeft: 
-  hallwayRight: 
+  hallwayDorm: 
   scene2: 2_CanteenDorm
   scene3: 
   scene4: 
   chapterTitleText: {fileID: 1111695703}
   titleText: {fileID: 1111695700}
-  fadeDuration: 2
-  delayBeforeFadeOut: 2
+  fadeDuration: 0.8
+  delayBeforeFadeOut: 0.8
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 1870802714}
   textFadeDone: 0
@@ -5691,6 +5691,7 @@ MonoBehaviour:
   checkpoint2: {fileID: 0}
   requiredTag: door
   toCanteen: {fileID: 412869263}
+  toDoctors: {fileID: 0}
   toHallwayLeft: {fileID: 0}
   toHallwayRight: {fileID: 0}
   clownMask: {fileID: 0}
@@ -5903,8 +5904,6 @@ MonoBehaviour:
   ManicStateDormBG: {fileID: 1520634149}
   SoberStateHallwayBG: {fileID: 1520634149}
   ManicStateHallwayBG: {fileID: 341466276}
-  mc: {fileID: 2093656900}
-  hallwayCheckpoint: {fileID: 1784935301}
   isManic: 0
 --- !u!1 &1685602370
 GameObject:

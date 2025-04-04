@@ -14264,7 +14264,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1011297530}
   TextUpdater: {fileID: 874940734}
   startCurtainRight: {fileID: 1278173774}
-  Speed: 3
+  Speed: 3.3
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 298812902}
@@ -14291,8 +14291,8 @@ MonoBehaviour:
   scene4: 
   chapterTitleText: {fileID: 1111695703}
   titleText: {fileID: 1111695700}
-  fadeDuration: 2
-  delayBeforeFadeOut: 2
+  fadeDuration: 0.8
+  delayBeforeFadeOut: 0.8
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 1870802714}
   textFadeDone: 0
@@ -14330,6 +14330,7 @@ MonoBehaviour:
   checkpoint2: {fileID: 1784935301}
   requiredTag: door
   toCanteen: {fileID: 906847042}
+  toDoctors: {fileID: 0}
   toHallwayLeft: {fileID: 412869263}
   toHallwayRight: {fileID: 1145824140}
   clownMask: {fileID: 0}

@@ -10968,7 +10968,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1011297530}
   TextUpdater: {fileID: 0}
   startCurtainRight: {fileID: 1278173774}
-  Speed: 3
+  Speed: 3.3
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 0}
@@ -10995,8 +10995,8 @@ MonoBehaviour:
   scene4: 4_Doctors
   chapterTitleText: {fileID: 1111695703}
   titleText: {fileID: 1111695700}
-  fadeDuration: 2
-  delayBeforeFadeOut: 2
+  fadeDuration: 0.8
+  delayBeforeFadeOut: 0.8
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 1870802714}
   textFadeDone: 0
@@ -11511,8 +11511,6 @@ MonoBehaviour:
   ManicStateDormBG: {fileID: 477367053}
   SoberStateHallwayBG: {fileID: 341466276}
   ManicStateHallwayBG: {fileID: 1520634149}
-  mc: {fileID: 2093656900}
-  hallwayCheckpoint: {fileID: 1097755773}
   isManic: 0
 --- !u!1 &1685602370
 GameObject:

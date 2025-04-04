@@ -378,11 +378,11 @@ Transform:
   m_GameObject: {fileID: 38538740}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.81, y: -3.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.81, y: 1.36, z: 0}
+  m_LocalScale: {x: 0.91487, y: 0.91487, z: 0.91487}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1729334365}
+  m_Father: {fileID: 2050216225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &38538742
 BoxCollider2D:
@@ -3737,7 +3737,7 @@ Transform:
   m_GameObject: {fileID: 478605177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.8, y: 0.14, z: 0.0007858062}
+  m_LocalPosition: {x: 41.91, y: 0.14, z: 0.0007858062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4262,11 +4262,11 @@ Transform:
   m_GameObject: {fileID: 601956573}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.94, y: -3.17, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.17, y: -0.37, z: 0}
+  m_LocalScale: {x: 0.91487, y: 0.91487, z: 0.91487}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1729334365}
+  m_Father: {fileID: 2050216225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &601956575
 BoxCollider2D:
@@ -6370,7 +6370,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -4
-  m_Sprite: {fileID: 6586358538396290574, guid: 180079b224f3c1d4bb982a63f4de6e2d, type: 3}
+  m_Sprite: {fileID: -5146765189732842785, guid: 4dd6c9b7cec4d1446b89acca97f547c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6566,7 +6566,7 @@ Transform:
   m_GameObject: {fileID: 1161976880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.316942, y: -0.37, z: 0}
+  m_LocalPosition: {x: 18.8, y: -0.6, z: 0}
   m_LocalScale: {x: 0.7932284, y: 0.7932284, z: 0.7932284}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8349,11 +8349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1831.7607, y: 404.82935}
+  scrollPos: {x: -1883.5336, y: 401.12714}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.6999997
+  zoom: 0.66999996
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -8629,7 +8629,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8741,7 +8741,7 @@ MonoBehaviour:
     to help you, {/color}\n{s=3}{$PlayerName}{/s}\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8795,7 +8795,7 @@ MonoBehaviour:
   storyText: Now, {$PlayerName}, why are you here?
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8823,7 +8823,7 @@ MonoBehaviour:
     name,{w=1} sweetheart?\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8900,7 +8900,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9048,7 +9048,7 @@ MonoBehaviour:
     leave them here.\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9075,7 +9075,7 @@ MonoBehaviour:
   storyText: "That\u2019s more like it.\nYour relatives sent over your things.\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
+  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9444,7 +9444,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 6988799979076814806, guid: 4b62aedfcc46ae44fbf1e93bb06200a1, type: 3}
+  portrait: {fileID: 162231993076498431, guid: 22ba60e2b43e9e849976cab3ab9271a0, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -11998,9 +11998,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 734
   indentLevel: 0
-  storyText: 'Press R to wear Clown Mask
+  storyText: 'Press E to wear Clown Mask
 
-    Press E to open Journal '
+    Press Q to open Journal '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -12638,7 +12638,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1399134467
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12682,7 +12682,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &1399134469
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12807,7 +12807,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 113574507334628870, guid: bde57d575ed93ab41b8af6902fd2a46d, type: 3}
+  m_Sprite: {fileID: 7146236265442462331, guid: bde57d575ed93ab41b8af6902fd2a46d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12827,7 +12827,7 @@ Transform:
   m_GameObject: {fileID: 1469265966}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.56, y: 0.13999999, z: 0}
+  m_LocalPosition: {x: 42.69, y: 0.13999999, z: 0}
   m_LocalScale: {x: 0.7932284, y: 0.7932284, z: 0.7932284}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12906,7 +12906,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1249919572}
   TextUpdater: {fileID: 1190436716}
   startCurtainRight: {fileID: 46473996}
-  Speed: 3
+  Speed: 3.3
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 1399133818}
@@ -12933,8 +12933,8 @@ MonoBehaviour:
   scene4: 
   chapterTitleText: {fileID: 544483245}
   titleText: {fileID: 544483242}
-  fadeDuration: 2
-  delayBeforeFadeOut: 2
+  fadeDuration: 0.8
+  delayBeforeFadeOut: 0.8
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 705957865}
   textFadeDone: 0
@@ -13059,7 +13059,7 @@ Transform:
   m_GameObject: {fileID: 1501490593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.14, z: 0.0007858062}
+  m_LocalPosition: {x: -0.1, y: -0.6, z: 0.0007858062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13681,7 +13681,7 @@ Transform:
   m_GameObject: {fileID: 1708174859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.05, y: -3.15, z: 0.0007858062}
+  m_LocalPosition: {x: 42.44, y: -3.15, z: 0.0007858062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13946,9 +13946,6 @@ Transform:
   - {fileID: 664463230}
   - {fileID: 94737579}
   - {fileID: 656122465}
-  - {fileID: 601956574}
-  - {fileID: 38538741}
-  - {fileID: 2025875810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731718829
@@ -16227,7 +16224,7 @@ Transform:
   m_GameObject: {fileID: 1982067669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.2, y: 0.14, z: 0.0007858062}
+  m_LocalPosition: {x: 18.2, y: -0.6, z: 0.0007858062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16473,11 +16470,11 @@ Transform:
   m_GameObject: {fileID: 2025875809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.57, y: -3.18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.67, y: -2.37, z: 0}
+  m_LocalScale: {x: 0.91487, y: 0.91487, z: 0.91487}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1729334365}
+  m_Father: {fileID: 2050216225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2025875811
 BoxCollider2D:
@@ -16884,7 +16881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2050216224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16952,7 +16949,10 @@ Transform:
   m_LocalPosition: {x: 1.5900002, y: 1.6899999, z: 0}
   m_LocalScale: {x: 1.0930514, y: 1.0930514, z: 1.0930514}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 601956574}
+  - {fileID: 38538741}
+  - {fileID: 2025875810}
   m_Father: {fileID: 376513449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061188769

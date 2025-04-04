@@ -238,14 +238,14 @@ MonoBehaviour:
   animator: {fileID: 903489503}
   scene: 1_IsolationChamber
   hallwayLeft: 
-  hallwayRight: 
+  hallwayDorm: 
   scene2: 
   scene3: 
   scene4: 
   chapterTitleText: {fileID: 903489500}
   titleText: {fileID: 903489499}
-  fadeDuration: 2
-  delayBeforeFadeOut: 2
+  fadeDuration: 0.8
+  delayBeforeFadeOut: 0.8
   curtains: {fileID: 0}
   fadeOutObject: {fileID: 1212853705}
   textFadeDone: 1

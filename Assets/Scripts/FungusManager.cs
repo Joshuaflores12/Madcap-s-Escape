@@ -110,6 +110,9 @@ public class FungusManager : MonoBehaviour
     {
         float timeElapsed = 0f;
         Vector3 startPos = nurse.transform.position;
+
+        nurse.transform.localScale = new Vector3(-nurse.transform.localScale.x, nurse.transform.localScale.y, nurse.transform.localScale.z);
+
         while (timeElapsed < 8f)
         {
             float moveT = timeElapsed / nurseLerpSpeed;
@@ -117,9 +120,11 @@ public class FungusManager : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
+
         nurse.transform.position = nurseTargetTransform.position;
         nurse.SetActive(false);
     }
+
 
     private IEnumerator MoveNurse(Vector3 targetPosition)
     {
@@ -155,6 +160,11 @@ public class FungusManager : MonoBehaviour
         float timeElapsed = 0f;
         Vector3 startPos = guard.transform.position;
 
+        if (Mathf.Sign(targetPosition.x - startPos.x) != Mathf.Sign(guard.transform.localScale.x))
+        {
+            guard.transform.localScale = new Vector3(-guard.transform.localScale.x, guard.transform.localScale.y, guard.transform.localScale.z);
+        }
+
         while (timeElapsed < 8f)
         {
             guard.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / guardLerpSpeed);
@@ -164,6 +174,7 @@ public class FungusManager : MonoBehaviour
 
         guard.transform.position = targetPosition;
     }
+
 
     private IEnumerator DelayMCFollow(float delay)
     {
