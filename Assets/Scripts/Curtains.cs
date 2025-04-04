@@ -17,8 +17,8 @@ public class Curtains : MonoBehaviour
     [SerializeField] private TextMeshProUGUI TextUpdater;
     [SerializeField] private Transform startCurtainRight;
     [SerializeField] private float Speed = 3f;
-    [SerializeField] private bool isOpening = false;
-    [SerializeField] private bool isClosing = false;
+    public bool isOpening = false;
+    public bool isClosing = false;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private string blockToExecute;
 
@@ -64,6 +64,8 @@ public class Curtains : MonoBehaviour
 
     public void CloseCurtains()
     {
+        curtainLeft.SetActive(true);
+        curtainRight.SetActive(true);
         isClosing = true;
         isOpening = false;  // Prevent opening and closing at the same time
         Debug.Log("Curtains closing");

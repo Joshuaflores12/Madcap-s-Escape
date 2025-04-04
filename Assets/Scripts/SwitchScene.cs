@@ -49,7 +49,7 @@ public class SwitchScene : MonoBehaviour
 
     public void SwitchSceneToChapter2()
     {
-        StartCoroutine(LoadSceneAfterTextFade(scene2));
+        StartCoroutine(LoadSceneAfterFadeOut(scene2));
         Debug.Log("Switching scene to: " + scene2);
     }
 
@@ -108,12 +108,18 @@ public class SwitchScene : MonoBehaviour
     private IEnumerator LoadSceneAfterFadeOut(string sceneName)
     {
         fadeOutObject.SetActive(true);
-        yield return new WaitForSeconds(fadeDuration + delayBeforeFadeOut);
+        yield return new WaitForSeconds(0f + 0f);
 
         animator.SetBool("FadeOut", true);
 
+        curtains.CloseCurtains();
+
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !animator.IsInTransition(0));
 
+        if(curtains.isClosing == true)
+        {
         SceneManager.LoadScene(sceneName);
+
+        }
     }
 }

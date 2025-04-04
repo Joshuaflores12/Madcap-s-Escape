@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClownMask : MonoBehaviour
 {
@@ -26,14 +27,18 @@ public class ClownMask : MonoBehaviour
         {
             isInHallway = true;
         }
-        if (secondChallenge.isSecondChallengeCompleted == true)
+        if (SceneManager.GetActiveScene().name == "1_IsolationChamber")
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (secondChallenge.isSecondChallengeCompleted == true)
             {
-                isManic = !isManic;
-                SwitchStateBG();
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    isManic = !isManic;
+                    SwitchStateBG();
+                }
             }
         }
+
         
     }
     public void SwitchStateIsolationBG()

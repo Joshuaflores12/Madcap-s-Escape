@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/2_CanteenDorm.unity
     guid: 53f7e1ddbc95cf34f93aceae44e3062b
   - enabled: 1
+    path: Assets/_Scenes/HallwayLeft.unity
+    guid: 39bb1e1d56583da4ba33677f0abc4c89
+  - enabled: 1
     path: Assets/_Scenes/HallwayRight.unity
     guid: 517a416a6fa6e7f42a889ae60bbc50c9
   - enabled: 1

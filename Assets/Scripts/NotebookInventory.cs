@@ -13,7 +13,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] public GameObject notebook;
     [SerializeField] public SecondChallenge secondChallenge;
 
-    [SerializeField] private string[] allowedSceneNames = { "2_CanteenDorm", "3_Dorm" };
+    [SerializeField] private string[] allowedSceneNames = { "2_CanteenDorm", "3_Dorm", "4_Doctors" };
 
 
     private void Awake()

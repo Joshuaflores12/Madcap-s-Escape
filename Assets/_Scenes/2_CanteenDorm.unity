@@ -814,6 +814,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1870802715}
   - {fileID: 834034182}
   - {fileID: 1789173637}
   - {fileID: 1278173774}
@@ -821,7 +822,6 @@ RectTransform:
   - {fileID: 1111695701}
   - {fileID: 153481494}
   - {fileID: 1238837758}
-  - {fileID: 1870802715}
   - {fileID: 42546330}
   - {fileID: 1072688050}
   m_Father: {fileID: 0}
@@ -1010,7 +1010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1845, y: 0}
+  m_AnchoredPosition: {x: -1295, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &153883911
@@ -10175,12 +10175,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -6
-  m_Sprite: {fileID: -6757562920791615380, guid: a14f72ca1f1704c4c8aececbc6dfa9f6, type: 3}
+  m_Sprite: {fileID: -5903286712860606791, guid: 1b3f9e613acdcc84a8c1d428303a42a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 31.199999, y: 10.801171}
+  m_Size: {x: 50.04163, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13398,7 +13398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2033.1608, y: 0}
+  m_AnchoredPosition: {x: 1295, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1278173773
@@ -14283,7 +14283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1870802716}
   scene: 1_IsolationChamber
-  hallwayLeft: Hallway
+  hallwayLeft: HallwayLeft
   hallwayRight: HallwayRight
   scene2: 
   scene3: 
@@ -14452,7 +14452,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 31.199999, y: 10.801171}
+  m_Size: {x: 50.04163, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14467,8 +14467,8 @@ Transform:
   m_GameObject: {fileID: 1520634149}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.94, y: 3.47, z: 0}
-  m_LocalScale: {x: 0.9566656, y: 0.9566656, z: 0.9566656}
+  m_LocalPosition: {x: 6.1, y: 2.39, z: 0}
+  m_LocalScale: {x: 1.0623324, y: 1.0623324, z: 1.0623324}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 376513449}

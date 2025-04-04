@@ -8,16 +8,20 @@ public class StartButton : MonoBehaviour
     [SerializeField] private string nextSceneName;
     [SerializeField] private float fadeOutDuration = 1.5f; 
     [SerializeField] private GameObject fadeOutObject;
+    [SerializeField] private GameObject blackScreen;
 
     private void Start()
     {
         fadeOutObject.SetActive(false);
+        blackScreen.SetActive(true);
     }
     public void StartGame()
     {
         fadeOutObject.SetActive(true);
         StartCoroutine(FadeAndLoadScene());
     }
+
+
 
     private IEnumerator FadeAndLoadScene()
     {

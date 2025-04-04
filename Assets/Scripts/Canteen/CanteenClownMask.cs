@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanteenClownMask : MonoBehaviour
 {
@@ -17,13 +18,17 @@ public class CanteenClownMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (SceneManager.GetActiveScene().name == "2_CanteenDorm")
         {
-            isManic = !isManic;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                isManic = !isManic;
 
-            SoberStateCanteenBG.SetActive(!isManic);
-            ManicStateCanteenBG.SetActive(isManic);
+                SoberStateCanteenBG.SetActive(!isManic);
+                ManicStateCanteenBG.SetActive(isManic);
+            }
         }
+
     }
 
 
