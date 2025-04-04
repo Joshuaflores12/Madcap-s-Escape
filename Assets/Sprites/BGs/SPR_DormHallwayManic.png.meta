@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_DormHallwayManic_0: 5906096276139192091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

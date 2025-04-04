@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPR_CafeteriaManic_0: -6668016220073188646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
