@@ -74,7 +74,7 @@ public class ContinueDialogue : MonoBehaviour
             if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayRight))
             {
                 hasTriggeredHallwayTransition = true;
-                TriggerHallwayRightTransition();
+                TriggerHallwayDormTransition();
             }
         }
         
@@ -142,12 +142,12 @@ public class ContinueDialogue : MonoBehaviour
             switchScene.SwitchSceneToHallwayLeft();
         }
     }
-    private void TriggerHallwayRightTransition()
+    private void TriggerHallwayDormTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
-            switchScene.SwitchSceneToHallwayRight();
+            switchScene.SwitchSceneToHallwayDorm();
         }
     }
 }

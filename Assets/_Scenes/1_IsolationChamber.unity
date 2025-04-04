@@ -3669,6 +3669,8 @@ MonoBehaviour:
   nameColor: {r: 0.38679248, g: 0.034665354, b: 0.12404543, a: 1}
   soundEffect: {fileID: 0}
   portraits:
+  - {fileID: 6988799979076814806, guid: 4b62aedfcc46ae44fbf1e93bb06200a1, type: 3}
+  - {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   - {fileID: 162231993076498431, guid: 22ba60e2b43e9e849976cab3ab9271a0, type: 3}
   - {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
   portraitsFace: 0
@@ -7906,7 +7908,7 @@ MonoBehaviour:
     back to the chamber!"
   description: 
   character: {fileID: 1005277647}
-  portrait: {fileID: 5417424893544543205, guid: 5875b613375a10b40a5a246bf57ddc67, type: 3}
+  portrait: {fileID: -1154388647637100039, guid: 80c1bbe8f9e0ea04c92a1f004ba64a44, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7936,7 +7938,7 @@ MonoBehaviour:
     to lower her dosage!'
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7964,7 +7966,7 @@ MonoBehaviour:
     pretty little thing."
   description: 
   character: {fileID: 1005277647}
-  portrait: {fileID: 5417424893544543205, guid: 5875b613375a10b40a5a246bf57ddc67, type: 3}
+  portrait: {fileID: -1154388647637100039, guid: 80c1bbe8f9e0ea04c92a1f004ba64a44, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -7991,7 +7993,7 @@ MonoBehaviour:
   storyText: "Wh-{w=0.5}{punch=10,0.5}What?!\n{punch=10,0.5}No, I didn\u2019t!"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -5146235407998571632, guid: 632dfce24843140499b4829f4004804c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8018,7 +8020,7 @@ MonoBehaviour:
   storyText: "Hm\u2026\nI suppose he would be the type to say that."
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 0}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8232,7 +8234,7 @@ MonoBehaviour:
     confinement?\nYou\u2019re not due to be let out until\u2026"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 0}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8344,11 +8346,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1590.9008, y: 603.4947}
+  scrollPos: {x: -1919.5436, y: 248.01773}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.52
+  zoom: 0.8799996
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -8356,9 +8358,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134093}
-  selectedCommands:
-  - {fileID: 1399134463}
+  - {fileID: 1399134120}
+  selectedCommands: []
   variables:
   - {fileID: 1399134396}
   description: 
@@ -8625,7 +8626,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8737,7 +8738,7 @@ MonoBehaviour:
     to help you, {/color}\n{s=3}{$PlayerName}{/s}\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8791,7 +8792,7 @@ MonoBehaviour:
   storyText: Now, {$PlayerName}, why are you here?
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8819,7 +8820,7 @@ MonoBehaviour:
     name,{w=1} sweetheart?\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -8896,7 +8897,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9044,7 +9045,7 @@ MonoBehaviour:
     leave them here.\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9071,7 +9072,7 @@ MonoBehaviour:
   storyText: "That\u2019s more like it.\nYour relatives sent over your things.\r\n\n\n\n\r\n"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: -8180614222905166463, guid: 24ba6d6007d7b7348b1ae3e2bb318c5c, type: 3}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -9440,7 +9441,7 @@ MonoBehaviour:
 '
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 162231993076498431, guid: 22ba60e2b43e9e849976cab3ab9271a0, type: 3}
+  portrait: {fileID: 6988799979076814806, guid: 4b62aedfcc46ae44fbf1e93bb06200a1, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -10881,7 +10882,7 @@ MonoBehaviour:
   storyText: "The sooner you eat, {w=0.5}the sooner you\u2019ll be back in your room!"
   description: 
   character: {fileID: 458456193}
-  portrait: {fileID: 0}
+  portrait: {fileID: 7086453747206212394, guid: 38918df882e46d14b96c4f8b997d4f18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -11069,7 +11070,7 @@ MonoBehaviour:
   storyText: Back to the room you go.
   description: 
   character: {fileID: 1005277647}
-  portrait: {fileID: 5417424893544543205, guid: 5875b613375a10b40a5a246bf57ddc67, type: 3}
+  portrait: {fileID: -1154388647637100039, guid: 80c1bbe8f9e0ea04c92a1f004ba64a44, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -12848,6 +12849,7 @@ MonoBehaviour:
   isClosing: 0
   flowchart: {fileID: 1399133818}
   blockToExecute: FirstBlock
+  notebookInventory: {fileID: 1162979935}
 --- !u!114 &1486352528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12873,6 +12875,7 @@ MonoBehaviour:
   delayBeforeFadeOut: 2
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 705957865}
+  textFadeDone: 0
 --- !u!4 &1486352529
 Transform:
   m_ObjectHideFlags: 0
@@ -14045,7 +14048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1775290110
 Transform:
   m_ObjectHideFlags: 0

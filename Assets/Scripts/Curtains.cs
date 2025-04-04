@@ -4,6 +4,7 @@ using UnityEngine;
 using Fungus;
 using Unity.VisualScripting;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Curtains : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Curtains : MonoBehaviour
     public bool isClosing = false;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private string blockToExecute;
+    [SerializeField] private NotebookInventory notebookInventory;
 
     private bool hasExecutedBlock = false;
 
@@ -58,7 +60,11 @@ public class Curtains : MonoBehaviour
         isClosing = false;  // Ensure it doesn’t conflict with closing
         hasExecutedBlock = false;
         StartCoroutine(ExecuteFungusBlockAfterDelay(4f));
+        if (notebookInventory.IsSceneAllowed())
+        {
+
         TextUpdater.text = string.Empty;
+        }
         
     }
 
@@ -74,8 +80,13 @@ public class Curtains : MonoBehaviour
     private IEnumerator ExecuteFungusBlockAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        CollectablesUI.SetActive(true);
-        Npc.SetActive(true);
+
+        if (SceneManager.GetActiveScene().name == "2_CanteenDorm")
+        {
+            CollectablesUI.SetActive(true);
+            Npc.SetActive(true);
+        }
+
 
         if (!hasExecutedBlock && flowchart != null && !string.IsNullOrEmpty(blockToExecute))
         {

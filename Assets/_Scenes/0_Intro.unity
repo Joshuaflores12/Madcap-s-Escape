@@ -149,10 +149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAnimator: {fileID: 1212853707}
+  fadeInAnimator: {fileID: 1317500383}
   nextSceneName: 1_IsolationChamber
   fadeOutDuration: 4
   fadeOutObject: {fileID: 1212853705}
-  blackScreen: {fileID: 0}
+  blackScreen: {fileID: 1317500379}
+  videoPlayerCutscene: {fileID: 1420384063}
+  switchScene: {fileID: 109756555}
 --- !u!4 &4273394
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +248,7 @@ MonoBehaviour:
   delayBeforeFadeOut: 2
   curtains: {fileID: 0}
   fadeOutObject: {fileID: 1212853705}
+  textFadeDone: 1
 --- !u!4 &109756556
 Transform:
   m_ObjectHideFlags: 0
@@ -275,6 +279,10 @@ GameObject:
   - component: {fileID: 169782994}
   - component: {fileID: 169782996}
   - component: {fileID: 169782995}
+  - component: {fileID: 169782998}
+  - component: {fileID: 169782999}
+  - component: {fileID: 169783000}
+  - component: {fileID: 169783001}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -308,6 +316,10 @@ MonoBehaviour:
   eventHandler: {fileID: 169782994}
   commandList:
   - {fileID: 169782993}
+  - {fileID: 169782998}
+  - {fileID: 169782999}
+  - {fileID: 169783000}
+  - {fileID: 169783001}
   suppressAllAutoSelections: 0
 --- !u!114 &169782991
 MonoBehaviour:
@@ -397,7 +409,7 @@ MonoBehaviour:
   waitForFrames: 1
 --- !u!114 &169782995
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -439,6 +451,79 @@ MonoBehaviour:
   commandList:
   - {fileID: 169782995}
   suppressAllAutoSelections: 0
+--- !u!114 &169782998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169782989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  targetObject: {fileID: 4273392}
+  methodName: FadeInCutscene
+  delay: 0
+--- !u!114 &169782999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169782989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  targetObject: {fileID: 4273392}
+  methodName: PlayVideo
+  delay: 0
+--- !u!114 &169783000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169782989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 50
+  durationOLD: 0
+--- !u!114 &169783001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169782989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 169782996}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1 &240496629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,8 +1085,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.930695, y: 97.59573}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 9.25, y: -34.02}
+  m_SizeDelta: {x: 159.12, y: 165.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1212853707
 Animator:

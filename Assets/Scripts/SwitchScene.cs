@@ -8,7 +8,7 @@ public class SwitchScene : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] string scene;
     [SerializeField] string hallwayLeft;
-    [SerializeField] string hallwayRight;
+    [SerializeField] string hallwayDorm;
     [SerializeField] string scene2;
     [SerializeField] string scene3;
     [SerializeField] string scene4;
@@ -18,6 +18,7 @@ public class SwitchScene : MonoBehaviour
     [SerializeField] float delayBeforeFadeOut = 0f;
     [SerializeField] private Curtains curtains;
     [SerializeField] private GameObject fadeOutObject;
+    public bool textFadeDone = false;
 
     void Start()
     {
@@ -41,10 +42,11 @@ public class SwitchScene : MonoBehaviour
         StartCoroutine(LoadSceneAfterFadeOut(hallwayLeft));
         Debug.Log("Switching scene to: " + hallwayLeft);
     }
-    public void SwitchSceneToHallwayRight()
+    public void SwitchSceneToHallwayDorm()
     {
-        StartCoroutine(LoadSceneAfterFadeOut(hallwayRight));
-        Debug.Log("Switching scene to: " + hallwayRight);
+        Debug.Log("to dorm");
+        StartCoroutine(LoadSceneAfterFadeOut(hallwayDorm));
+        Debug.Log("Switching scene to: " + hallwayDorm);
     }
 
     public void SwitchSceneToChapter2()
@@ -86,6 +88,11 @@ public class SwitchScene : MonoBehaviour
 
         chapterTitleText.gameObject.SetActive(false);
 
+        if (chapterTitleText.gameObject.activeSelf!)
+        {
+            textFadeDone = true;
+        }
+
         if (curtains != null)
         {
             curtains.OpenCurtains();
@@ -94,6 +101,7 @@ public class SwitchScene : MonoBehaviour
 
     private IEnumerator LoadSceneAfterTextFade(string sceneName)
     {
+
         fadeOutObject.SetActive(true);
         yield return new WaitForSeconds(fadeDuration + delayBeforeFadeOut);
 
