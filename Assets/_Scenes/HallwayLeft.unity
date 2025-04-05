@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &52017644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8172,7 +8172,7 @@ MonoBehaviour:
   letter: {fileID: 0}
   Patient1Prefab: {fileID: 0}
   TextUpdater: {fileID: 0}
-  flowchart: {fileID: 0}
+  flowchart: {fileID: 423972050}
   clownMaskButton: {fileID: 207702587}
   FoodBlock: Food
   JuiceBlock: Odd Juice
