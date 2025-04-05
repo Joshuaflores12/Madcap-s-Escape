@@ -31,7 +31,7 @@ public class ClownMask : MonoBehaviour
         {
             if (secondChallenge.isSecondChallengeCompleted == true)
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     isManic = !isManic;
                     SwitchStateBG();

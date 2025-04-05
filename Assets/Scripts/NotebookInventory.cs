@@ -27,8 +27,8 @@ public class NotebookInventory : MonoBehaviour
     {
         if (secondChallenge.isSecondChallengeCompleted == true || IsSceneAllowed())
         {
-            //Debug.Log("E");
-            if (Input.GetKeyDown(KeyCode.E))
+            //Debug.Log("Q");
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 notebook.SetActive(!notebook.activeSelf);
             }

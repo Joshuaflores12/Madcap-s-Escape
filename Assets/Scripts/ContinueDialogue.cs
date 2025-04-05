@@ -33,11 +33,11 @@ public class ContinueDialogue : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "1_IsolationChamber")
         {
-            if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint) && clownMask.ManicStateIsolationBG.activeSelf)
+/*            if (!hasTriggeredFirstCheckpoint && PlayerHasPassedCheckpoint(checkpoint) && clownMask.ManicStateIsolationBG.activeSelf)
             {
                 hasTriggeredFirstCheckpoint = true;
                 ExecuteFungusBlock(blockName);
-            }
+            }*/
 
             if (PlayerHasPassedCheckpoint(checkpoint2) && isBackToIsolation == true)
             {
@@ -54,6 +54,7 @@ public class ContinueDialogue : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && PlayerHasThreeKeys())
             {
+                Debug.Log("clicked door");
                 Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 

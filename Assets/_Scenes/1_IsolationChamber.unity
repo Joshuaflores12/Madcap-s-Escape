@@ -8053,6 +8053,9 @@ GameObject:
   - component: {fileID: 1399134469}
   - component: {fileID: 1399134467}
   - component: {fileID: 1399134470}
+  - component: {fileID: 1399134471}
+  - component: {fileID: 1399134473}
+  - component: {fileID: 1399134472}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -8531,11 +8534,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1809.3464, y: 148.20728}
+  scrollPos: {x: -1530.5262, y: 439.1807}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.4900001
+  zoom: 0.79
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -8543,9 +8546,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1399134131}
-  selectedCommands:
-  - {fileID: 1399134470}
+  - {fileID: 1399134064}
+  selectedCommands: []
   variables:
   - {fileID: 1399134396}
   description: 
@@ -10577,8 +10579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1818.0502
-    y: -171.08508
+    x: 1826.9109
+    y: -145.76863
     width: 240
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10597,6 +10599,7 @@ MonoBehaviour:
   - {fileID: 1399134048}
   - {fileID: 1399134047}
   - {fileID: 1399134417}
+  - {fileID: 1399134471}
   suppressAllAutoSelections: 0
 --- !u!114 &1399134067
 MonoBehaviour:
@@ -10700,8 +10703,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1888.4167
-    y: -77.57555
+    x: 1911.2017
+    y: -15.550232
     width: 119.34
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12101,8 +12104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1702.0088
-    y: -92.82355
+    x: 1904.5406
+    y: -92.82356
     width: 129.76999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12167,6 +12170,8 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1399134430}
+  - {fileID: 1399134473}
+  - {fileID: 1399134472}
   suppressAllAutoSelections: 0
 --- !u!114 &1399134430
 MonoBehaviour:
@@ -12896,6 +12901,62 @@ MonoBehaviour:
   targetObject: {fileID: 1486352526}
   methodName: SetBoolCanExitIsolationChamber
   delay: 0
+--- !u!114 &1399134471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 775
+  indentLevel: 0
+  targetObject: {fileID: 1486352526}
+  methodName: SetBoolCanCollectKeys
+  delay: 0
+--- !u!114 &1399134472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 777
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1399134064}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1399134473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399133750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 776
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 4
+  durationOLD: 0
 --- !u!1 &1434300568
 GameObject:
   m_ObjectHideFlags: 0

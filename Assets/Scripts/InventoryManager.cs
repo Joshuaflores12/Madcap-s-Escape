@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             Inventoy_UI.SetActive(!Inventoy_UI.activeSelf);
         }

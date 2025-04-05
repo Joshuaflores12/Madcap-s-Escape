@@ -46,6 +46,13 @@ public class ItemCollector : MonoBehaviour
 
     void Update()
     {
+
+        if (flowchart.HasExecutingBlocks())
+        {
+            return; 
+        }
+
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

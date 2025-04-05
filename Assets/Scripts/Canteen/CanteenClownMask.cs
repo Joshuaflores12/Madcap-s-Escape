@@ -20,7 +20,7 @@ public class CanteenClownMask : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "2_CanteenDorm")
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 isManic = !isManic;
 

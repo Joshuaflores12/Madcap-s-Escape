@@ -25,7 +25,7 @@ public class DormClownMask : MonoBehaviour
         
         if (SceneManager.GetActiveScene().name == "HallwayDorm")
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 isManic = !isManic;
 
@@ -38,7 +38,7 @@ public class DormClownMask : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "HallwayLeft")
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 isManic = !isManic;
 
