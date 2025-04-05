@@ -64,14 +64,14 @@ public class ContinueDialogue : MonoBehaviour
                 }
             }
 
-            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
+/*            if (!hasTriggeredCanteenTransition && PlayerHasPassedCheckpoint(toCanteen))
             {
                 hasTriggeredCanteenTransition = true;
                 TriggerCanteenTransition();
-            }
+            }*/
         }
 
-        if (SceneManager.GetActiveScene().name == "2_CanteenDorm") 
+/*        if (SceneManager.GetActiveScene().name == "2_CanteenDorm") 
         {
             if (!hasTriggeredHallwayTransition && PlayerHasPassedCheckpoint(toHallwayLeft))
             {
@@ -108,7 +108,7 @@ public class ContinueDialogue : MonoBehaviour
                 TriggerCanteenTransition();
             }
 
-        }
+        }*/
 
 
 
@@ -151,7 +151,7 @@ public class ContinueDialogue : MonoBehaviour
         isBackToIsolation = false;
     }
 
-    private void TriggerCanteenTransition()
+    public void TriggerCanteenTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
@@ -160,7 +160,7 @@ public class ContinueDialogue : MonoBehaviour
         }
     }
     
-    private void TriggerHallwayLeftTransition()
+    public void TriggerHallwayLeftTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
@@ -168,7 +168,7 @@ public class ContinueDialogue : MonoBehaviour
             switchScene.SwitchSceneToHallwayLeft();
         }
     }
-    private void TriggerHallwayDormTransition()
+    public void TriggerHallwayDormTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
@@ -177,7 +177,7 @@ public class ContinueDialogue : MonoBehaviour
         }
     }
 
-    private void TriggerDoctorsOfficeTransition()
+    public void TriggerDoctorsOfficeTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)

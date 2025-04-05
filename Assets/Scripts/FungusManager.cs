@@ -31,7 +31,12 @@ public class FungusManager : MonoBehaviour
 
     [SerializeField] private Button clownMaskButton;
     [SerializeField] private Flowchart flowchart;
+    public bool canExitIsolationChamber = false;
 
+    public void SetBoolCanExitIsolationChamber()
+    {
+        canExitIsolationChamber = true;
+    }
     public void TriggerFadeoutAnimation()
     {
         fadeoutObject.SetActive(true);
@@ -147,7 +152,7 @@ public class FungusManager : MonoBehaviour
     {
         Debug.Log("guard dragging mc");
         StartCoroutine(MoveGuard(guardTargetTransform.position));
-        StartCoroutine(DelayMCFollow(1f));
+        StartCoroutine(DelayMCFollow(0f));
     }
 
     public void GuardReturnToOGPos()
@@ -224,6 +229,7 @@ public class FungusManager : MonoBehaviour
 
     public void MCToHallway()
     {
+        StopAllCoroutines();
         Debug.Log("moving mc to hallway");
         StartCoroutine(MoveMCHallway(mcHallwayTransform.position));
     }
@@ -233,7 +239,7 @@ public class FungusManager : MonoBehaviour
         float timeElapsed = 0f;
         Vector3 startPos = mc.transform.position;
 
-        while (timeElapsed < 8f)
+        while (timeElapsed < 3f)
         {
             mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / 1f);
             timeElapsed += Time.deltaTime;
@@ -245,6 +251,7 @@ public class FungusManager : MonoBehaviour
 
     public void MCBackToIsolation()
     {
+        StopAllCoroutines();
         Debug.Log("back to isolation");
         StartCoroutine(MoveMCBackIsolation(mcIsolationTransform.position));
     }
@@ -254,7 +261,7 @@ public class FungusManager : MonoBehaviour
         float timeElapsed = 0f;
         Vector3 startPos = mc.transform.position;
 
-        while (timeElapsed < 8f)
+        while (timeElapsed < 3f)
         {
             mc.transform.position = Vector3.Lerp(startPos, targetPosition, timeElapsed / 1f);
             timeElapsed += Time.deltaTime;

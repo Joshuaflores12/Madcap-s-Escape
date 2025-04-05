@@ -37,6 +37,8 @@ TagManager:
   - roomDoor3
   - roomDoor4
   - roomDoor5
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX
