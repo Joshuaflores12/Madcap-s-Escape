@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MadcapsEscape_0: 6556802053218226152
+      MadcapsEscape_1: 8674136465723576129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
