@@ -21,21 +21,21 @@ public class ClickHandtoSwitchScene : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
 
             
-            if (SceneManager.GetActiveScene().name == "2_CanteenDorm")
+            if (SceneManager.GetActiveScene().name == "2_HallwayDoctors")
             {
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
                     Debug.Log("clicked left hand. ");
-                    continueDialogue.TriggerHallwayLeftTransition();
+                    continueDialogue.TriggerHallwayDoctorsTransition();
                 }
 
-                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
+/*                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
                     Debug.Log("clicked right hand. ");
 
                     // condition before proceeding to transition scene: the player must interact with patient 1,2, or 3. items needed: cake or flower
                     continueDialogue.TriggerHallwayDormTransition();
-                }
+                }*/
             }
 
             if (SceneManager.GetActiveScene().name == "1_IsolationChamber")
@@ -46,7 +46,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                     Debug.Log("clicked right hand. ");
                     if(fungusManager.canExitIsolationChamber == true)
                     {
-                        continueDialogue.TriggerHallwayLeftTransition();
+                        continueDialogue.TriggerHallwayDoctorsTransition();
 
                     }
                 }

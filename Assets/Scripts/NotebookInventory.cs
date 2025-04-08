@@ -42,7 +42,7 @@ public class NotebookInventory : MonoBehaviour
     {
         string scene = SceneManager.GetActiveScene().name;
 
-        if (scene == "4_Doctors" || scene == "HallwayDorm" ||scene == "HallwayLeft" || scene == "2_CanteenDorm" ||
+        if (scene == "2_HallwayDoctors" || scene == "3_WaitingArea" ||scene == "4_Canteen" || scene == "5_HallwayDorm" || scene == "6_Doctors"||
            (scene == "1_IsolationChamber" && secondChallenge.isSecondChallengeCompleted))
         {
             if (Input.GetKeyDown(KeyCode.Q))

@@ -152,21 +152,31 @@ public class ContinueDialogue : MonoBehaviour
         isBackToIsolation = false;
     }
 
+
+    
+    public void TriggerHallwayDoctorsTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToHallwayDoctors();
+        }
+    }
+
+    public void TriggerWaitingAreaTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToWaitingArea();
+        }
+    }
     public void TriggerCanteenTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
-            switchScene.SwitchSceneToChapter2();
-        }
-    }
-    
-    public void TriggerHallwayLeftTransition()
-    {
-        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
-        if (switchScene != null)
-        {
-            switchScene.SwitchSceneToHallwayLeft();
+            switchScene.SwitchSceneToCanteen();
         }
     }
     public void TriggerHallwayDormTransition()
@@ -183,7 +193,7 @@ public class ContinueDialogue : MonoBehaviour
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
-            switchScene.SwitchSceneToChapter4();
+            switchScene.SwitchSceneToCanteen();
         }
     }
 }

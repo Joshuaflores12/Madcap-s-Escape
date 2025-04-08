@@ -7,11 +7,11 @@ public class SwitchScene : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] string scene;
-    [SerializeField] string hallwayLeft;
+    [SerializeField] string hallwayDoctors;
     [SerializeField] string hallwayDorm;
-    [SerializeField] string scene2;
+    [SerializeField] string waitingArea;
     [SerializeField] string scene3;
-    [SerializeField] string scene4;
+    [SerializeField] string canteen;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField] GameObject titleText;
     [SerializeField] float fadeDuration = 0f;
@@ -34,13 +34,25 @@ public class SwitchScene : MonoBehaviour
 
     public void OnPlayButtonClicked()
     {
-        StartCoroutine(LoadSceneAfterTextFade(scene2));
+        StartCoroutine(LoadSceneAfterTextFade(waitingArea));
     }
 
-    public void SwitchSceneToHallwayLeft()
+    public void SwitchSceneToHallwayDoctors()
     {
-        StartCoroutine(LoadSceneAfterFadeOut(hallwayLeft));
-        Debug.Log("Switching scene to: " + hallwayLeft);
+        StartCoroutine(LoadSceneAfterFadeOut(hallwayDoctors));
+        Debug.Log("Switching scene to: " + hallwayDoctors);
+    }
+
+    public void SwitchSceneToWaitingArea()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(waitingArea));
+        Debug.Log("Switching scene to: " + waitingArea);
+    }
+
+    public void SwitchSceneToCanteen()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(canteen));
+        Debug.Log("Switching scene to: " + canteen);
     }
     public void SwitchSceneToHallwayDorm()
     {
@@ -49,17 +61,9 @@ public class SwitchScene : MonoBehaviour
         Debug.Log("Switching scene to: " + hallwayDorm);
     }
 
-    public void SwitchSceneToChapter2()
-    {
-        StartCoroutine(LoadSceneAfterFadeOut(scene2));
-        Debug.Log("Switching scene to: " + scene2);
-    }
 
-    public void SwitchSceneToChapter4()
-    {
-        StartCoroutine(LoadSceneAfterFadeOut(scene4));
-        Debug.Log("Switching scene to: " + scene4);
-    }
+
+
 
     private IEnumerator FadeInAndOutChapterTitle()
     {

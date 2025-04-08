@@ -13695,9 +13695,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 705957867}
   scene: 1_IsolationChamber
-  hallwayLeft: HallwayLeft
+  hallwayLeft: 
   hallwayDorm: 
-  scene2: 2_CanteenDorm
+  scene2: 2_HallwayDoctors
   scene3: 
   scene4: 
   chapterTitleText: {fileID: 544483245}
