@@ -60,7 +60,7 @@ public class Curtains : MonoBehaviour
         isClosing = false;  // Ensure it doesn’t conflict with closing
         hasExecutedBlock = false;
         StartCoroutine(ExecuteFungusBlockAfterDelay(4f));
-        if (notebookInventory.IsSceneAllowed())
+        if (SceneManager.GetActiveScene().name != "HallwayDorm")
         {
 
         TextUpdater.text = string.Empty;

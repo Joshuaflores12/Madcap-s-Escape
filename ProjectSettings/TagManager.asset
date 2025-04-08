@@ -39,6 +39,9 @@ TagManager:
   - roomDoor5
   - LeftHand
   - RightHand
+  - Notebook
+  - InventoryUI
+  - paperClip
   layers:
   - Default
   - TransparentFX

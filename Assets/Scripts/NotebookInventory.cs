@@ -6,92 +6,75 @@ using UnityEngine.UI;
 
 public class NotebookInventory : MonoBehaviour
 {
-    public static NotebookInventory Instance;  
+    public static NotebookInventory Instance;
+
+    [Header("Inventory System")]
     [SerializeField] private List<string> inventory = new List<string>();
     [SerializeField] private Transform inventoryUI;
     [SerializeField] private GameObject inventorySlotPrefab;
-    [SerializeField] public GameObject notebook;
-    [SerializeField] public SecondChallenge secondChallenge;
-
+    [SerializeField] private GameObject notebook;
+    [SerializeField] private SecondChallenge secondChallenge;
     [SerializeField] private string[] allowedSceneNames = { "2_CanteenDorm", "3_Dorm", "4_Doctors", "HallwayLeft", "HallwayDorm" };
+    private int currentPage = 0;
+    private int itemsPerPage = 8;
 
+    [Header("Combination System")]
+    [SerializeField] private List<CombinationRecipe> combineRecipes;
+    [SerializeField] private GameObject combineEntryPrefab;
+    [SerializeField] private Transform combineListContainer;
+    private List<CombineDisplay> activeCombineDisplays = new List<CombineDisplay>();
 
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "HallwayLeft" || SceneManager.GetActiveScene().name == "2_CanteenDorm")
+        string scene = SceneManager.GetActiveScene().name;
+
+        if (scene == "HallwayLeft" || scene == "2_CanteenDorm" ||
+           (scene == "1_IsolationChamber" && secondChallenge.isSecondChallengeCompleted))
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 bool newState = !notebook.activeSelf;
                 notebook.SetActive(newState);
-
                 foreach (Transform child in notebook.transform)
-                {
                     child.gameObject.SetActive(newState);
-                }
             }
         }
-
-
-        if (SceneManager.GetActiveScene().name == "1_IsolationChamber")
-        {
-            if (secondChallenge.isSecondChallengeCompleted == true)
-            {
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    bool newState = !notebook.activeSelf;
-                    notebook.SetActive(newState);
-
-                    foreach (Transform child in notebook.transform)
-                    {
-                        child.gameObject.SetActive(newState);
-                    }
-                }
-
-            }
-        }
-
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        GameObject notebookObj = GameObject.Find("InventoryJournal");
-        GameObject inventoryUIObj = GameObject.Find("InventoryParent");
+        GameObject notebookObj = GameObject.FindWithTag("Notebook");
+        GameObject inventoryUIObj = GameObject.FindWithTag("InventoryUI");
 
         if (notebookObj != null && inventoryUIObj != null)
         {
             ReinitializeReferences(notebookObj, inventoryUIObj.transform);
             UpdateInventoryUI();
+/*            PopulateCombineUI(); */// Create combination entries
         }
         else
         {
             Debug.LogWarning("NotebookInventory: Could not find notebook or inventory UI in scene " + scene.name);
         }
-        notebook.SetActive(false);
+
+        if (notebook != null)
+            notebook.SetActive(false);
     }
 
     public void ReinitializeReferences(GameObject newNotebook, Transform newInventoryUI)
@@ -99,15 +82,14 @@ public class NotebookInventory : MonoBehaviour
         notebook = newNotebook;
         inventoryUI = newInventoryUI;
     }
+
     public bool IsSceneAllowed()
     {
         string currentScene = SceneManager.GetActiveScene().name;
         foreach (string scene in allowedSceneNames)
         {
             if (currentScene == scene)
-            {
                 return true;
-            }
         }
         return false;
     }
@@ -116,49 +98,71 @@ public class NotebookInventory : MonoBehaviour
     {
         bool isActive = !notebook.activeSelf;
         notebook.SetActive(isActive);
-
         foreach (Transform child in notebook.transform)
-        {
             child.gameObject.SetActive(isActive);
-        }
-
-
     }
 
     public GameObject AddToInventory(string itemTag)
     {
         inventory.Add(itemTag);
-        return UpdateInventoryUI();
+        UpdateInventoryUI();
+        UpdateCombineDisplays();
+        return null;
     }
 
     public GameObject UpdateInventoryUI()
     {
         foreach (Transform child in inventoryUI)
-        {
             Destroy(child.gameObject);
-        }
 
         float xOffset = 200f;
+        float yOffset = -200f;
+        int itemsPerRow = 2;
         GameObject lastSlot = null;
 
-        for (int i = 0; i < inventory.Count; i++)
+        int start = currentPage * itemsPerPage;
+        int end = Mathf.Min(start + itemsPerPage, inventory.Count);
+
+        for (int i = start; i < end; i++)
         {
             GameObject slot = Instantiate(inventorySlotPrefab, inventoryUI);
             TMP_Text slotText = slot.GetComponentInChildren<TMP_Text>();
-
-            if (slotText != null)
-                slotText.text = inventory[i];
+            if (slotText != null) slotText.text = inventory[i];
 
             RectTransform slotRect = slot.GetComponent<RectTransform>();
             if (slotRect != null)
             {
-                slotRect.anchoredPosition = new Vector2(xOffset * i, 0);
+                int localIndex = i - start;
+                int row = localIndex / itemsPerRow;
+                int col = localIndex % itemsPerRow;
+                float xPos = xOffset * col;
+                float yPos = yOffset * row;
+                slotRect.anchoredPosition = new Vector2(xPos, yPos);
             }
 
-            lastSlot = slot; // Store the last created slot
+            lastSlot = slot;
         }
 
-        return lastSlot; // Return the most recently created inventory slot
+        return lastSlot;
+    }
+
+    public void NextPage()
+    {
+        int maxPage = Mathf.CeilToInt((float)inventory.Count / itemsPerPage) - 1;
+        if (currentPage < maxPage)
+        {
+            currentPage++;
+            UpdateInventoryUI();
+        }
+    }
+
+    public void PreviousPage()
+    {
+        if (currentPage > 0)
+        {
+            currentPage--;
+            UpdateInventoryUI();
+        }
     }
 
     public int CountItems(string itemTag)
@@ -167,10 +171,90 @@ public class NotebookInventory : MonoBehaviour
         foreach (string item in inventory)
         {
             if (item == itemTag)
-            {
                 count++;
-            }
         }
         return count;
     }
+
+    /*public void PopulateCombineUI()
+    {
+        foreach (Transform child in combineListContainer)
+            Destroy(child.gameObject);
+
+        activeCombineDisplays.Clear();
+
+        foreach (var recipe in combineRecipes)
+        {
+            GameObject entry = Instantiate(combineEntryPrefab, combineListContainer);
+            TMP_Text label = entry.transform.Find("LabelText").GetComponent<TMP_Text>();
+            TMP_Text count = entry.transform.Find("CountText").GetComponent<TMP_Text>();
+            Button button = entry.transform.Find("LabelText").GetComponent<Button>();
+
+            CombineDisplay display = new CombineDisplay
+            {
+                outputItem = recipe.outputItem,
+                requiredItem = recipe.requiredItem,
+                requiredAmount = recipe.requiredAmount,
+                labelText = label,
+                countText = count,
+                labelButton = button
+            };
+
+            button.onClick.AddListener(() => TryCombine(display));
+            activeCombineDisplays.Add(display);
+        }
+
+        UpdateCombineDisplays();
+    }*/
+
+    public void UpdateCombineDisplays()
+    {
+        foreach (var display in activeCombineDisplays)
+        {
+            int count = CountItems(display.requiredItem);
+            bool ready = count >= display.requiredAmount;
+
+            if (display.countText != null)
+                display.countText.text = $"{count}/{display.requiredAmount} {display.requiredItem}";
+
+            if (display.labelText != null)
+                display.labelText.color = ready ? Color.green : Color.gray;
+
+            if (display.labelButton != null)
+                display.labelButton.interactable = ready;
+        }
+    }
+
+    public void TryCombine(CombineDisplay display)
+    {
+        if (CountItems(display.requiredItem) >= display.requiredAmount)
+        {
+            for (int i = 0; i < display.requiredAmount; i++)
+                inventory.Remove(display.requiredItem);
+
+            inventory.Add(display.outputItem);
+            UpdateInventoryUI();
+            UpdateCombineDisplays();
+        }
+    }
+}
+
+[System.Serializable]
+public class CombinationRecipe
+{
+    public string outputItem;
+    public string requiredItem;
+    public int requiredAmount;
+}
+
+[System.Serializable]
+public class CombineDisplay
+{
+    public string outputItem;
+    public string requiredItem;
+    public int requiredAmount;
+
+    public TMP_Text labelText;
+    public TMP_Text countText;
+    public Button labelButton;
 }
