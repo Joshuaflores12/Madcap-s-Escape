@@ -1373,7 +1373,7 @@ SpriteRenderer:
   m_Size: {x: 31.199999, y: 10.801171}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &365736363
@@ -1922,11 +1922,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 423972054}
-  - {fileID: 423972164}
-  - {fileID: 423972163}
-  - {fileID: 423972162}
-  - {fileID: 423972161}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 423972158}
   variables:
   - {fileID: 423972048}
   description: 
@@ -8175,6 +8172,7 @@ MonoBehaviour:
   isClosing: 0
   flowchart: {fileID: 0}
   blockToExecute: 
+  notebookInventory: {fileID: 0}
 --- !u!114 &1486352528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8189,7 +8187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1870802716}
   scene: 1_IsolationChamber
-  hallway: 
+  hallwayLeft: 
+  hallwayDorm: 
   scene2: 
   scene3: 
   scene4: 
@@ -8199,6 +8198,7 @@ MonoBehaviour:
   delayBeforeFadeOut: 2
   curtains: {fileID: 1486352527}
   fadeOutObject: {fileID: 1870802714}
+  textFadeDone: 0
 --- !u!4 &1486352529
 Transform:
   m_ObjectHideFlags: 0
@@ -8233,7 +8233,9 @@ MonoBehaviour:
   checkpoint2: {fileID: 0}
   requiredTag: door
   toCanteen: {fileID: 0}
-  toHallway: {fileID: 0}
+  toDoctors: {fileID: 0}
+  toHallwayLeft: {fileID: 0}
+  toHallwayRight: {fileID: 0}
   clownMask: {fileID: 0}
   hasTriggeredCanteenTransition: 0
   hasTriggeredHallwayTransition: 0
@@ -8442,6 +8444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SoberStateDormBG: {fileID: 341466276}
   ManicStateDormBG: {fileID: 1520634149}
+  SoberStateHallwayBG: {fileID: 0}
+  ManicStateHallwayBG: {fileID: 0}
   isManic: 0
 --- !u!1 &1610783314
 GameObject:
