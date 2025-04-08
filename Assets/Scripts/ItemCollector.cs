@@ -84,10 +84,11 @@ public class ItemCollector : MonoBehaviour
                 {
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;
-                    string uniqueID = hit.collider.gameObject.name;
-                    NotebookInventory.Instance.MarkItemCollected(uniqueID);
-                    NotebookInventory.Instance.AddToInventory(itemTag);
-                    Destroy(hit.collider.gameObject);
+                    string uniqueID = hit.collider.tag + "_" + hit.collider.gameObject.name;
+
+                    NotebookInventory.Instance.MarkItemCollected(uniqueID); 
+                    NotebookInventory.Instance.AddToInventory(hit.collider.tag); 
+                    Destroy(hit.collider.gameObject); 
 
                 }
                 if (hit.collider.CompareTag("Food"))

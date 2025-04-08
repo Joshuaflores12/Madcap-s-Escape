@@ -85,6 +85,30 @@ public class NotebookInventory : MonoBehaviour
 
         if (notebook != null)
             notebook.SetActive(false);
+
+        RemoveCollectedItemsFromScene();
+    }
+
+    private void RemoveCollectedItemsFromScene()
+    {
+        string[] collectibleTags = { "brokenKey", "Food", "Water", "pingPongBall", "OddColoredJuice", "bobbyPin", "Food2", "paperClip" };
+
+        foreach (string tag in collectibleTags)
+        {
+            GameObject[] items = GameObject.FindGameObjectsWithTag(tag);
+
+            foreach (GameObject obj in items)
+            {
+                string uniqueID = tag + "_" + obj.name;
+
+                if (HasItemBeenCollected(uniqueID))
+                {
+                    Destroy(obj);  
+                }
+            }
+        }
+
+        Debug.Log("removing item");
     }
 
     public void ReinitializeReferences(GameObject newNotebook, Transform newInventoryUI)
