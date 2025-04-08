@@ -137,8 +137,8 @@ public class ContinueDialogue : MonoBehaviour
     {
         if (NotebookInventory.Instance != null)
         {
-            int keyCount = NotebookInventory.Instance.CountItems("Key");
-            return keyCount >= 3;
+            int keyCount = NotebookInventory.Instance.CountItems("Door Key");
+            return keyCount >= 1;
         }
         return false;
     }

@@ -44,6 +44,25 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        // Remove any previously collected objects in the scene
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("brokenKey"))
+            DestroyIfCollected(obj);
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Food"))
+            DestroyIfCollected(obj);
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Water"))
+            DestroyIfCollected(obj);
+        // repeat for other collectible tags as needed
+    }
+    void DestroyIfCollected(GameObject obj)
+    {
+        string uniqueID = obj.name; // uses GameObject name
+        if (NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            Destroy(obj);
+        }
+    }
     void Update()
     {
 
@@ -61,10 +80,12 @@ public class ItemCollector : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("Key") || hit.collider.CompareTag("Food") || hit.collider.CompareTag("OddColoredJuice") || hit.collider.CompareTag("Food2") || hit.collider.CompareTag("Water") || hit.collider.CompareTag("paperClip"))
+                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("brokenKey") || hit.collider.CompareTag("Food") || hit.collider.CompareTag("OddColoredJuice") || hit.collider.CompareTag("Food2") || hit.collider.CompareTag("Water") || hit.collider.CompareTag("paperClip"))
                 {
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;
+                    string uniqueID = hit.collider.gameObject.name;
+                    NotebookInventory.Instance.MarkItemCollected(uniqueID);
                     NotebookInventory.Instance.AddToInventory(itemTag);
                     Destroy(hit.collider.gameObject);
 

@@ -46,7 +46,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                     Debug.Log("clicked right hand. ");
                     if(fungusManager.canExitIsolationChamber == true)
                     {
-                        continueDialogue.TriggerCanteenTransition();
+                        continueDialogue.TriggerHallwayLeftTransition();
 
                     }
                 }

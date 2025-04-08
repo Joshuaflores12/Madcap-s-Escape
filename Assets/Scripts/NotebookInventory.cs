@@ -19,11 +19,12 @@ public class NotebookInventory : MonoBehaviour
     private int itemsPerPage = 8;
 
     [Header("Combination System")]
+
     [SerializeField] private List<CombinationRecipe> combineRecipes;
     [SerializeField] private GameObject combineEntryPrefab;
-    [SerializeField] private Transform combineListContainer;
+    private Transform combineListContainer;
     private List<CombineDisplay> activeCombineDisplays = new List<CombineDisplay>();
-
+    private HashSet<string> collectedIDs = new HashSet<string>();
     private void Awake()
     {
         if (Instance == null)
@@ -41,7 +42,7 @@ public class NotebookInventory : MonoBehaviour
     {
         string scene = SceneManager.GetActiveScene().name;
 
-        if (scene == "HallwayLeft" || scene == "2_CanteenDorm" ||
+        if (scene == "4_Doctors" || scene == "HallwayDorm" ||scene == "HallwayLeft" || scene == "2_CanteenDorm" ||
            (scene == "1_IsolationChamber" && secondChallenge.isSecondChallengeCompleted))
         {
             if (Input.GetKeyDown(KeyCode.Q))
@@ -53,7 +54,15 @@ public class NotebookInventory : MonoBehaviour
             }
         }
     }
+    public void MarkItemCollected(string id)
+    {
+        collectedIDs.Add(id);
+    }
 
+    public bool HasItemBeenCollected(string id)
+    {
+        return collectedIDs.Contains(id);
+    }
     private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
     private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
 
@@ -61,12 +70,13 @@ public class NotebookInventory : MonoBehaviour
     {
         GameObject notebookObj = GameObject.FindWithTag("Notebook");
         GameObject inventoryUIObj = GameObject.FindWithTag("InventoryUI");
+        combineListContainer = GameObject.FindWithTag("CombineList")?.transform;
 
         if (notebookObj != null && inventoryUIObj != null)
         {
             ReinitializeReferences(notebookObj, inventoryUIObj.transform);
             UpdateInventoryUI();
-/*            PopulateCombineUI(); */// Create combination entries
+            PopulateCombineUI(); 
         }
         else
         {
@@ -176,83 +186,141 @@ public class NotebookInventory : MonoBehaviour
         return count;
     }
 
-    /*public void PopulateCombineUI()
+    public void PopulateCombineUI()
     {
         foreach (Transform child in combineListContainer)
             Destroy(child.gameObject);
 
         activeCombineDisplays.Clear();
 
+        string currentScene = SceneManager.GetActiveScene().name;
+
         foreach (var recipe in combineRecipes)
         {
+            if (recipe.sceneName != currentScene)
+                continue;
+
             GameObject entry = Instantiate(combineEntryPrefab, combineListContainer);
-            TMP_Text label = entry.transform.Find("LabelText").GetComponent<TMP_Text>();
-            TMP_Text count = entry.transform.Find("CountText").GetComponent<TMP_Text>();
-            Button button = entry.transform.Find("LabelText").GetComponent<Button>();
+            TMP_Text label = entry.GetComponentInChildren<TMP_Text>();
+            TMP_Text count = entry.transform.Find("CountText")?.GetComponent<TMP_Text>();
+            Button button = entry.GetComponentInChildren<Button>();
+
+            if (label != null)
+                label.text = recipe.outputItem;
 
             CombineDisplay display = new CombineDisplay
             {
                 outputItem = recipe.outputItem,
-                requiredItem = recipe.requiredItem,
-                requiredAmount = recipe.requiredAmount,
+                requiredItems = new List<string>(recipe.requiredItems),
+                requiredAmounts = new List<int>(recipe.requiredAmounts),
                 labelText = label,
                 countText = count,
                 labelButton = button
             };
 
-            button.onClick.AddListener(() => TryCombine(display));
+            CombineDisplay localDisplay = display;
+            button.onClick.AddListener(() => TryCombine(localDisplay));
+
             activeCombineDisplays.Add(display);
         }
 
         UpdateCombineDisplays();
-    }*/
+    }
+
+
 
     public void UpdateCombineDisplays()
     {
         foreach (var display in activeCombineDisplays)
         {
-            int count = CountItems(display.requiredItem);
-            bool ready = count >= display.requiredAmount;
+            List<string> itemStatus = new List<string>();
+            bool ready = true;
+
+            for (int i = 0; i < display.requiredItems.Count; i++)
+            {
+                string item = display.requiredItems[i];
+                int needed = display.requiredAmounts[i];
+                int collected = CountItems(item);
+
+                itemStatus.Add($"{collected}/{needed} {item}");
+
+                if (collected < needed)
+                    ready = false;
+            }
 
             if (display.countText != null)
-                display.countText.text = $"{count}/{display.requiredAmount} {display.requiredItem}";
+                display.countText.text = string.Join(", ", itemStatus);
 
             if (display.labelText != null)
-                display.labelText.color = ready ? Color.green : Color.gray;
+                display.labelText.color = ready ? Color.red : Color.gray;
 
             if (display.labelButton != null)
                 display.labelButton.interactable = ready;
         }
     }
 
+
     public void TryCombine(CombineDisplay display)
     {
-        if (CountItems(display.requiredItem) >= display.requiredAmount)
-        {
-            for (int i = 0; i < display.requiredAmount; i++)
-                inventory.Remove(display.requiredItem);
+        bool ready = true;
 
-            inventory.Add(display.outputItem);
-            UpdateInventoryUI();
-            UpdateCombineDisplays();
+        for (int i = 0; i < display.requiredItems.Count; i++)
+        {
+            if (CountItems(display.requiredItems[i]) < display.requiredAmounts[i])
+            {
+                ready = false;
+                break;
+            }
         }
+
+        if (!ready) return;
+
+        for (int i = 0; i < display.requiredItems.Count; i++)
+        {
+            string item = display.requiredItems[i];
+            int amount = display.requiredAmounts[i];
+
+            for (int j = 0; j < amount; j++)
+                inventory.Remove(item);
+        }
+        if (display.labelText != null)
+        {
+            display.labelText.text = $"<s>{display.outputItem}</s>";
+            display.labelText.color = Color.gray;
+            Debug.Log($"Combining: {display.outputItem} — applying strikethrough");
+        }
+
+        if (display.labelButton != null)
+        {
+
+            display.labelButton.interactable = false;
+        }
+        inventory.Add(display.outputItem);
+        UpdateInventoryUI();
+        UpdateCombineDisplays();
+
+
     }
+
 }
 
 [System.Serializable]
 public class CombinationRecipe
 {
     public string outputItem;
-    public string requiredItem;
-    public int requiredAmount;
+    public List<string> requiredItems = new List<string>();
+    public List<int> requiredAmounts = new List<int>();
+
+    public string sceneName;
+
 }
 
 [System.Serializable]
 public class CombineDisplay
 {
     public string outputItem;
-    public string requiredItem;
-    public int requiredAmount;
+    public List<string> requiredItems = new List<string>();
+    public List<int> requiredAmounts = new List<int>();
 
     public TMP_Text labelText;
     public TMP_Text countText;

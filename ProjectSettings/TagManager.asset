@@ -42,6 +42,8 @@ TagManager:
   - Notebook
   - InventoryUI
   - paperClip
+  - CombineList
+  - brokenKey
   layers:
   - Default
   - TransparentFX
