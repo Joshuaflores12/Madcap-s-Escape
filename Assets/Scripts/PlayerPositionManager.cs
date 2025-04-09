@@ -16,16 +16,20 @@ public class PlayerPositionManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (SceneManager.GetActiveScene().name != "1_IsolationChamber" || SceneManager.GetActiveScene().name != "0_aStartScreen" || SceneManager.GetActiveScene().name != "0_Intro")
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        SceneManager.sceneLoaded += OnSceneLoaded;
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

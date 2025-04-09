@@ -128,9 +128,9 @@ public class ClickHandtoSwitchScene : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "6_Janitors")
             {
 
-                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
+                if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
-                    PlayerPositionManager.Instance.EnterFromLeft();
+                    PlayerPositionManager.Instance.EnterFromRight();
                     Debug.Log("clicked right hand. to dorms ");
                     continueDialogue.TriggerHallwayDormTransition(); 
                 }
