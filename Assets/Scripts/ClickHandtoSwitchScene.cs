@@ -56,6 +56,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromLeft();
                     continueDialogue.TriggerWaitingAreaTransition();
                     Debug.Log("clicked right hand. to waiting area");
 
@@ -65,6 +66,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
                     flowchart.ExecuteBlock("doctors office door locked");
+                    PlayerPositionManager.Instance.EnterFromRight();
 
                     /*Debug.Log("clicked left hand. ");
                     continueDialogue.TriggerDoctorsOfficeTransition();*/
@@ -76,15 +78,15 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromLeft();
                     Debug.Log("clicked right hand. to canteen");
-
                     continueDialogue.TriggerCanteenTransition();
                 }
 
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromRight();
                     Debug.Log("clicked left hand. to doctors");
-
                     continueDialogue.TriggerHallwayDoctorsTransition();
                 }
             }
@@ -93,6 +95,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
             {
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromRight();
                     Debug.Log("clicked left hand. to waiting area");
                     continueDialogue.TriggerWaitingAreaTransition();
                 }
@@ -100,7 +103,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
                     Debug.Log("clicked right hand. to dorms");
-
+                    PlayerPositionManager.Instance.EnterFromLeft();
                     continueDialogue.TriggerHallwayDormTransition();
                 }
             }
@@ -109,14 +112,15 @@ public class ClickHandtoSwitchScene : MonoBehaviour
             {
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromRight();
                     Debug.Log("clicked left hand. ");
                     continueDialogue.TriggerCanteenTransition();
                 }
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromLeft();
                     Debug.Log("clicked right hand. to janitors closet ");
-
                     continueDialogue.TriggerJanitorsClosetTransition(); //
                 }
             }
@@ -126,8 +130,8 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
+                    PlayerPositionManager.Instance.EnterFromLeft();
                     Debug.Log("clicked right hand. to dorms ");
-
                     continueDialogue.TriggerHallwayDormTransition(); 
                 }
             }
