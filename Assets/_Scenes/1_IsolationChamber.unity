@@ -3816,7 +3816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 430.8
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -13694,7 +13694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 705957867}
-  hallwayDoctors: 
+  hallwayDoctors: 2_HallwayDoctors
   waitingArea: 
   canteen: 
   hallwayDorm: 

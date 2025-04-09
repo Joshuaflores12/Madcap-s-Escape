@@ -217,4 +217,22 @@ public class ItemCollector : MonoBehaviour
 
         isExecutingBlock = false;
     }
+
+    public void AddCatPlushieToInventory()
+    {
+        string itemTag = "catPlushie";
+        string uniqueID = itemTag + "_manualAdd";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("Cat Plushie added to inventory!");
+        }
+        else
+        {
+            Debug.Log("Cat Plushie already collected.");
+        }
+    }
+
 }
