@@ -15,6 +15,7 @@ public class DormFungusManager : MonoBehaviour
     [SerializeField] private GameObject room4;
     [SerializeField] private GameObject room5;
     [SerializeField] private GameObject doorsParent;
+    [SerializeField] private CinemachineFreeze cinemachineFreeze;
 
     private void Start()
     {
@@ -41,7 +42,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("FreezeCam");
+                cinemachineFreeze.FreezeCamera();
                 Invoke(nameof(UnhideRoom1), 3f);
 
                 doorsParent.SetActive(false);
@@ -53,7 +54,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("FreezeCam");
+                cinemachineFreeze.FreezeCamera();
                 Invoke(nameof(UnhideRoom2), 3f);
 
                 doorsParent.SetActive(false);
@@ -65,7 +66,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("FreezeCam");
+                cinemachineFreeze.FreezeCamera();
                 Invoke(nameof(UnhideRoom3), 3f);
 
                 doorsParent.SetActive(false);
@@ -77,7 +78,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("FreezeCam");
+                cinemachineFreeze.FreezeCamera();
                 Invoke(nameof(UnhideRoom4), 3f);
 
                 doorsParent.SetActive(false);
@@ -89,7 +90,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("FreezeCam");
+                cinemachineFreeze.FreezeCamera();
                 Invoke(nameof(UnhideRoom5), 3f);
 
                 doorsParent.SetActive(false);
@@ -101,7 +102,7 @@ public class DormFungusManager : MonoBehaviour
                 TriggerFadeoutAnimation();
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
-                ExecuteFungusBlock("UnfreezeCam");
+                Invoke(nameof(delayUnfreeze), 2f);
                 Invoke(nameof(HideRoom), 3f);
 
                 doorsParent.SetActive(true);
@@ -126,6 +127,11 @@ public class DormFungusManager : MonoBehaviour
     {
         animFadeout.SetBool("FadeOut", false);
 
+    }
+
+    public void delayUnfreeze()
+    {
+        cinemachineFreeze.UnfreezeCamera();
     }
     public void UnhideRoom1()
     {

@@ -18,7 +18,7 @@ public class CanteenClownMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "2_CanteenDorm")
+        if (SceneManager.GetActiveScene().name == "4_Canteen")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -32,7 +32,7 @@ public class CanteenClownMask : MonoBehaviour
     }
 
 
-    public void SwitchStateCanteenBG()
+    public void SwitchStateBG()
     {
         isManic = !isManic;
 

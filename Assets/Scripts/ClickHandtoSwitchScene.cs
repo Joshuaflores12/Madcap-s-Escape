@@ -1,3 +1,4 @@
+using Fungus;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
     [SerializeField] private ContinueDialogue continueDialogue;
     [SerializeField] private FungusManager fungusManager;
+    [SerializeField] private Flowchart flowchart;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +17,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -23,11 +26,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
             
             if (SceneManager.GetActiveScene().name == "2_HallwayDoctors")
             {
-                if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
-                {
-                    Debug.Log("clicked left hand. ");
-                    continueDialogue.TriggerHallwayDoctorsTransition();
-                }
+
 
 /*                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
@@ -43,7 +42,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
-                    Debug.Log("clicked right hand. ");
+                    Debug.Log("clicked right hand. to hallway doctors");
                     if(fungusManager.canExitIsolationChamber == true)
                     {
                         continueDialogue.TriggerHallwayDoctorsTransition();
@@ -52,18 +51,61 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                 }
             }
 
-            if (SceneManager.GetActiveScene().name == "HallwayLeft")
+            if (SceneManager.GetActiveScene().name == "2_HallwayDoctors")
             {
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
-                    Debug.Log("clicked right hand. ");
+                    continueDialogue.TriggerWaitingAreaTransition();
+                    Debug.Log("clicked right hand. to waiting area");
 
-                    continueDialogue.TriggerCanteenTransition();
+                }
+
+
+                if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
+                {
+                    flowchart.ExecuteBlock("doctors office door locked");
+
+                    /*Debug.Log("clicked left hand. ");
+                    continueDialogue.TriggerDoctorsOfficeTransition();*/
                 }
             }
 
-            if (SceneManager.GetActiveScene().name == "HallwayDorm")
+            if (SceneManager.GetActiveScene().name == "3_WaitingArea")
+            {
+
+                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
+                {
+                    Debug.Log("clicked right hand. to canteen");
+
+                    continueDialogue.TriggerCanteenTransition();
+                }
+
+                if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
+                {
+                    Debug.Log("clicked left hand. to doctors");
+
+                    continueDialogue.TriggerHallwayDoctorsTransition();
+                }
+            }
+
+            if (SceneManager.GetActiveScene().name == "4_Canteen")
+            {
+                if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
+                {
+                    Debug.Log("clicked left hand. to waiting area");
+                    continueDialogue.TriggerWaitingAreaTransition();
+                }
+
+                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
+                {
+                    Debug.Log("clicked right hand. to dorms");
+
+                    continueDialogue.TriggerHallwayDormTransition();
+                }
+            }
+
+            if (SceneManager.GetActiveScene().name == "5_HallwayDorm")
             {
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
@@ -73,9 +115,20 @@ public class ClickHandtoSwitchScene : MonoBehaviour
 
                 if (hit.collider != null && hit.collider.CompareTag("RightHand"))
                 {
-                    Debug.Log("clicked right hand. ");
+                    Debug.Log("clicked right hand. to janitors closet ");
 
-                    //continueDialogue.Trigger   Transition();
+                    continueDialogue.TriggerJanitorsClosetTransition(); //
+                }
+            }
+
+            if (SceneManager.GetActiveScene().name == "6_Janitors")
+            {
+
+                if (hit.collider != null && hit.collider.CompareTag("RightHand"))
+                {
+                    Debug.Log("clicked right hand. to dorms ");
+
+                    continueDialogue.TriggerHallwayDormTransition(); 
                 }
             }
         }

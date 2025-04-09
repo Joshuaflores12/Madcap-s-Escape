@@ -3816,7 +3816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 430.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -7141,19 +7141,19 @@ MonoBehaviour:
     - egg
     - flour
     requiredAmounts: 010000000100000001000000
-    sceneName: 2_CanteenDorm
+    sceneName: 4_Canteen
   - outputItem: Lockpick
     requiredItems:
     - bobbyPin
     - paperClip
     requiredAmounts: 0100000001000000
-    sceneName: HallwayDorm
+    sceneName: 5_HallwayDorm
   - outputItem: Fire Starter
     requiredItems:
     - battery
     - paperClip
     requiredAmounts: 0100000001000000
-    sceneName: HallwayDorm
+    sceneName: 5_HallwayDorm
   combineEntryPrefab: {fileID: 8829194251956353392, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
 --- !u!4 &1162979936
 Transform:
@@ -13675,7 +13675,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1249919572}
   TextUpdater: {fileID: 1190436716}
   startCurtainRight: {fileID: 46473996}
-  Speed: 3.3
+  Speed: 4
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 1399133818}
@@ -13694,12 +13694,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 705957867}
-  scene: 1_IsolationChamber
-  hallwayLeft: 
+  hallwayDoctors: 
+  waitingArea: 
+  canteen: 
   hallwayDorm: 
-  scene2: 2_HallwayDoctors
-  scene3: 
-  scene4: 
+  janitorsCloset: 
+  doctorsOffice: 
   chapterTitleText: {fileID: 544483245}
   titleText: {fileID: 544483242}
   fadeDuration: 0.8
@@ -13818,6 +13818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   continueDialogue: {fileID: 1486352532}
   fungusManager: {fileID: 1486352530}
+  flowchart: {fileID: 0}
 --- !u!114 &1486352534
 MonoBehaviour:
   m_ObjectHideFlags: 0

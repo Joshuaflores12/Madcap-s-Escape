@@ -23,7 +23,7 @@ public class DormClownMask : MonoBehaviour
     {
 
         
-        if (SceneManager.GetActiveScene().name == "HallwayDorm")
+        if (SceneManager.GetActiveScene().name == "5_HallwayDorm")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

@@ -188,12 +188,21 @@ public class ContinueDialogue : MonoBehaviour
         }
     }
 
+    public void TriggerJanitorsClosetTransition()
+    {
+        SwitchScene switchScene = FindObjectOfType<SwitchScene>();
+        if (switchScene != null)
+        {
+            switchScene.SwitchSceneToJanitorsCloset();
+        }
+    }
+
     public void TriggerDoctorsOfficeTransition()
     {
         SwitchScene switchScene = FindObjectOfType<SwitchScene>();
         if (switchScene != null)
         {
-            switchScene.SwitchSceneToCanteen();
+            switchScene.SwitchSceneToDoctorsOffice();
         }
     }
 }

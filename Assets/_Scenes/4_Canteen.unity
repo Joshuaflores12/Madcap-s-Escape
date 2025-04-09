@@ -16718,7 +16718,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1821713758}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -17022,7 +17022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CHAPTER 2
+  m_text: CANTEEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18141,6 +18141,7 @@ GameObject:
   - component: {fileID: 1486352532}
   - component: {fileID: 1486352531}
   - component: {fileID: 1486352528}
+  - component: {fileID: 1486352533}
   - component: {fileID: 1486352527}
   - component: {fileID: 1486352530}
   m_Layer: 0
@@ -18171,7 +18172,7 @@ MonoBehaviour:
   startCurtainLeft: {fileID: 1011297530}
   TextUpdater: {fileID: 874940734}
   startCurtainRight: {fileID: 1278173774}
-  Speed: 3.3
+  Speed: 4
   isOpening: 0
   isClosing: 0
   flowchart: {fileID: 298812902}
@@ -18190,12 +18191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1870802716}
-  scene: 1_IsolationChamber
-  hallwayLeft: HallwayLeft
-  hallwayDorm: HallwayDorm
-  scene2: 
-  scene3: 
-  scene4: 
+  hallwayDoctors: 2_HallwayDoctors
+  waitingArea: 3_WaitingArea
+  canteen: 
+  hallwayDorm: 5_HallwayDorm
+  janitorsCloset: 
+  doctorsOffice: 
   chapterTitleText: {fileID: 1111695703}
   titleText: {fileID: 1111695700}
   fadeDuration: 0.8
@@ -18256,7 +18257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueDialogue: {fileID: 1486352530}
-  fungusManager: {fileID: 0}
+  fungusManager: {fileID: 1486352533}
+  flowchart: {fileID: 0}
 --- !u!114 &1486352532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18270,6 +18272,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1386289866}
+--- !u!114 &1486352533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486352526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cd5819e8778de479de412fc7b2eada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  weakpoints: {fileID: 0}
+  instruction: {fileID: 0}
+  letter: {fileID: 0}
+  openedletterScreen: {fileID: 0}
+  door: {fileID: 0}
+  nurse: {fileID: 0}
+  guard: {fileID: 0}
+  mc: {fileID: 0}
+  journalClownMask: {fileID: 0}
+  checkpointContinueDialogue: {fileID: 0}
+  nurseStartTransform: {fileID: 0}
+  nurseTargetTransform: {fileID: 0}
+  guardStartTransform: {fileID: 0}
+  guardTargetTransform: {fileID: 0}
+  mcTargetTransform: {fileID: 0}
+  mcDoorwayTransform: {fileID: 0}
+  mcHallwayTransform: {fileID: 0}
+  mcIsolationTransform: {fileID: 0}
+  nurseLerpSpeed: 0.09
+  guardLerpSpeed: 0.09
+  animFadeout: {fileID: 0}
+  fadeoutObject: {fileID: 0}
+  clownMaskButton: {fileID: 0}
+  flowchart: {fileID: 298812902}
+  canExitIsolationChamber: 0
 --- !u!1 &1487982017
 GameObject:
   m_ObjectHideFlags: 0
@@ -20019,7 +20059,7 @@ Transform:
   m_GameObject: {fileID: 1821713756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6307497, y: 1.3664529, z: -10}
+  m_LocalPosition: {x: -3.6307487, y: 1.3664529, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20817,7 +20857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2065836812
 RectTransform:
   m_ObjectHideFlags: 0

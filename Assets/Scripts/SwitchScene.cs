@@ -6,12 +6,12 @@ using TMPro;
 public class SwitchScene : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] string scene;
     [SerializeField] string hallwayDoctors;
-    [SerializeField] string hallwayDorm;
     [SerializeField] string waitingArea;
-    [SerializeField] string scene3;
     [SerializeField] string canteen;
+    [SerializeField] string hallwayDorm;
+    [SerializeField] string janitorsCloset;
+    [SerializeField] string doctorsOffice;
     [SerializeField] TextMeshProUGUI chapterTitleText;
     [SerializeField] GameObject titleText;
     [SerializeField] float fadeDuration = 0f;
@@ -60,7 +60,17 @@ public class SwitchScene : MonoBehaviour
         StartCoroutine(LoadSceneAfterFadeOut(hallwayDorm));
         Debug.Log("Switching scene to: " + hallwayDorm);
     }
+    public void SwitchSceneToDoctorsOffice()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(doctorsOffice));
+        Debug.Log("Switching scene to: " + doctorsOffice);
+    }
 
+    public void SwitchSceneToJanitorsCloset()
+    {
+        StartCoroutine(LoadSceneAfterFadeOut(janitorsCloset));
+        Debug.Log("Switching scene to: " + janitorsCloset);
+    }
 
 
 

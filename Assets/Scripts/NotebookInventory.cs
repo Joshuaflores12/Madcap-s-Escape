@@ -14,7 +14,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] private GameObject inventorySlotPrefab;
     [SerializeField] private GameObject notebook;
     [SerializeField] private SecondChallenge secondChallenge;
-    [SerializeField] private string[] allowedSceneNames = { "2_CanteenDorm", "3_Dorm", "4_Doctors", "HallwayLeft", "HallwayDorm" };
+    [SerializeField] private string[] allowedSceneNames = {  "5_HallwayDorm", "4_Canteen", "3_WaitingArea", "2_HallwayDorm" };
     private int currentPage = 0;
     private int itemsPerPage = 8;
 
@@ -42,7 +42,7 @@ public class NotebookInventory : MonoBehaviour
     {
         string scene = SceneManager.GetActiveScene().name;
 
-        if (scene == "2_HallwayDoctors" || scene == "3_WaitingArea" ||scene == "4_Canteen" || scene == "5_HallwayDorm" || scene == "6_Doctors"||
+        if (scene == "2_HallwayDoctors" || scene == "3_WaitingArea" ||scene == "4_Canteen" || scene == "5_HallwayDorm" || scene == "6_Janitors"|| scene == "DoctorsOffice"||
            (scene == "1_IsolationChamber" && secondChallenge.isSecondChallengeCompleted))
         {
             if (Input.GetKeyDown(KeyCode.Q))
