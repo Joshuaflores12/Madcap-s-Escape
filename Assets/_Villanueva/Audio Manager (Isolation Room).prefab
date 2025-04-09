@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3360205558316439766
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145513271882272854, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4781150181992820196, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 79fa2d64e20b8d445a69bdb9d912603a, type: 3}
+    - target: {fileID: 4781150181992820196, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 79fa2d64e20b8d445a69bdb9d912603a, type: 3}
+    - target: {fileID: 8224218504869915860, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager (Isolation Room)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2359525981818958126, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 79756026165681301}
+  m_SourcePrefab: {fileID: 100100000, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+--- !u!1 &1017639002190195192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2359525981818958126, guid: ee4200bbaa4ec344f98727906d913704, type: 3}
+  m_PrefabInstance: {fileID: 3360205558316439766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &79756026165681301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017639002190195192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c14dca448e5e6e4684bce4f43d641d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  insane: {fileID: 8300000, guid: 009450d53fb25994bb649b2c1d896c00, type: 3}
+  sane: {fileID: 8300000, guid: 0644ad13baa0466439e93cd860798ef5, type: 3}
