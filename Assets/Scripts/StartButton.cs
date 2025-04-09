@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
@@ -13,6 +14,7 @@ public class StartButton : MonoBehaviour
     [SerializeField] private GameObject blackScreen;
     [SerializeField] private VideoPlayer videoPlayerCutscene;
     [SerializeField] private SwitchScene switchScene;
+    [SerializeField] private VolumeAdjust ambience; //Added by Aundee - (Comment Out if causing issues)
 
     private void Start()
     {
@@ -40,6 +42,8 @@ public class StartButton : MonoBehaviour
         {
             fadeAnimator.SetTrigger("FadeOut");  
         }
+
+        ambience.audioFadeOut(); //Added by Aundee - (Comment Out if causing issues)
 
         yield return new WaitForSeconds(fadeOutDuration);  
 
