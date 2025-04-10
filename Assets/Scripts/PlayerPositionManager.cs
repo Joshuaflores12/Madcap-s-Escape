@@ -23,10 +23,12 @@ public class PlayerPositionManager : MonoBehaviour
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            else
+            else if (Instance != this)
             {
-                Destroy(gameObject);
+                Destroy(gameObject); 
+                return;
             }
+
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 

@@ -18,6 +18,7 @@ public class StartButton : MonoBehaviour
     {
         fadeOutObject.SetActive(false);
         blackScreen.SetActive(true);
+        Invoke(nameof(FadeOutBeforeVideo),5f);
     }
     public void StartGame()
     {
@@ -25,8 +26,15 @@ public class StartButton : MonoBehaviour
         StartCoroutine(FadeAndLoadScene());
     }
 
+    public void FadeOutBeforeVideo()
+    {
+        fadeOutObject.SetActive(true);
+
+    }
+
     public void FadeInCutscene()
     {
+
         fadeInAnimator.Play("fadeIn");
     }
     public void PlayVideo()

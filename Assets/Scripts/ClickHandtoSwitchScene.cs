@@ -86,7 +86,7 @@ public class ClickHandtoSwitchScene : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("LeftHand"))
                 {
                     PlayerPositionManager.Instance.EnterFromRight();
-                    Debug.Log("clicked left hand. to doctors");
+                    Debug.Log("clicked left hand. to hallwaydoctors");
                     continueDialogue.TriggerHallwayDoctorsTransition();
                 }
             }
