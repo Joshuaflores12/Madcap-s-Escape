@@ -44,6 +44,12 @@ TagManager:
   - paperClip
   - CombineList
   - brokenKey
+  - NurseBoundary
+  - Flour
+  - ClusterOfEggs
+  - Milk
+  - Blood
+  - WiltedFlower
   layers:
   - Default
   - TransparentFX
