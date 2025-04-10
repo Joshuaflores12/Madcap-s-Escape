@@ -6,13 +6,14 @@ public class CanteenClownMask : MonoBehaviour
     [SerializeField] public GameObject SoberStateCanteenBG;
     [SerializeField] public GameObject ManicStateCanteenBG;
 
-    [SerializeField] private bool isManic = false;
+    [SerializeField] public bool isManic = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ManicStateCanteenBG.SetActive(false);
         SoberStateCanteenBG.SetActive(true);
+        ManicStateCanteenBG.SetActive(false);
+        
     }
 
     // Update is called once per frame

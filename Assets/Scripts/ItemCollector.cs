@@ -4,11 +4,14 @@ using Fungus;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class ItemCollector : MonoBehaviour
 {
     [SerializeField] private GameObject letter;
     [SerializeField] private GameObject Patient1Prefab;
+    [SerializeField] private GameObject NpcSane;
+    [SerializeField] private GameObject NpcManic;
     [SerializeField] private TextMeshProUGUI TextUpdater;
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private Button clownMaskButton;
@@ -25,23 +28,31 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private string Patient4Block;
     [SerializeField] private string Patient5Block;
     [SerializeField] private string Patient6Block;
+    [SerializeField] private string CanteenManicBlock;
+    [SerializeField] private string Patient1WhisperingBlock;
+    [SerializeField] CanteenClownMask clownMask;
 
 
     private NotebookInventory notebookInventory;
     private SecondChallenge secondChallenge;
     private bool isExecutingBlock = false;
+    private bool hasExecutedCanteenManic;
 
 
     void Awake()
     {
         notebookInventory = FindFirstObjectByType<NotebookInventory>();
         secondChallenge = FindFirstObjectByType<SecondChallenge>();
+        CanteenClownMask clownMask = FindAnyObjectByType<CanteenClownMask>();
 
         if (clownMaskButton != null)
         {
             clownMaskButton.interactable = true;
             clownMaskButton.onClick.AddListener(() => StartCoroutine(HandleClownMaskClick()));
+            
         }
+
+        
     }
 
     void Start()
@@ -54,6 +65,7 @@ public class ItemCollector : MonoBehaviour
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Water"))
             DestroyIfCollected(obj);
         // repeat for other collectible tags as needed
+        NpcManic.SetActive(false);
     }
     void DestroyIfCollected(GameObject obj)
     {
@@ -68,9 +80,30 @@ public class ItemCollector : MonoBehaviour
 
         if (flowchart.HasExecutingBlocks())
         {
-            return; 
+            return;
         }
 
+        if (clownMask.isManic && !hasExecutedCanteenManic)
+        {
+            flowchart.ExecuteBlock(CanteenManicBlock);
+            hasExecutedCanteenManic = true;
+            flowchart.enabled = false;
+            TextUpdater.text = "ManicState!";
+            Debug.Log("CanteenManicExecutedOnce!");
+        }
+
+        if (clownMask.isManic) 
+        {
+            NpcManic.SetActive(true);
+            NpcSane.SetActive(false);
+        }
+
+        if (!clownMask.isManic) 
+        {
+            NpcManic.SetActive(false);
+            TextUpdater.text = string.Empty;
+            NpcSane.SetActive(true);
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -125,6 +158,13 @@ public class ItemCollector : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     Patient1Prefab.SetActive(true);
                     TextUpdater.text = "Patient1";
+
+                }
+
+                if (hit.collider.CompareTag("Patient1.1"))
+                {
+                    flowchart.ExecuteBlock(Patient1_1Block);
+                    TextUpdater.text = "Patient1";
                 }
 
                 if (hit.collider.CompareTag("CanteenDoor"))
@@ -138,12 +178,6 @@ public class ItemCollector : MonoBehaviour
                 {
                     flowchart.ExecuteBlock(KitchenLadyBlock);
                     TextUpdater.text = "KitchenLady";
-                }
-
-                if (hit.collider.CompareTag("Patient1.1"))
-                {
-                    flowchart.ExecuteBlock(Patient1_1Block);
-                    TextUpdater.text = "Patient1";
                 }
 
                 if (hit.collider.CompareTag("Patient2"))
@@ -234,5 +268,7 @@ public class ItemCollector : MonoBehaviour
             Debug.Log("Cat Plushie already collected.");
         }
     }
+
+    
 
 }
