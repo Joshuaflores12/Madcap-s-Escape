@@ -43,7 +43,7 @@ public class DormFungusManager : MonoBehaviour
                 //MoveRoomDown();
                 Invoke(nameof(FadeoutFalse), 1.5f);
                 cinemachineFreeze.FreezeCamera();
-                Invoke(nameof(UnhideRoom1), 3f);
+                Invoke(nameof(UnhideRoom1), 6.3f);
 
                 doorsParent.SetActive(false);
             }

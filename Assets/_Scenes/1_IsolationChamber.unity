@@ -1824,7 +1824,7 @@ Transform:
   m_GameObject: {fileID: 174688460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8341696, y: 0.62553906, z: -10}
+  m_LocalPosition: {x: 1.5592501, y: 0.62553906, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3816,7 +3816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 430.8
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15607,7 +15607,7 @@ Transform:
   m_GameObject: {fileID: 1821713756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8341696, y: 0.62553906, z: -10}
+  m_LocalPosition: {x: 1.5592501, y: 0.62553906, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18240,6 +18240,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 1368853}
   Patient1Prefab: {fileID: 0}
+  NpcSane: {fileID: 0}
+  NpcManic: {fileID: 0}
+  CollectablesSane: {fileID: 0}
+  CollectablesManic: {fileID: 0}
   TextUpdater: {fileID: 0}
   flowchart: {fileID: 1399133818}
   clownMaskButton: {fileID: 0}
@@ -18247,6 +18251,11 @@ MonoBehaviour:
   JuiceBlock: 
   Food2Block: 
   WaterBlock: 
+  FlourBlock: 
+  ClusterOfEggsBlock: 
+  MilkBlock: 
+  BloodBlock: 
+  WiltedFlowerBlock: 
   Chapter2IntroBlock: 
   HallwayBlock: 
   KitchenLadyBlock: 
@@ -18256,6 +18265,10 @@ MonoBehaviour:
   Patient4Block: 
   Patient5Block: 
   Patient6Block: 
+  CanteenManicBlock: 
+  Patient1WhisperingBlock: 
+  ExitCanteenInteractionBlock: 
+  clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
   m_ObjectHideFlags: 0

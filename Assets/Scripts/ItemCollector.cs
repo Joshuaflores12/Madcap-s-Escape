@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ItemCollector : MonoBehaviour
 {
@@ -72,8 +73,14 @@ public class ItemCollector : MonoBehaviour
             DestroyIfCollected(obj);
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Water"))
             DestroyIfCollected(obj);
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("CatPlush"))
+            DestroyIfCollected(obj);
         // repeat for other collectible tags as needed
-        NpcManic.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "4_Canteen")
+        {
+            NpcManic.SetActive(false);
+
+        }
     }
     void DestroyIfCollected(GameObject obj)
     {
@@ -85,37 +92,40 @@ public class ItemCollector : MonoBehaviour
     }
     void Update()
     {
-
-        if (flowchart.HasExecutingBlocks())
+        if (SceneManager.GetActiveScene().name == "4_Canteen")
         {
-            return;
-        }
+            if (flowchart.HasExecutingBlocks())
+            {
+                return;
+            }
 
-        if (clownMask.isManic && !hasExecutedCanteenManic)
-        {
-            flowchart.ExecuteBlock(CanteenManicBlock);
-            hasExecutedCanteenManic = true;
-            flowchart.enabled = false;
-            TextUpdater.text = "Manic State!";
-            Debug.Log("CanteenManicExecutedOnce!");
-        }
+            if (clownMask.isManic && !hasExecutedCanteenManic)
+            {
+                flowchart.ExecuteBlock(CanteenManicBlock);
+                hasExecutedCanteenManic = true;
+                flowchart.enabled = false;
+                TextUpdater.text = "Manic State!";
+                Debug.Log("CanteenManicExecutedOnce!");
+            }
 
-        if (clownMask.isManic) 
-        {
-            NpcManic.SetActive(true);
-            NpcSane.SetActive(false);
-            CollectablesSane.SetActive(false);
-            CollectablesManic.SetActive(true);
-        }
+            if (clownMask.isManic)
+            {
+                NpcManic.SetActive(true);
+                NpcSane.SetActive(false);
+                CollectablesSane.SetActive(false);
+                CollectablesManic.SetActive(true);
+            }
 
-        if (!clownMask.isManic) 
-        {
-            NpcManic.SetActive(false);
-            TextUpdater.text = string.Empty;
-            NpcSane.SetActive(true);
-            CollectablesSane.SetActive(true);
-            CollectablesManic.SetActive(false);
+            if (!clownMask.isManic)
+            {
+                NpcManic.SetActive(false);
+                TextUpdater.text = string.Empty;
+                NpcSane.SetActive(true);
+                CollectablesSane.SetActive(true);
+                CollectablesManic.SetActive(false);
+            }
         }
+            
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -302,7 +312,7 @@ public class ItemCollector : MonoBehaviour
 
     public void AddCatPlushieToInventory()
     {
-        string itemTag = "catPlushie";
+        string itemTag = "CatPlush";
         string uniqueID = itemTag + "_manualAdd";
 
         if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
@@ -310,6 +320,12 @@ public class ItemCollector : MonoBehaviour
             NotebookInventory.Instance.MarkItemCollected(uniqueID);
             NotebookInventory.Instance.AddToInventory(itemTag);
             Debug.Log("Cat Plushie added to inventory!");
+            GameObject catPlushieObject = GameObject.FindWithTag(itemTag);
+            if (catPlushieObject != null)
+            {
+                Destroy(catPlushieObject);
+                Debug.Log("Cat Plushie GameObject destroyed.");
+            }
         }
         else
         {

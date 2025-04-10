@@ -50,6 +50,7 @@ TagManager:
   - Milk
   - Blood
   - WiltedFlower
+  - CatPlush
   layers:
   - Default
   - TransparentFX
