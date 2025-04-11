@@ -14,7 +14,6 @@ TagManager:
   - letter
   - HiddenInventory
   - ClownMask
-  - Key
   - door
   - Food
   - OddColoredJuice
@@ -43,7 +42,6 @@ TagManager:
   - InventoryUI
   - paperClip
   - CombineList
-  - brokenKey
   - NurseBoundary
   - Flour
   - ClusterOfEggs
@@ -56,6 +54,7 @@ TagManager:
   - nail
   - foil
   - papers
+<<<<<<< Updated upstream
   - Patient1Manic
   - Patient2Manic
   - Patient3Manic
@@ -65,6 +64,11 @@ TagManager:
   - KitchenLadyManic
   - KitchenWindowManic
   - NurseManic
+=======
+  - brokenKey1
+  - brokenKey2
+  - brokenKey3
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
