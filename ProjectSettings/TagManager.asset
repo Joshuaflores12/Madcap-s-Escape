@@ -56,6 +56,15 @@ TagManager:
   - nail
   - foil
   - papers
+  - Patient1Manic
+  - Patient2Manic
+  - Patient3Manic
+  - Patient4Manic
+  - Patient5Manic
+  - Patient6Manic
+  - KitchenLadyManic
+  - KitchenWindowManic
+  - NurseManic
   layers:
   - Default
   - TransparentFX

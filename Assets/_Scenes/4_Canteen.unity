@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 225798196}
   m_Layer: 0
   m_Name: Patient2
-  m_TagString: Patient2
+  m_TagString: Patient2Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1900,10 +1900,6 @@ GameObject:
   - component: {fileID: 298813033}
   - component: {fileID: 298813035}
   - component: {fileID: 298813036}
-  - component: {fileID: 298813037}
-  - component: {fileID: 298813038}
-  - component: {fileID: 298813039}
-  - component: {fileID: 298813040}
   - component: {fileID: 298813042}
   - component: {fileID: 298813041}
   - component: {fileID: 298813043}
@@ -1980,6 +1976,12 @@ GameObject:
   - component: {fileID: 298813115}
   - component: {fileID: 298813114}
   - component: {fileID: 298813113}
+  - component: {fileID: 298813118}
+  - component: {fileID: 298813117}
+  - component: {fileID: 298813121}
+  - component: {fileID: 298813120}
+  - component: {fileID: 298813119}
+  - component: {fileID: 298813122}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -7973,11 +7975,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1923.1953, y: 577.5771}
+  scrollPos: {x: -1066.316, y: -429.67188}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 285
-  zoom: 0.3699998
+  zoom: 0.7599995
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7985,8 +7987,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 298812863}
-  selectedCommands: []
+  - {fileID: 298813060}
+  selectedCommands:
+  - {fileID: 298813062}
   variables:
   - {fileID: 298812900}
   description: 
@@ -11370,8 +11373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1070.6422
-    y: 541.2416
+    x: 776.8923
+    y: 533.4291
     width: 124.13
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -11384,10 +11387,6 @@ MonoBehaviour:
   - {fileID: 298813033}
   - {fileID: 298813035}
   - {fileID: 298813036}
-  - {fileID: 298813037}
-  - {fileID: 298813038}
-  - {fileID: 298813039}
-  - {fileID: 298813040}
   suppressAllAutoSelections: 0
 --- !u!114 &298813035
 MonoBehaviour:
@@ -11445,116 +11444,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 1036412078}
---- !u!114 &298813037
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 417
-  indentLevel: 0
-  storyText: The flower blooms into a vibrant red, the color staining what used to
-    be white petals.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 1036412078}
---- !u!114 &298813038
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 418
-  indentLevel: 0
-  storyText: "Oh\u2026 it now has blood flowing through it."
-  description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -7041533162383839695, guid: 887a8e790a46822429dba727ca48dff2, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 885076828}
---- !u!114 &298813039
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 419
-  indentLevel: 0
-  storyText: "It made it\u2026 alive."
-  description: 
-  character: {fileID: 1878828503}
-  portrait: {fileID: -7041533162383839695, guid: 887a8e790a46822429dba727ca48dff2, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 885076828}
---- !u!114 &298813040
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298812719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 420
-  indentLevel: 0
-  storyText: The flower stands tall now, its red petals glowing faintly in the dim
-    light. It feels alive, almost sentient.
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 1036412078}
 --- !u!114 &298813041
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11598,8 +11487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1066.7957
-    y: 606.7439
+    x: 1065.3031
+    y: 608.23645
     width: 172.45999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -11665,6 +11554,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 298813045}
+  - {fileID: 298813122}
   suppressAllAutoSelections: 0
 --- !u!114 &298813045
 MonoBehaviour:
@@ -11734,8 +11624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 1101.9626
-    y: 735.433
+    x: 1083.5415
+    y: 734.1172
     width: 161.19
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -11819,7 +11709,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 1130.985
-    y: 823.27704
+    y: 821.7845
     width: 167.89
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12140,7 +12030,7 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   waitForVO: 0
-  setSayDialog: {fileID: 1036412078}
+  setSayDialog: {fileID: 885076828}
 --- !u!114 &298813062
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -13681,6 +13571,169 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 885076828}
+--- !u!114 &298813117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 499
+  indentLevel: 0
+  storyText: The flower blooms into a vibrant red, the color staining what used to
+    be white petals.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1036412078}
+--- !u!114 &298813118
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 916.63086
+    y: 540.72546
+    width: 156.55
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 497
+  blockName: WiltedFlowerBlood
+  description: 'UsedBlood
+
+'
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 298813117}
+  - {fileID: 298813121}
+  - {fileID: 298813120}
+  - {fileID: 298813119}
+  suppressAllAutoSelections: 0
+--- !u!114 &298813119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 502
+  indentLevel: 0
+  storyText: The flower stands tall now, its red petals glowing faintly in the dim
+    light. It feels alive, almost sentient.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 1036412078}
+--- !u!114 &298813120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 501
+  indentLevel: 0
+  storyText: "It made it\u2026 alive."
+  description: 
+  character: {fileID: 1878828503}
+  portrait: {fileID: -7041533162383839695, guid: 887a8e790a46822429dba727ca48dff2, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 885076828}
+--- !u!114 &298813121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 500
+  indentLevel: 0
+  storyText: "Oh\u2026 it now has blood flowing through it."
+  description: 
+  character: {fileID: 1878828503}
+  portrait: {fileID: -7041533162383839695, guid: 887a8e790a46822429dba727ca48dff2, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 885076828}
+--- !u!114 &298813122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298812719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 503
+  indentLevel: 0
+  targetFlowchart: {fileID: 298812902}
+  targetBlock: {fileID: 298813047}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1 &341250139
 GameObject:
   m_ObjectHideFlags: 0
@@ -14247,6 +14300,131 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &565957158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565957159}
+  - component: {fileID: 565957160}
+  - component: {fileID: 565957161}
+  m_Layer: 0
+  m_Name: NurseManic
+  m_TagString: NurseManic
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565957159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565957158}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 33.416603, y: -0.5669298, z: -50.76324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 698605861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &565957160
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565957158}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1746117119346733345, guid: 180079b224f3c1d4bb982a63f4de6e2d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.76, y: 8.46}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!70 &565957161
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565957158}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.76, y: 8.46}
+  m_Direction: 0
 --- !u!1 &586595138
 GameObject:
   m_ObjectHideFlags: 0
@@ -14822,18 +15000,20 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698605860}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.9273777, y: 1.5338236, z: 50.76324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1873789988}
+  - {fileID: 1244717098}
   - {fileID: 979166622}
+  - {fileID: 1873789988}
   - {fileID: 225798195}
   - {fileID: 1406675872}
   - {fileID: 1698979027}
   - {fileID: 1137609236}
   - {fileID: 2015677181}
+  - {fileID: 565957159}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &830347963
@@ -16170,7 +16350,7 @@ GameObject:
   - component: {fileID: 979166623}
   m_Layer: 0
   m_Name: KitchenLady
-  m_TagString: KitchenLady
+  m_TagString: KitchenLadyManic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17382,7 +17562,7 @@ GameObject:
   - component: {fileID: 1137609237}
   m_Layer: 0
   m_Name: Patient5
-  m_TagString: Patient5
+  m_TagString: Patient5Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17560,6 +17740,84 @@ RectTransform:
   m_AnchoredPosition: {x: 1295, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1244717097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244717098}
+  - component: {fileID: 1244717099}
+  m_Layer: 0
+  m_Name: KitchenWindowManic
+  m_TagString: KitchenWindowManic
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244717098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244717097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.53, y: 1.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 698605861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1244717099
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244717097}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.0230904, y: -1.2029189}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.0461807, y: 3.4058378}
+  m_EdgeRadius: 0
 --- !u!1 &1278173773
 GameObject:
   m_ObjectHideFlags: 0
@@ -18653,7 +18911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 430.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -18750,7 +19008,7 @@ GameObject:
   - component: {fileID: 1406675873}
   m_Layer: 0
   m_Name: Patient3
-  m_TagString: Patient3
+  m_TagString: Patient3Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19902,84 +20160,6 @@ MonoBehaviour:
   SoberStateCanteenBG: {fileID: 341466276}
   ManicStateCanteenBG: {fileID: 1520634149}
   isManic: 0
---- !u!1 &1583267035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1583267037}
-  - component: {fileID: 1583267036}
-  m_Layer: 0
-  m_Name: NurseBoundary
-  m_TagString: NurseBoundary
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1583267036
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583267035}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.5933342, y: 2.3513637}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.4834557, y: 7.109149}
-  m_EdgeRadius: 0
---- !u!4 &1583267037
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583267035}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.05, y: -2.16, z: -0.10683486}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593834389
 GameObject:
   m_ObjectHideFlags: 0
@@ -20417,7 +20597,7 @@ GameObject:
   - component: {fileID: 1698979028}
   m_Layer: 0
   m_Name: Patient4
-  m_TagString: Patient4
+  m_TagString: Patient4Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21610,7 +21790,7 @@ GameObject:
   - component: {fileID: 1873789989}
   m_Layer: 0
   m_Name: Patient1
-  m_TagString: Patient1
+  m_TagString: Patient1Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22143,7 +22323,7 @@ GameObject:
   - component: {fileID: 2015677182}
   m_Layer: 0
   m_Name: Patient6
-  m_TagString: Patient6
+  m_TagString: Patient6Manic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22976,6 +23156,17 @@ MonoBehaviour:
   CanteenManicBlock: CanteenManic
   Patient1WhisperingBlock: PATIENT 1, WHISPERING TO PATIENT 2 MANIC
   ExitCanteenInteractionBlock: INTERACT WITH EXIT TO THE DORMITORY
+  KitchenWindowManicBlock: KitchenWindowManic
+  KitchenLadyManicBlock: KitchenladyManic
+  KitchenLadyManicInteractWithPatient6Block: KitchenLadyManiccc
+  KitchenLadyManicAskedAgainBlock: KitchenLadyManicAskedAgain
+  NurseManicBlock: NurseManic
+  Patient1ManicBlock: Patient1Manic
+  Patient2ManicBlock: Patient2Manic
+  Patient3ManicBlock: Patient3Manic
+  Patient4ManicBlock: Patient4Manic
+  Patient5ManicBlock: Patient5Manic
+  Patient6ManicBlock: Patient6Manic
   clownMask: {fileID: 1570625486}
 --- !u!114 &2093656902
 MonoBehaviour:
@@ -23533,8 +23724,8 @@ SceneRoots:
   - {fileID: 114698488}
   - {fileID: 2065836812}
   - {fileID: 1729334365}
-  - {fileID: 485715298}
   - {fileID: 698605861}
+  - {fileID: 485715298}
   - {fileID: 1900291609}
   - {fileID: 1610783316}
   - {fileID: 1784935301}
@@ -23550,4 +23741,3 @@ SceneRoots:
   - {fileID: 1486352529}
   - {fileID: 1666893457}
   - {fileID: 1742678385}
-  - {fileID: 1583267037}

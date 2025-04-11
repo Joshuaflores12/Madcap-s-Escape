@@ -39,6 +39,17 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private string CanteenManicBlock;
     [SerializeField] private string Patient1WhisperingBlock;
     [SerializeField] private string ExitCanteenInteractionBlock;
+    [SerializeField] private string KitchenWindowManicBlock;
+    [SerializeField] private string KitchenLadyManicBlock;
+    [SerializeField] private string KitchenLadyManicInteractWithPatient6Block;
+    [SerializeField] private string KitchenLadyManicAskedAgainBlock;
+    [SerializeField] private string NurseManicBlock;
+    [SerializeField] private string Patient1ManicBlock;
+    [SerializeField] private string Patient2ManicBlock;
+    [SerializeField] private string Patient3ManicBlock;
+    [SerializeField] private string Patient4ManicBlock;
+    [SerializeField] private string Patient5ManicBlock;
+    [SerializeField] private string Patient6ManicBlock;
     [SerializeField] CanteenClownMask clownMask;
 
 
@@ -46,6 +57,8 @@ public class ItemCollector : MonoBehaviour
     private SecondChallenge secondChallenge;
     private bool isExecutingBlock = false;
     private bool hasExecutedCanteenManic;
+    private bool hasExecutedPatien6ManicBlock = false;
+    private bool hasInteractedWithPatient6 = false;
 
 
     void Awake()
@@ -136,7 +149,7 @@ public class ItemCollector : MonoBehaviour
             if (hit.collider != null)
             {
                 if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("brokenKey") || hit.collider.CompareTag("Food") || hit.collider.CompareTag("OddColoredJuice") || hit.collider.CompareTag("Food2") || hit.collider.CompareTag("Water") || hit.collider.CompareTag("paperClip")
-                    || hit.collider.CompareTag("Flour") || hit.collider.CompareTag("ClusterOfEggs") || hit.collider.CompareTag("Milk") || hit.collider.CompareTag("Blood") || hit.collider.CompareTag("WiltedFlower"))
+                    || hit.collider.CompareTag("Flour") || hit.collider.CompareTag("ClusterOfEggs") || hit.collider.CompareTag("Milk") || hit.collider.CompareTag("Blood"))
                 {
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;
@@ -206,7 +219,6 @@ public class ItemCollector : MonoBehaviour
                 if (hit.collider.CompareTag("WiltedFlower")) 
                 {
                     flowchart.ExecuteBlock(WiltedFlowerBlock);
-                    Destroy(hit.collider.gameObject);
                     TextUpdater.text = "Wilted Flower!";
                 }
 
@@ -266,6 +278,75 @@ public class ItemCollector : MonoBehaviour
                 {
                     flowchart.ExecuteBlock(Patient6Block);
                     TextUpdater.text = "Patient 6";
+                }
+
+                if (hit.collider.CompareTag("KitchenWindowManic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(KitchenWindowManicBlock);
+                    TextUpdater.text = "Kitchen Window!";
+                }
+
+                if (hit.collider.CompareTag("KitchenLadyManic") && clownMask.isManic)
+                {
+                    if (!hasExecutedPatien6ManicBlock)
+                    {
+                        flowchart.ExecuteBlock(KitchenLadyManicBlock);
+                        TextUpdater.text = "Kitchen Lady!";
+                        hasExecutedPatien6ManicBlock = true;
+                    }
+                    else if (hasInteractedWithPatient6) // only true after talking to patient 6
+                    {
+                        flowchart.ExecuteBlock(KitchenLadyManicInteractWithPatient6Block);
+                        TextUpdater.text = "Kitchen Lady (Interacted with Patient 6)!";
+                    }
+                    else
+                    {
+                        flowchart.ExecuteBlock(KitchenLadyManicAskedAgainBlock);
+                        TextUpdater.text = "Kitchen Lady (You already asked!)";
+                    }
+                }
+
+                if (hit.collider.CompareTag("NurseManic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(NurseManicBlock);
+                    TextUpdater.text = "Nurse!";
+                }
+                
+                if (hit.collider.CompareTag("Patient1Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient1ManicBlock);
+                    TextUpdater.text = "Patient 1 Manic!";
+                }
+                
+                if (hit.collider.CompareTag("Patient2Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient2ManicBlock);
+                    TextUpdater.text = "Patient 2 Manic!";
+                }
+                
+                if (hit.collider.CompareTag("Patient3Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient3ManicBlock);
+                    TextUpdater.text = "Patient 3 Manic!";
+                }
+                
+                if (hit.collider.CompareTag("Patient4Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient4ManicBlock);
+                    TextUpdater.text = "Patient 4 Manic!";
+                }
+                
+                if (hit.collider.CompareTag("Patient5Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient5ManicBlock);
+                    TextUpdater.text = "Patient 5 Manic!";
+                }
+                
+                if (hit.collider.CompareTag("Patient6Manic") && clownMask.isManic) 
+                {
+                    flowchart.ExecuteBlock(Patient6ManicBlock);
+                    TextUpdater.text = "Patient 6 Manic!";
+                    hasInteractedWithPatient6 = true;
                 }
 
 
@@ -505,7 +586,7 @@ public class ItemCollector : MonoBehaviour
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (clownMask.isManic && collision.gameObject.tag == "NurseBoundary")
+        if (clownMask.isManic && collision.gameObject.tag == "NurseManic")
         {
             flowchart.ExecuteBlock(ExitCanteenInteractionBlock);
             TextUpdater.text = "Nurse is blocking your path!";
@@ -514,7 +595,7 @@ public class ItemCollector : MonoBehaviour
 
     private void OnCollisionExit2D(UnityEngine.Collision2D collision)
     {
-        if (clownMask.isManic && collision.gameObject.tag == "NurseBoundary") 
+        if (clownMask.isManic && collision.gameObject.tag == "NurseManic") 
         {
             TextUpdater.text = string.Empty;
         }
