@@ -20,6 +20,10 @@ public class NotebookInventory : MonoBehaviour
 
     [Header("Combination System")]
 
+
+    [SerializeField] private List<ItemSpriteData> itemSprites = new List<ItemSpriteData>();
+    private Dictionary<string, Sprite> itemSpriteMap = new Dictionary<string, Sprite>();
+
     [SerializeField] private List<CombinationRecipe> combineRecipes;
     [SerializeField] private GameObject combineEntryPrefab;
     private Transform combineListContainer;
@@ -31,6 +35,15 @@ public class NotebookInventory : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            // Build the map
+            foreach (var data in itemSprites)
+            {
+                if (!itemSpriteMap.ContainsKey(data.itemTag))
+                {
+                    itemSpriteMap.Add(data.itemTag, data.sprite);
+                }
+            }
         }
         else
         {
@@ -91,7 +104,7 @@ public class NotebookInventory : MonoBehaviour
 
     private void RemoveCollectedItemsFromScene()
     {
-        string[] collectibleTags = { "brokenKey", "Food", "Water", "pingPongBall", "OddColoredJuice", "bobbyPin", "Food2", "paperClip" };
+        string[] collectibleTags = { "Food", "Water", "pingPongBall", "OddColoredJuice", "bobbyPin", "Food2", "paperClip" };
 
         foreach (string tag in collectibleTags)
         {
@@ -149,8 +162,8 @@ public class NotebookInventory : MonoBehaviour
         foreach (Transform child in inventoryUI)
             Destroy(child.gameObject);
 
-        float xOffset = 200f;
-        float yOffset = -200f;
+        float xOffset = 220f;
+        float yOffset = -220f;
         int itemsPerRow = 2;
         GameObject lastSlot = null;
 
@@ -162,6 +175,21 @@ public class NotebookInventory : MonoBehaviour
             GameObject slot = Instantiate(inventorySlotPrefab, inventoryUI);
             TMP_Text slotText = slot.GetComponentInChildren<TMP_Text>();
             if (slotText != null) slotText.text = inventory[i];
+
+            Image icon = slot.transform.Find("ItemIcon")?.GetComponent<Image>();
+            if (icon != null)
+            {
+                Sprite itemSprite = GetItemSprite(inventory[i]);
+                if (itemSprite != null)
+                {
+                    icon.sprite = itemSprite;
+                    icon.enabled = true;
+                }
+                else
+                {
+                    icon.enabled = false; // Hide icon if not found
+                }
+            }
 
             RectTransform slotRect = slot.GetComponent<RectTransform>();
             if (slotRect != null)
@@ -178,6 +206,15 @@ public class NotebookInventory : MonoBehaviour
         }
 
         return lastSlot;
+    }
+
+    public Sprite GetItemSprite(string itemTag)
+    {
+        if (itemSpriteMap.TryGetValue(itemTag, out Sprite sprite))
+        {
+            return sprite;
+        }
+        return null;
     }
 
     public void NextPage()
@@ -349,4 +386,10 @@ public class CombineDisplay
     public TMP_Text labelText;
     public TMP_Text countText;
     public Button labelButton;
+}
+[System.Serializable]
+public class ItemSpriteData
+{
+    public string itemTag;
+    public Sprite sprite;
 }

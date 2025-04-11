@@ -80,8 +80,8 @@ public class ItemCollector : MonoBehaviour
     void Start()
     {
         // Remove any previously collected objects in the scene
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("brokenKey"))
-            DestroyIfCollected(obj);
+/*        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("brokenKey1"))
+            DestroyIfCollected(obj);*/
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Food"))
             DestroyIfCollected(obj);
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Water"))

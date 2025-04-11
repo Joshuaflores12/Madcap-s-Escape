@@ -5071,6 +5071,7 @@ MonoBehaviour:
   allowedSceneNames:
   - 2_CanteenDorm
   - 3_Dorm
+  itemSprites: []
   combineRecipes:
   - outputItem: Door Key
     requiredItems:
@@ -6778,7 +6779,7 @@ Transform:
   m_GameObject: {fileID: 1390951004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9341695, y: 1.3664529, z: -10}
+  m_LocalPosition: {x: 2.65925, y: 1.3664529, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7343,6 +7344,119 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &1701888257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 133852669007037512, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_Name
+      value: Canvas PAUSE SCREEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 133852669007037512, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1178247879789181235, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1821713758}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447642280696850460, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985099913932844437, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626583652061362464, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
 --- !u!1 &1702011261
 GameObject:
   m_ObjectHideFlags: 0
@@ -8198,7 +8312,7 @@ Transform:
   m_GameObject: {fileID: 1821713756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9341695, y: 1.3664529, z: -10}
+  m_LocalPosition: {x: 2.65925, y: 1.3664529, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9825,6 +9939,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 0}
   Patient1Prefab: {fileID: 0}
+  NpcSane: {fileID: 0}
+  NpcManic: {fileID: 0}
+  CollectablesSane: {fileID: 0}
+  CollectablesManic: {fileID: 0}
   TextUpdater: {fileID: 0}
   flowchart: {fileID: 423972050}
   clownMaskButton: {fileID: 207702587}
@@ -9832,6 +9950,11 @@ MonoBehaviour:
   JuiceBlock: Odd Juice
   Food2Block: FOOD (Right Table)
   WaterBlock: Water (Before Use)
+  FlourBlock: 
+  ClusterOfEggsBlock: 
+  MilkBlock: 
+  BloodBlock: 
+  WiltedFlowerBlock: 
   Chapter2IntroBlock: Chapter2Intro
   HallwayBlock: 
   KitchenLadyBlock: 
@@ -9841,6 +9964,10 @@ MonoBehaviour:
   Patient4Block: 
   Patient5Block: 
   Patient6Block: 
+  CanteenManicBlock: 
+  Patient1WhisperingBlock: 
+  ExitCanteenInteractionBlock: 
+  clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10045,6 +10172,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1701888257}
   - {fileID: 873699378}
   - {fileID: 108269827}
   - {fileID: 376513449}

@@ -2232,7 +2232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532, y: 244}
+  m_AnchoredPosition: {x: -487, y: 239}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479201498
@@ -6994,7 +6994,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 83
+  itemId: 161
   blockName: ask janitor job
   description: 
   eventHandler: {fileID: 0}
@@ -8269,6 +8269,7 @@ MonoBehaviour:
   allowedSceneNames:
   - 2_CanteenDorm
   - 3_Dorm
+  itemSprites: []
   combineRecipes:
   - outputItem: Door Key
     requiredItems:

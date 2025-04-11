@@ -61,13 +61,13 @@ public class SecondChallenge : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                challenge2Anim.SetTrigger("isSpammed2");
+                challenge2Anim.SetTrigger("isSpammed");
                 animA.SetTrigger("AisPressed");
                 StartCoroutine(ResetTrigger());
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                challenge2Anim.SetTrigger("isSpammed2");
+                challenge2Anim.SetTrigger("isSpammed");
                 animD.SetTrigger("DisPressed");
                 StartCoroutine(ResetTrigger());
             }
@@ -123,7 +123,7 @@ public class SecondChallenge : MonoBehaviour
         yield return new WaitForSeconds(0.05f); 
         animA.ResetTrigger("AisPressed");
         animD.ResetTrigger("DisPressed");
-        challenge2Anim.ResetTrigger("isSpammed2");
+        challenge2Anim.ResetTrigger("isSpammed");
     }
 
     private void IncreaseSpam()
