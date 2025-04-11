@@ -148,8 +148,8 @@ public class ItemCollector : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("brokenKey") || hit.collider.CompareTag("Food") || hit.collider.CompareTag("OddColoredJuice") || hit.collider.CompareTag("Food2") || hit.collider.CompareTag("Water") || hit.collider.CompareTag("paperClip")
-                    || hit.collider.CompareTag("Flour") || hit.collider.CompareTag("ClusterOfEggs") || hit.collider.CompareTag("Milk") || hit.collider.CompareTag("Blood"))
+                if (hit.collider.CompareTag("candle") || hit.collider.CompareTag("bobbyPin") || hit.collider.CompareTag("pingPongBall") || hit.collider.CompareTag("brokenKey1") || hit.collider.CompareTag("brokenKey2" ) || hit.collider.CompareTag("brokenKey3")  || hit.collider.CompareTag("Food") || hit.collider.CompareTag("OddColoredJuice") || hit.collider.CompareTag("Food2") || hit.collider.CompareTag("Water") || hit.collider.CompareTag("paperClip")
+                    || hit.collider.CompareTag("Flour") || hit.collider.CompareTag("ClusterOfEggs") || hit.collider.CompareTag("Milk") || hit.collider.CompareTag("Blood") || hit.collider.CompareTag("WiltedFlower"))
                 {
                     Debug.Log("Picked up: " + hit.collider.gameObject.name);
                     string itemTag = hit.collider.tag;

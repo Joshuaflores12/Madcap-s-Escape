@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      battery-removebg-preview_0: 2915468800170096956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
