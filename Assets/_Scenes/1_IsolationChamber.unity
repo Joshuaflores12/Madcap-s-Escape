@@ -3816,7 +3816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 430.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4190842093925874382, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
       propertyPath: m_SizeDelta.y
@@ -7131,13 +7131,45 @@ MonoBehaviour:
   - 3_Dorm
   itemSprites:
   - itemTag: brokenKey1
-    sprite: {fileID: -3827906360981135518, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+    sprite: {fileID: -7649971826674472222, guid: d68279cd3544b4c4a97816723d4430a8, type: 3}
   - itemTag: brokenKey2
-    sprite: {fileID: -3827906360981135518, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+    sprite: {fileID: 6147005430606751260, guid: d68279cd3544b4c4a97816723d4430a8, type: 3}
   - itemTag: brokenKey3
-    sprite: {fileID: -3827906360981135518, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+    sprite: {fileID: 3858433733994164679, guid: d68279cd3544b4c4a97816723d4430a8, type: 3}
   - itemTag: Door Key
     sprite: {fileID: 8913232191353806495, guid: d68279cd3544b4c4a97816723d4430a8, type: 3}
+  - itemTag: battery
+    sprite: {fileID: -8106765049896576796, guid: c97119a143d75534c82b9ddba9fec736, type: 3}
+  - itemTag: bobbyPin
+    sprite: {fileID: 152407751446637147, guid: feb5bb22a48485842b8a1e0ae1899e50, type: 3}
+  - itemTag: CatPlush
+    sprite: {fileID: -8665140037953305120, guid: 7e20ad76452d7124caf11821314d4729, type: 3}
+  - itemTag: Fire Starter
+    sprite: {fileID: -5873284258749715743, guid: 6bce8dc2a61771e4ebfd11e08adbc932, type: 3}
+  - itemTag: foil
+    sprite: {fileID: 6850693251940570046, guid: 813993e3d95143043826f5716229f3a4, type: 3}
+  - itemTag: nail
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Food
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: OddColoredJuice
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Food2
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Food2
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: paperClip
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Flour
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: ClusterOfEggs
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Milk
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Blood
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
+  - itemTag: Blood
+    sprite: {fileID: 4076766029098984973, guid: b53246c0cf81ee444a625c459c306213, type: 3}
   combineRecipes:
   - outputItem: Door Key
     requiredItems:
@@ -13664,6 +13696,7 @@ GameObject:
   - component: {fileID: 1486352530}
   - component: {fileID: 1486352531}
   - component: {fileID: 1486352532}
+  - component: {fileID: 1486352537}
   - component: {fileID: 1486352536}
   - component: {fileID: 1486352535}
   m_Layer: 0
@@ -13963,6 +13996,18 @@ MonoBehaviour:
   soundVolume: 0.5
   insane: {fileID: 8300000, guid: 009450d53fb25994bb649b2c1d896c00, type: 3}
   sane: {fileID: 8300000, guid: 0644ad13baa0466439e93cd860798ef5, type: 3}
+--- !u!114 &1486352537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486352526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a41d4405d3bb94ab4533aad82b78cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1501490593
 GameObject:
   m_ObjectHideFlags: 0
@@ -18330,6 +18375,17 @@ MonoBehaviour:
   CanteenManicBlock: 
   Patient1WhisperingBlock: 
   ExitCanteenInteractionBlock: 
+  KitchenWindowManicBlock: 
+  KitchenLadyManicBlock: 
+  KitchenLadyManicInteractWithPatient6Block: 
+  KitchenLadyManicAskedAgainBlock: 
+  NurseManicBlock: 
+  Patient1ManicBlock: 
+  Patient2ManicBlock: 
+  Patient3ManicBlock: 
+  Patient4ManicBlock: 
+  Patient5ManicBlock: 
+  Patient6ManicBlock: 
   clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
@@ -18979,6 +19035,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1486352534}
+    - target: {fileID: 8626583652061362464, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1486352537}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

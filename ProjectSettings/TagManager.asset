@@ -54,7 +54,6 @@ TagManager:
   - nail
   - foil
   - papers
-<<<<<<< Updated upstream
   - Patient1Manic
   - Patient2Manic
   - Patient3Manic
@@ -64,11 +63,9 @@ TagManager:
   - KitchenLadyManic
   - KitchenWindowManic
   - NurseManic
-=======
-  - brokenKey1
   - brokenKey2
+  - brokenKey1
   - brokenKey3
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

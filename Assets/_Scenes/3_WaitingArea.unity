@@ -6239,8 +6239,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1486352532}
     - target: {fileID: 8626583652061362464, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1486352535}
+    - target: {fileID: 8626583652061362464, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626583652061362464, guid: d476c365049c7e444a82ebc104bc9d38, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: QuitButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6261,6 +6269,7 @@ GameObject:
   - component: {fileID: 1486352528}
   - component: {fileID: 1486352527}
   - component: {fileID: 1486352530}
+  - component: {fileID: 1486352535}
   - component: {fileID: 1486352534}
   - component: {fileID: 1486352533}
   m_Layer: 0
@@ -6503,6 +6512,18 @@ MonoBehaviour:
   soundVolume: 0.5
   insane: {fileID: 8300000, guid: 009450d53fb25994bb649b2c1d896c00, type: 3}
   sane: {fileID: 8300000, guid: 0644ad13baa0466439e93cd860798ef5, type: 3}
+--- !u!114 &1486352535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486352526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a41d4405d3bb94ab4533aad82b78cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1520634149
 GameObject:
   m_ObjectHideFlags: 0
@@ -9139,6 +9160,17 @@ MonoBehaviour:
   CanteenManicBlock: 
   Patient1WhisperingBlock: 
   ExitCanteenInteractionBlock: 
+  KitchenWindowManicBlock: 
+  KitchenLadyManicBlock: 
+  KitchenLadyManicInteractWithPatient6Block: 
+  KitchenLadyManicAskedAgainBlock: 
+  NurseManicBlock: 
+  Patient1ManicBlock: 
+  Patient2ManicBlock: 
+  Patient3ManicBlock: 
+  Patient4ManicBlock: 
+  Patient5ManicBlock: 
+  Patient6ManicBlock: 
   clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:

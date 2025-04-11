@@ -16,7 +16,7 @@ public class NotebookInventory : MonoBehaviour
     [SerializeField] private SecondChallenge secondChallenge;
     [SerializeField] private string[] allowedSceneNames = {  "5_HallwayDorm", "4_Canteen", "3_WaitingArea", "2_HallwayDorm" };
     private int currentPage = 0;
-    private int itemsPerPage = 8;
+    private int itemsPerPage = 6;
 
     [Header("Combination System")]
 
@@ -55,6 +55,11 @@ public class NotebookInventory : MonoBehaviour
     {
         string scene = SceneManager.GetActiveScene().name;
 
+        if (scene == "1_IsolationChamber")
+        {
+            secondChallenge = FindFirstObjectByType<SecondChallenge>();
+        }
+
         if (scene == "2_HallwayDoctors" || scene == "3_WaitingArea" ||scene == "4_Canteen" || scene == "5_HallwayDorm" || scene == "6_Janitors"|| scene == "DoctorsOffice"||
            (scene == "1_IsolationChamber" && secondChallenge.isSecondChallengeCompleted))
         {
@@ -66,6 +71,8 @@ public class NotebookInventory : MonoBehaviour
                     child.gameObject.SetActive(newState);
             }
         }
+
+
     }
     public void MarkItemCollected(string id)
     {
@@ -361,6 +368,18 @@ public class NotebookInventory : MonoBehaviour
         UpdateCombineDisplays();
 
 
+    }
+
+    public void ResetItemInventory()
+    {
+        inventory.Clear();
+        collectedIDs.Clear();
+        currentPage = 0;
+
+        UpdateInventoryUI();
+        UpdateCombineDisplays();
+
+        Debug.Log("NotebookInventory: Inventory and collected items have been reset.");
     }
 
 }
