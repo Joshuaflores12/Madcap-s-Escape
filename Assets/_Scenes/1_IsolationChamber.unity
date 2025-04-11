@@ -3111,8 +3111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1055, y: -79.00006}
-  m_SizeDelta: {x: 2432.355, y: 1226.8003}
+  m_AnchoredPosition: {x: -899.2506, y: -49}
+  m_SizeDelta: {x: 1799.507, y: 751.538}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &344335423
 MonoBehaviour:
@@ -3175,7 +3175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc2741ba8dd2e384d8fb54a4ce42a32c, type: 3}
+  m_Sprite: {fileID: 4095214559595063261, guid: 6fb4e2bccdccff346b203334e59e4716, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6798,7 +6798,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2000, y: 2000}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -7151,7 +7151,13 @@ MonoBehaviour:
   - outputItem: Fire Starter
     requiredItems:
     - battery
-    - paperClip
+    - foil
+    requiredAmounts: 0100000001000000
+    sceneName: 5_HallwayDorm
+  - outputItem: Fire
+    requiredItems:
+    - CatPlush
+    - Fire Starter
     requiredAmounts: 0100000001000000
     sceneName: 5_HallwayDorm
   combineEntryPrefab: {fileID: 8829194251956353392, guid: a3ab140df6231fe46b63ed99570dff1c, type: 3}
@@ -7766,7 +7772,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 36
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8078,7 +8084,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2000, y: 2000}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -8900,11 +8906,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -1264.1359, y: 412.9242}
+  scrollPos: {x: -1064.6097, y: 607.50714}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 0.64000016
+  zoom: 0.46000028
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -14016,7 +14022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1692, y: -628}
+  m_AnchoredPosition: {x: 1513, y: -180.46}
   m_SizeDelta: {x: 366.8533, y: 92.3349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539618238
@@ -14793,8 +14799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.78700006}
-  m_AnchoredPosition: {x: 109.07666, y: -240.17328}
-  m_SizeDelta: {x: -1187.3147, y: -517.1464}
+  m_AnchoredPosition: {x: -7.6660156, y: -24.07602}
+  m_SizeDelta: {x: -129.182, y: -84.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714845373
 MonoBehaviour:
@@ -14838,7 +14844,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 36
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -16057,7 +16063,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2000, y: 2000}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -17711,7 +17717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.7870001}
-  m_AnchoredPosition: {x: 109.07666, y: -240.17328}
+  m_AnchoredPosition: {x: 109.07666, y: -209}
   m_SizeDelta: {x: -1187.3147, y: -517.1464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036621202
@@ -17756,7 +17762,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 36
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

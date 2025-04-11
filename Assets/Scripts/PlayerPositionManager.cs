@@ -36,18 +36,21 @@ public class PlayerPositionManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log(" Scene loaded: " + scene.name + " | Spawning player from: " + entryFrom);
-
-        player = GameObject.FindGameObjectWithTag("Player");
-        leftSpawnPoint = GameObject.Find("LeftSpawnPoint").transform;
-        rightSpawnPoint = GameObject.Find("RightSpawnPoint").transform;
-
-        if (player != null)
+        if (SceneManager.GetActiveScene().name != "1_IsolationChamber")
         {
-            if (entryFrom == EntryDirection.Left)
-                player.transform.position = leftSpawnPoint.position;
-            else if (entryFrom == EntryDirection.Right)
-                player.transform.position = rightSpawnPoint.position;
+            Debug.Log(" Scene loaded: " + scene.name + " | Spawning player from: " + entryFrom);
+
+            player = GameObject.FindGameObjectWithTag("Player");
+            leftSpawnPoint = GameObject.Find("LeftSpawnPoint").transform;
+            rightSpawnPoint = GameObject.Find("RightSpawnPoint").transform;
+
+            if (player != null)
+            {
+                if (entryFrom == EntryDirection.Left)
+                    player.transform.position = leftSpawnPoint.position;
+                else if (entryFrom == EntryDirection.Right)
+                    player.transform.position = rightSpawnPoint.position;
+            }
         }
     }
 

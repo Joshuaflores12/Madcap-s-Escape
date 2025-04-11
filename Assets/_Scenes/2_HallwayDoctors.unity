@@ -9239,6 +9239,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 0}
   Patient1Prefab: {fileID: 0}
+  NpcSane: {fileID: 0}
+  NpcManic: {fileID: 0}
+  CollectablesSane: {fileID: 0}
+  CollectablesManic: {fileID: 0}
   TextUpdater: {fileID: 0}
   flowchart: {fileID: 423972050}
   clownMaskButton: {fileID: 207702587}
@@ -9246,6 +9250,11 @@ MonoBehaviour:
   JuiceBlock: Odd Juice
   Food2Block: FOOD (Right Table)
   WaterBlock: Water (Before Use)
+  FlourBlock: 
+  ClusterOfEggsBlock: 
+  MilkBlock: 
+  BloodBlock: 
+  WiltedFlowerBlock: 
   Chapter2IntroBlock: Chapter2Intro
   HallwayBlock: 
   KitchenLadyBlock: 
@@ -9255,6 +9264,10 @@ MonoBehaviour:
   Patient4Block: 
   Patient5Block: 
   Patient6Block: 
+  CanteenManicBlock: 
+  Patient1WhisperingBlock: 
+  ExitCanteenInteractionBlock: 
+  clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
   m_ObjectHideFlags: 0

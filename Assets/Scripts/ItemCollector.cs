@@ -310,16 +310,19 @@ public class ItemCollector : MonoBehaviour
         isExecutingBlock = false;
     }
 
+
+
     public void AddCatPlushieToInventory()
     {
         string itemTag = "CatPlush";
-        string uniqueID = itemTag + "_manualAdd";
+        string uniqueID = itemTag + "newCatPlush";
 
         if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
         {
             NotebookInventory.Instance.MarkItemCollected(uniqueID);
             NotebookInventory.Instance.AddToInventory(itemTag);
             Debug.Log("Cat Plushie added to inventory!");
+
             GameObject catPlushieObject = GameObject.FindWithTag(itemTag);
             if (catPlushieObject != null)
             {
@@ -330,6 +333,173 @@ public class ItemCollector : MonoBehaviour
         else
         {
             Debug.Log("Cat Plushie already collected.");
+        }
+    }
+
+    public void AddBobbyPinToInventory()
+    {
+        string itemTag = "bobbyPin";
+        string uniqueID = itemTag + "newBobbyPin";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("bobby pin added to inventory!");
+
+            GameObject bobbyPinObject = GameObject.FindWithTag(itemTag);
+            if (bobbyPinObject != null)
+            {
+                Destroy(bobbyPinObject);
+                Debug.Log("bobby pin GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("bobby pin already collected.");
+        }
+    }
+
+    public void AddPaperClipToInventory()
+    {
+        string itemTag = "paperClip";
+        string uniqueID = itemTag + "newPaperClip";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("paper clip added to inventory!");
+
+            GameObject paperClipObject = GameObject.FindWithTag(itemTag);
+            if (paperClipObject != null)
+            {
+                Destroy(paperClipObject);
+                Debug.Log("paper clip GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("paper clip already collected.");
+        }
+    }
+
+    public void AddBatteryToInventory()
+    {
+        string itemTag = "battery";
+        string uniqueID = itemTag + "newBattery";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("Battery added to inventory!");
+
+            GameObject batteryObject = GameObject.FindWithTag(itemTag);
+            if (batteryObject != null)
+            {
+                Destroy(batteryObject);
+                Debug.Log("bBattery GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("Battery already collected.");
+        }
+    }
+
+    public void AddTicketToInventory()
+    {
+        string itemTag = "ticket";
+        string uniqueID = itemTag + "newticket";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("ticket added to inventory!");
+
+            GameObject ticketObject = GameObject.FindWithTag(itemTag);
+            if (ticketObject != null)
+            {
+                Destroy(ticketObject);
+                Debug.Log("ticket GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("ticket already collected.");
+        }
+    }
+
+    public void AddNailToInventory()
+    {
+        string itemTag = "nail";
+        string uniqueID = itemTag + "newNail";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("nail added to inventory!");
+
+            GameObject nailObject = GameObject.FindWithTag(itemTag);
+            if (nailObject != null)
+            {
+                Destroy(nailObject);
+                Debug.Log("nail GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("nail already collected.");
+        }
+    }
+    public void AddFoilToInventory()
+    {
+        string itemTag = "foil";
+        string uniqueID = itemTag + "newFoil";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("foil added to inventory!");
+
+            GameObject foilObject = GameObject.FindWithTag(itemTag);
+            if (foilObject != null)
+            {
+                Destroy(foilObject);
+                Debug.Log("foil GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("foil already collected.");
+        }
+    }
+
+    public void AddPapersToInventory()
+    {
+        string itemTag = "papers";
+        string uniqueID = itemTag + "newPapers";
+
+        if (!NotebookInventory.Instance.HasItemBeenCollected(uniqueID))
+        {
+            NotebookInventory.Instance.MarkItemCollected(uniqueID);
+            NotebookInventory.Instance.AddToInventory(itemTag);
+            Debug.Log("papers added to inventory!");
+
+            GameObject papersObject = GameObject.FindWithTag(itemTag);
+            if (papersObject != null)
+            {
+                Destroy(papersObject);
+                Debug.Log("papers GameObject destroyed.");
+            }
+        }
+        else
+        {
+            Debug.Log("papers already collected.");
         }
     }
 

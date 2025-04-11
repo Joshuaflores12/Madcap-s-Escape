@@ -51,6 +51,11 @@ TagManager:
   - Blood
   - WiltedFlower
   - CatPlush
+  - battery
+  - ticket
+  - nail
+  - foil
+  - papers
   layers:
   - Default
   - TransparentFX

@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2000, y: 2000}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -3688,8 +3688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1055, y: -79.00006}
-  m_SizeDelta: {x: 2432.355, y: 1226.8003}
+  m_AnchoredPosition: {x: -893.7175, y: -42}
+  m_SizeDelta: {x: 1795.503, y: 905.592}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &860891706
 MonoBehaviour:
@@ -3752,7 +3752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc2741ba8dd2e384d8fb54a4ce42a32c, type: 3}
+  m_Sprite: {fileID: 4095214559595063261, guid: 6fb4e2bccdccff346b203334e59e4716, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4205,8 +4205,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.78700006}
-  m_AnchoredPosition: {x: 109.07666, y: -240.17328}
-  m_SizeDelta: {x: -1187.3147, y: -517.1464}
+  m_AnchoredPosition: {x: -3.2349854, y: -80.48}
+  m_SizeDelta: {x: -127.375, y: -274.975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032927879
 MonoBehaviour:
@@ -4250,7 +4250,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 36
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -8501,7 +8501,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2000, y: 2000}
+  m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -8612,7 +8612,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 79197ecfbc3a4294a89ce589dac02cf2, type: 3}
-    m_FontSize: 36
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9110,6 +9110,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letter: {fileID: 0}
   Patient1Prefab: {fileID: 0}
+  NpcSane: {fileID: 0}
+  NpcManic: {fileID: 0}
+  CollectablesSane: {fileID: 0}
+  CollectablesManic: {fileID: 0}
   TextUpdater: {fileID: 0}
   flowchart: {fileID: 423972050}
   clownMaskButton: {fileID: 207702587}
@@ -9117,6 +9121,11 @@ MonoBehaviour:
   JuiceBlock: Odd Juice
   Food2Block: FOOD (Right Table)
   WaterBlock: Water (Before Use)
+  FlourBlock: 
+  ClusterOfEggsBlock: 
+  MilkBlock: 
+  BloodBlock: 
+  WiltedFlowerBlock: 
   Chapter2IntroBlock: Chapter2Intro
   HallwayBlock: 
   KitchenLadyBlock: 
@@ -9126,6 +9135,10 @@ MonoBehaviour:
   Patient4Block: 
   Patient5Block: 
   Patient6Block: 
+  CanteenManicBlock: 
+  Patient1WhisperingBlock: 
+  ExitCanteenInteractionBlock: 
+  clownMask: {fileID: 0}
 --- !u!114 &2093656902
 MonoBehaviour:
   m_ObjectHideFlags: 0
